@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app="demoapp">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
@@ -15,11 +15,17 @@
   <link href="../../stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
 
   <script src="../../javascripts/application.js" type="text/javascript"></script>
+
+  <!--Leaflet angular includes-->
+  <script src="../../javascripts/angular.min.js"></script>
+  <script src="../../javascripts/leaflet.js"></script>
+  <script src="../../javascripts/angular-leaflet-directive.min.js"></script>
+  <link rel="stylesheet" href="../../stylesheets/leaflet.css" />
 </head>
 
 
 
-<body>
+<body ng-controller="DemoController">
 <nav class="navbar navbar-default navbar-inverse navbar-static-top" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
@@ -124,81 +130,6 @@
       </a>
     </li>
 
-
-
-
-
-
-    <li class="dark-nav ">
-
-      <span class="glow"></span>
-
-
-
-      <!--<a class="accordion-toggle collapsed " data-toggle="collapse" href="#yJ6h3Npe7C">-->
-      <!--<i class="icon-beaker icon-2x"></i>-->
-      <!--<span>-->
-      <!--UI Lab-->
-      <!--<i class="icon-caret-down"></i>-->
-      <!--</span>-->
-      <!--</a>-->
-
-      <!--<ul id="yJ6h3Npe7C" class="collapse ">-->
-
-      <!--<li class="">-->
-      <!--<a href="../ui_lab/buttons.html">-->
-      <!--<i class="icon-hand-up"></i> Buttons-->
-      <!--</a>-->
-      <!--</li>-->
-
-      <!--<li class="">-->
-      <!--<a href="../ui_lab/general.html">-->
-      <!--<i class="icon-beaker"></i> General elements-->
-      <!--</a>-->
-      <!--</li>-->
-
-      <!--<li class="">-->
-      <!--<a href="../ui_lab/icons.html">-->
-      <!--<i class="icon-info-sign"></i> Icons-->
-      <!--</a>-->
-      <!--</li>-->
-
-      <!--<li class="">-->
-      <!--<a href="../ui_lab/grid.html">-->
-      <!--<i class="icon-th-large"></i> Grid-->
-      <!--</a>-->
-      <!--</li>-->
-
-      <!--<li class="">-->
-      <!--<a href="../ui_lab/tables.html">-->
-      <!--<i class="icon-table"></i> Tables-->
-      <!--</a>-->
-      <!--</li>-->
-
-      <!--<li class="">-->
-      <!--<a href="../ui_lab/widgets.html">-->
-      <!--<i class="icon-plus-sign-alt"></i> Widgets-->
-      <!--</a>-->
-      <!--</li>-->
-
-      <!--</ul>-->
-
-      <!--</li>-->
-
-
-      <!--<li class="">-->
-      <!--<span class="glow"></span>-->
-      <!--<a href="../forms/forms.html">-->
-      <!--<i class="icon-edit icon-2x"></i>-->
-      <!--<span>Forms</span>-->
-      <!--</a>-->
-      <!--</li>-->
-
-
-
-
-
-
     <li class="">
       <span class="glow"></span>
       <a href="../charts/charts.html">
@@ -206,52 +137,6 @@
         <span>Charts</span>
       </a>
     </li>
-
-    <!--<li class="dark-nav ">-->
-    <!--<span class="glow"></span>-->
-    <!--<a class="accordion-toggle collapsed " data-toggle="collapse" href="#WLGsdJPav9">-->
-    <!--<i class="icon-link icon-2x"></i>-->
-    <!--<span>-->
-    <!--Others-->
-    <!--<i class="icon-caret-down"></i>-->
-    <!--</span>-->
-    <!--</a>-->
-
-    <!--<ul id="WLGsdJPav9" class="collapse ">-->
-
-    <!--<li class="">-->
-    <!--<a href="../other/wizard.html">-->
-    <!--<i class="icon-magic"></i> Wizard-->
-    <!--</a>-->
-    <!--</li>-->
-
-    <!--<li class="">-->
-    <!--<a href="../other/login.html">-->
-    <!--<i class="icon-money"></i> Login Page-->
-    <!--</a>-->
-    <!--</li>-->
-
-    <!--<li class="">-->
-    <!--<a href="../other/sign_up.html">-->
-    <!--<i class="icon-money"></i> Sign Up Page-->
-    <!--</a>-->
-    <!--</li>-->
-
-    <!--<li class="">-->
-    <!--<a href="../other/full_calendar.html">-->
-    <!--<i class="icon-calendar"></i> Full Calendar-->
-    <!--</a>-->
-    <!--</li>-->
-
-    <!--<li class="">-->
-    <!--<a href="../other/error404.html">-->
-    <!--<i class="icon-ban-circle"></i> Error 404 page-->
-    <!--</a>-->
-    <!--</li>-->
-
-    <!--</ul>-->
-
-    <!--</li>-->
 
 
   </ul>
@@ -287,7 +172,6 @@
     </div>
   </div>
 
-
 </div>
 <div class="main-content">
 <div class="container">
@@ -297,7 +181,7 @@
       <div class="pull-left header">
         <h3 class="title">
           <i class="icon-dashboard"></i>
-          Dashboard
+          Dashboard -Arad City Concil
         </h3>
         <h5>
             <span>
@@ -495,19 +379,72 @@
 </div>
 
 <div class="row">
-  <div class="col-md-6">
+  <div class="col-md-8">
     <div class="box">
       <div class="box-header">
-        <div class="title">Full calendar</div>
+        <div class="title">City map</div>
       </div>
-
       <div class="box-content">
-        <div id="calendar"></div>
+        <script>
+          angular.module("demoapp", ["leaflet-directive"]);
+          function DemoController($scope) {
+            angular.extend($scope, {
+              arad: {
+                lat: 31.26,
+                lng: 35.21,
+                zoom: 15
+              },
+              markers: {
+                marker1: {
+                  lat: 31.26,
+                  lng: 35.205,
+                  focus: false,
+                  message: "School irony Alef",
+                  title: "School irony Alef",
+                  draggable: false
+                },
+                marker2: {
+                  lat: 31.27,
+                  lng: 35.215,
+                  focus: false,
+                  message: "School irony Bet",
+                  title: "School irony Bet",
+                  draggable: false
+                },
+                marker3: {
+                  lat: 31.255,
+                  lng: 35.215,
+                  focus: false,
+                  message: "School irony Gimel",
+                  title: "School irony Gimel",
+                  draggable: false
+                },
+                marker4: {
+                  lat: 31.265,
+                  lng: 35.210,
+                  focus: false,
+                  message: "School irony Daled",
+                  title: "School irony Daled",
+                  draggable: false
+                },
+                marker5: {
+                  lat: 31.265,
+                  lng: 35.213,
+                  focus: false,
+                  message: "School irony Hey",
+                  title: "School irony Hey",
+                  draggable: false
+                }
+              }
+            });
+          };
+        </script>
+        <leaflet center="arad" markers="markers" height="550px" width="100%"></leaflet>
       </div>
     </div>
   </div>
 
-  <div class="col-md-6">
+  <div class="col-md-4">
     <div class="box">
       <div class="box-header">
         <span class="title">News with avatars (scrollable box)</span>
