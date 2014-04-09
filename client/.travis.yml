@@ -9,4 +9,4 @@ before_script:
 travis-lint
 
 # from any directory
-travis-lint .travis.yml
+travis-lint client/.travis.yml
