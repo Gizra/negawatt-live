@@ -5,12 +5,9 @@ angular.module('aravaApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute',
-  'apiMock',
   'leaflet-directive'
 ])
-  .config(function ($routeProvider, $httpProvider, httpInterceptorProvider) {
-    // Add interceptors.
-    $httpProvider.interceptors.push('AravaHttpInterceptor');
+  .config(function ($routeProvider, $httpProvider) {
 
     // Define routes.
     $routeProvider
@@ -22,14 +19,14 @@ angular.module('aravaApp', [
         templateUrl: 'views/dashboard.html',
         controller: 'DashboardCtrl'
       })
+      .when('/dashboard-with', {
+        templateUrl: 'views/dashboard.html',
+        controller: 'DashboardCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
 
-      // Add configuration of the apiMock.
-    httpInterceptorProvider.config({
-      mockDataPath: '/mock_data/',
-      apiPath: '/'
-    });
+
   });
 
