@@ -219,70 +219,189 @@
 </div>
 
 <div class="container">
-<div class="row">
 
-  <div class="col-md-3">
-    <!-- find me in partials/action_nav_normal -->
-
-    <!--big normal buttons-->
-    <div class="action-nav-normal">
-
-      <div class="row action-nav-row">
-        <div class="col-sm-6 action-nav-button">
-          <a href="#" title="New Project">
-            <i class="icon-bar-chart"></i>
-            <span>Current</span>
-          </a>
-          <span class="triangle-button red"><i class="icon-plus"></i></span>
+  <div class="row">
+    <div class="col-md-8">
+      <div class="box">
+        <div class="box-header">
+          <div class="title">City map</div>
         </div>
-
-        <div class="col-sm-6 action-nav-button">
-          <a href="#" title="Messages">
-            <i class="icon-calendar"></i>
-            <span>Last month</span>
-          </a>
-          <span class="label label-black">14</span>
+        <div class="box-content">
+          <script>
+            angular.module("demoapp", ["leaflet-directive"]);
+            function DemoController($scope) {
+              angular.extend($scope, {
+                arad: {
+                  lat: 31.258,
+                  lng: 35.21,
+                  zoom: 15
+                },
+                markers: {
+                  marker1: {
+                    lat: 31.258,
+                    lng: 35.214,
+                    focus: false,
+                    message: "יסודי יעלים-עופרים",
+                    title: "יסודי יעלים-עופרים",
+                    draggable: false
+                  },
+                  marker2: {
+                    lat: 31.261,
+                    lng: 35.215,
+                    focus: false,
+                    message: "מקיף אורט ערד",
+                    title: "מקיף אורט ערד",
+                    draggable: false
+                  },
+                  marker3: {
+                    lat: 31.255,
+                    lng: 35.207,
+                    focus: false,
+                    message: "יסודי אבישור",
+                    title: "יסודי אבישור",
+                    draggable: false
+                  },
+                  marker4: {
+                    lat: 31.26,
+                    lng: 35.203,
+                    focus: false,
+                    message: "ממלכתי חלמיש",
+                    title: "ממלכתי חלמיש",
+                    draggable: false
+                  },
+                  marker5: {
+                    lat: 31.249,
+                    lng: 35.217,
+                    focus: false,
+                    message: "אולפנת בני עקיבא",
+                    title: "אולפנת בני עקיבא",
+                    draggable: false
+                  }
+                }
+              });
+            };
+          </script>
+          <leaflet center="arad" markers="markers" height="550px" width="100%"></leaflet>
         </div>
       </div>
+    </div>
 
-      <div class="row action-nav-row">
-        <div class="col-sm-6 action-nav-button">
-          <a href="#" title="Files">
-            <i class="icon-calendar"></i>
-            <span>Last year</span>
-          </a>
+    <div class="col-md-4">
+      <div class="box">
+        <div class="box-header">
+          <span class="title">Latest alerts</span>
+          <ul class="box-toolbar">
+            <li><span class="label label-blue">178</span></li>
+          </ul>
         </div>
+        <div class="box-content scrollable" style="height: 552px; overflow-y: auto">
+          <!-- find me in partials/news_with_icons -->
 
-        <div class="col-sm-6 action-nav-button">
-          <a href="#" title="Users">
-            <i class="icon-calendar"></i>
-            <span>Last week</span>
-          </a>
-          <span class="triangle-button green"><span class="inner">+3</span></span>
+          <div class="box-section news with-icons">
+            <div class="avatar label-red"><i class="icon-warning-sign icon-2x"></i></div>
+            <div class="news-time">
+              <span>11</span> feb
+            </div>
+            <div class="news-content">
+              <!-- <div class="avatar label-red"><i class="icon-warning-sign icon-2x"></i></div> -->
+              <div class="news-title"><a href="#">Consumption exceeded warning in יסודי יעלים-עופרים</a></div>
+              <div class="news-text">
+                This an alert warning about an exceptional consumption pick in last 2 day in יסודי יעלים-עופרים, <a href="#">Click here</a> to see the detailed report.
+              </div>
+            </div>
+          </div>
+
+          <div class="box-section news with-icons">
+            <div class="avatar label-red"><i class="icon-warning-sign icon-2x"></i></div>
+            <div class="news-time">
+              <span>04</span> mar
+            </div>
+            <div class="news-content">
+              <div class="news-title"><a href="#">Error - Malfunctioning receptor in ממלכתי חלמיש</a></div>
+              <div class="news-text">
+                An Electric reception has stoped working at ממלכתי חלמיש - A message has been sent via SMS to the technician.
+              </div>
+            </div>
+          </div>
+
+          <div class="box-section news with-icons">
+            <div class="avatar green"><i class="icon-ok icon-2x"></i></div>
+            <div class="news-time">
+              <span>22</span> dec
+            </div>
+            <div class="news-content">
+              <div class="news-title"><a href="#">New device added: אולפנת בני עקיבא</a></div>
+              <div class="news-text">
+                Device אולפנת בני עקיבא successfully installed. <a href="#">Click here</a> to access device info.
+              </div>
+            </div>
+          </div>
+
+          <div class="box-section news with-icons">
+            <div class="avatar green"><i class="icon-money icon-2x"></i></div>
+            <div class="news-time">
+              <span>1</span> dec
+            </div>
+            <div class="news-content">
+              <div class="news-title"><a href="#">%15 saving goal met this month</a></div>
+              <div class="news-text">
+                <a href="#">Click here</a> for detailed report.
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
-
-      <div class="row action-nav-row">
-        <div class="col-sm-6 action-nav-button">
-          <a href="#" title="Friends">
-            <i class="icon-cogs"></i>
-            <span>Preferences</span>
-          </a>
-        </div>
-
-        <div class="col-sm-6 action-nav-button">
-          <a href="#" title="Followers">
-            <i class="icon-signal"></i>
-            <span>Reports</span>
-          </a>
-          <span class="triangle-button blue"><span class="inner">+8</span></span>
-        </div>
-      </div>
-
     </div>
   </div>
 
-  <div class="col-md-9">
+  <div class="row">
+
+    <div class="col-md-3">
+      <!-- find me in partials/action_nav_normal -->
+
+      <!--big normal buttons-->
+      <div class="action-nav-normal">
+
+        <div class="row action-nav-row">
+          <div class="col-sm-6 action-nav-button">
+            <a href="#" title="New Project">
+              <i class="icon-bar-chart"></i>
+              <span>Current</span>
+            </a>
+            <span class="triangle-button red"><i class="icon-plus"></i></span>
+          </div>
+
+          <div class="col-sm-6 action-nav-button">
+            <a href="#" title="Messages">
+              <i class="icon-calendar"></i>
+              <span>Last month</span>
+            </a>
+            <span class="label label-black">14</span>
+          </div>
+        </div>
+
+        <div class="row action-nav-row">
+          <div class="col-sm-6 action-nav-button">
+            <a href="#" title="Files">
+              <i class="icon-calendar"></i>
+              <span>Last year</span>
+            </a>
+          </div>
+
+          <div class="col-sm-6 action-nav-button">
+            <a href="#" title="Users">
+              <i class="icon-calendar"></i>
+              <span>Last week</span>
+            </a>
+            <span class="triangle-button green"><span class="inner">+3</span></span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="col-md-9">
     <!-- find me in partials/big_chart -->
 
     <div class="box">
@@ -357,144 +476,10 @@
         </div>
       </div>
     </div>
-
   </div>
 </div>
 
-<div class="row">
-  <div class="col-md-8">
-    <div class="box">
-      <div class="box-header">
-        <div class="title">City map</div>
-      </div>
-      <div class="box-content">
-        <script>
-          angular.module("demoapp", ["leaflet-directive"]);
-          function DemoController($scope) {
-            angular.extend($scope, {
-              arad: {
-                lat: 31.258,
-                lng: 35.21,
-                zoom: 15
-              },
-              markers: {
-                marker1: {
-                  lat: 31.258,
-                  lng: 35.214,
-                  focus: false,
-                  message: "יסודי יעלים-עופרים",
-                  title: "יסודי יעלים-עופרים",
-                  draggable: false
-                },
-                marker2: {
-                  lat: 31.261,
-                  lng: 35.215,
-                  focus: false,
-                  message: "מקיף אורט ערד",
-                  title: "מקיף אורט ערד",
-                  draggable: false
-                },
-                marker3: {
-                  lat: 31.255,
-                  lng: 35.207,
-                  focus: false,
-                  message: "יסודי אבישור",
-                  title: "יסודי אבישור",
-                  draggable: false
-                },
-                marker4: {
-                  lat: 31.26,
-                  lng: 35.203,
-                  focus: false,
-                  message: "ממלכתי חלמיש",
-                  title: "ממלכתי חלמיש",
-                  draggable: false
-                },
-                marker5: {
-                  lat: 31.249,
-                  lng: 35.217,
-                  focus: false,
-                  message: "אולפנת בני עקיבא",
-                  title: "אולפנת בני עקיבא",
-                  draggable: false
-                }
-              }
-            });
-          };
-        </script>
-        <leaflet center="arad" markers="markers" height="550px" width="100%"></leaflet>
-      </div>
-    </div>
-  </div>
 
-  <div class="col-md-4">
-    <div class="box">
-      <div class="box-header">
-        <span class="title">Latest alerts</span>
-        <ul class="box-toolbar">
-          <li><span class="label label-blue">178</span></li>
-        </ul>
-      </div>
-      <div class="box-content scrollable" style="height: 552px; overflow-y: auto">
-        <!-- find me in partials/news_with_icons -->
-
-        <div class="box-section news with-icons">
-          <div class="avatar label-red"><i class="icon-warning-sign icon-2x"></i></div>
-          <div class="news-time">
-            <span>11</span> feb
-          </div>
-          <div class="news-content">
-           <!-- <div class="avatar label-red"><i class="icon-warning-sign icon-2x"></i></div> -->
-            <div class="news-title"><a href="#">Consumption exceeded warning in יסודי יעלים-עופרים</a></div>
-            <div class="news-text">
-              This an alert warning about an exceptional consumption pick in last 2 day in יסודי יעלים-עופרים, <a href="#">Click here</a> to see the detailed report.
-            </div>
-          </div>
-        </div>
-
-        <div class="box-section news with-icons">
-          <div class="avatar label-red"><i class="icon-warning-sign icon-2x"></i></div>
-          <div class="news-time">
-            <span>04</span> mar
-          </div>
-          <div class="news-content">
-            <div class="news-title"><a href="#">Error - Malfunctioning receptor in ממלכתי חלמיש</a></div>
-            <div class="news-text">
-              An Electric reception has stoped working at ממלכתי חלמיש - A message has been sent via SMS to the technician.
-            </div>
-          </div>
-        </div>
-
-        <div class="box-section news with-icons">
-          <div class="avatar green"><i class="icon-ok icon-2x"></i></div>
-          <div class="news-time">
-            <span>22</span> dec
-          </div>
-          <div class="news-content">
-            <div class="news-title"><a href="#">New device added: אולפנת בני עקיבא</a></div>
-            <div class="news-text">
-              Device אולפנת בני עקיבא successfully installed. <a href="#">Click here</a> to access device info.
-             </div>
-          </div>
-        </div>
-
-        <div class="box-section news with-icons">
-          <div class="avatar green"><i class="icon-money icon-2x"></i></div>
-          <div class="news-time">
-            <span>1</span> dec
-          </div>
-          <div class="news-content">
-            <div class="news-title"><a href="#">%15 saving goal met this month</a></div>
-            <div class="news-text">
-              <a href="#">Click here</a> for detailed report.
-             </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</div>
 
 
 
