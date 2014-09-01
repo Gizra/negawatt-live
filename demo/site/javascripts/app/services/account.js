@@ -1,9 +1,7 @@
 'use strict';
 
 angular.module('aravaApp')
-  .service('Account', function Detector($q, $http, Config) {
-    // AngularJS will instantiate a singleton by calling "new" on this function
-    var data = {};
+  .service('Account', function Detector($http, BACKEND_URL) {
 
     /**
      * Get city account consumption details.
@@ -17,16 +15,15 @@ angular.module('aravaApp')
      *  }
      *
      *  $http transform this object to ?start=201401&end=201407
+     *
      * @returns {*}
      */
-    this.getCounters = function(selection) {
+    this.get = function (selection) {
       return $http({
         method: 'GET',
-        url: Config.BACKEND_URL + '/account',
+        url: BACKEND_URL + '/account',
         params: selection
-      }).success(function(account) {
-        data.account = account;
       });
-    };
+    }
 
   });
