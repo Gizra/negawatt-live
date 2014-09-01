@@ -1,23 +1,18 @@
 'use strict';
 
-describe('Factory: Config', function () {
+describe('Service: Counter', function () {
 
   // load the service's module
   beforeEach(module('aravaApp'));
 
   // instantiate service
-  var ENV;
-  beforeEach(inject(function (_ENV_, _Config_) {
-    ENV = _ENV_;
-    config = _Config_;
+  var counter;
+  beforeEach(inject(function (_Counter_) {
+    counter = _Conunter_;
   }));
 
-  it('should be define an environment', function () {
-    expect(ENV).toBeDefined();
-  });
-
-  it('should be a backend url the enviroment', function () {
-    expect(config.BACKEND_URL).ֹtoBe('http://server.com');
+  it('should be define an list of counters', function () {
+    expect(counter).toBeDefined();
   });
 
 });
