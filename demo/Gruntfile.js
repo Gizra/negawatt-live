@@ -107,7 +107,7 @@ module.exports = function (grunt) {
 
   // Default task
   grunt.registerTask('serve', [
-    'jshint',
+    //'jshint',
     'connect:livereload',
     'watch'
   ]);
