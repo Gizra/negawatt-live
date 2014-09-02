@@ -1,5 +1,9 @@
 module.exports = function (grunt) {
   'use strict';
+
+  // load all grunt tasks matching the `grunt-*` pattern
+  require('load-grunt-tasks')(grunt);
+
   // Project configuration
   grunt.initConfig({
     // Metadata
@@ -48,32 +52,22 @@ module.exports = function (grunt) {
       },
       gruntfile: {
         src: 'Gruntfile.js'
-      },
-      lib_test: {
-        src: ['lib/**/*.js', 'test/**/*.js']
       }
-    },
-    qunit: {
-      files: ['test/**/*.html']
     },
     watch: {
       gruntfile: {
         files: '<%= jshint.gruntfile.src %>',
         tasks: ['jshint:gruntfile']
       },
-      lib_test: {
-        files: '<%= jshint.lib_test.src %>',
-        tasks: ['jshint:lib_test', 'qunit']
-      },
       livereload: {
         options: {
           livereload: '<%= connect.options.livereload %>'
         },
         files: [
-          'site/pages/{,*/}*.html',
-          'site/stylesheets/{,*/}*.css',
-          'site/javascripts/{,*/}*.js',
-          'site/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
+          'site/pages/**/*.html',
+          'site/stylesheets/**/*.css',
+          'site/javascripts/**/*.js',
+          'site/images/**/*.{png,jpg,jpeg,gif,webp,svg}'
         ]
       }
     },
@@ -82,28 +76,16 @@ module.exports = function (grunt) {
         port: 7000,
         // Change this to '0.0.0.0' to access the server from outside.
         hostname: 'localhost',
-        livereload: 35733,
-        keepalive: true
+        livereload: 35733
       },
       livereload: {
         options: {
-          open: true,
           base: 'site',
-          options: {
-            index: 'dashboard.html'
-          }
+          open: true
         }
       }
     }
   });
-
-  // These plugins provide necessary tasks
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-qunit');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-connect');
 
   // Default task
   grunt.registerTask('serve', [
@@ -115,9 +97,7 @@ module.exports = function (grunt) {
   // Default task
   grunt.registerTask('build', [
     'jshint',
-    'qunit',
-    'concat',
-    'uglify',
+    'copy:dist',
     'connect:livereload',
     'watch'
   ]);

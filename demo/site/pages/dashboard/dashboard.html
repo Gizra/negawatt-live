@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="demoapp">
+<html ng-app="aravaApp">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
@@ -18,6 +18,11 @@
 
   <!--Leaflet angular includes-->
   <script src="../../javascripts/angular.min.js"></script>
+  <script src="../../javascripts/app/app.js"></script>
+  <script src="../../javascripts/app/controllers/dashboard.js"></script>
+  <script src="../../javascripts/app/services/config.js"></script>
+  <script src="../../javascripts/app/services/counter.js"></script>
+  <script src="../../javascripts/app/services/account.js"></script>
   <script src="../../javascripts/leaflet.js"></script>
   <script src="../../javascripts/angular-leaflet-directive.min.js"></script>
   <link rel="stylesheet" href="../../stylesheets/leaflet.css" />
@@ -25,7 +30,7 @@
 
 
 
-<body ng-controller="DemoController">
+<body ng-controller="DashboardCtrl">
 <nav class="navbar navbar-default navbar-inverse navbar-static-top" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
@@ -227,60 +232,6 @@
           <div class="title">City map</div>
         </div>
         <div class="box-content">
-          <script>
-            angular.module("demoapp", ["leaflet-directive"]);
-            function DemoController($scope) {
-              angular.extend($scope, {
-                arad: {
-                  lat: 31.258,
-                  lng: 35.21,
-                  zoom: 15
-                },
-                markers: {
-                  marker1: {
-                    lat: 31.258,
-                    lng: 35.214,
-                    focus: false,
-                    message: "יסודי יעלים-עופרים",
-                    title: "יסודי יעלים-עופרים",
-                    draggable: false
-                  },
-                  marker2: {
-                    lat: 31.261,
-                    lng: 35.215,
-                    focus: false,
-                    message: "מקיף אורט ערד",
-                    title: "מקיף אורט ערד",
-                    draggable: false
-                  },
-                  marker3: {
-                    lat: 31.255,
-                    lng: 35.207,
-                    focus: false,
-                    message: "יסודי אבישור",
-                    title: "יסודי אבישור",
-                    draggable: false
-                  },
-                  marker4: {
-                    lat: 31.26,
-                    lng: 35.203,
-                    focus: false,
-                    message: "ממלכתי חלמיש",
-                    title: "ממלכתי חלמיש",
-                    draggable: false
-                  },
-                  marker5: {
-                    lat: 31.249,
-                    lng: 35.217,
-                    focus: false,
-                    message: "אולפנת בני עקיבא",
-                    title: "אולפנת בני עקיבא",
-                    draggable: false
-                  }
-                }
-              });
-            };
-          </script>
           <leaflet center="arad" markers="markers" height="550px" width="100%"></leaflet>
         </div>
       </div>
