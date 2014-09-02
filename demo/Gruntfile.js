@@ -61,10 +61,6 @@ module.exports = function (grunt) {
         files: '<%= jshint.gruntfile.src %>',
         tasks: ['jshint:gruntfile']
       },
-      lib_test: {
-        files: '<%= jshint.lib_test.src %>',
-        tasks: ['jshint:lib_test', 'qunit']
-      },
       livereload: {
         options: {
           livereload: '<%= connect.options.livereload %>'
@@ -96,14 +92,13 @@ module.exports = function (grunt) {
   // These plugins provide necessary tasks
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-qunit');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-connect');
 
   // Default task
   grunt.registerTask('serve', [
-    //'jshint',
+    'jshint',
     'connect:livereload',
     'watch'
   ]);
@@ -111,7 +106,6 @@ module.exports = function (grunt) {
   // Default task
   grunt.registerTask('build', [
     'jshint',
-    'qunit',
     'concat',
     'uglify',
     'connect:livereload',
