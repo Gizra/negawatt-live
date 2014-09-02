@@ -1,0 +1,755 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0">
+
+  <!-- Always force latest IE rendering engine or request Chrome Frame -->
+  <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800">
+
+  <!-- Use title if it's in the page YAML frontmatter -->
+  <title>Core Admin Theme</title>
+
+  <link href="../../stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
+
+  <script src="../../javascripts/application.js" type="text/javascript"></script>
+</head>
+
+
+
+<body>
+<nav class="navbar navbar-default navbar-inverse navbar-static-top" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <a class="navbar-brand" href="#">Core Admin</a>
+
+    
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-primary">
+          <span class="sr-only">Toggle Side Navigation</span>
+          <i class="icon-th-list"></i>
+        </button>
+
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse-top">
+          <span class="sr-only">Toggle Top Navigation</span>
+          <i class="icon-align-justify"></i>
+        </button>
+    
+  </div>
+
+  
+      
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse navbar-collapse-top">
+        <div class="navbar-right">
+
+          <ul class="nav navbar-nav navbar-left">
+            <li class="cdrop active"><a href="#">Link</a></li>
+
+            <li class="cdrop"><a href="#">Link</a></li>
+
+            <li class="dropdown cdrop">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input type="text" class="search-query animated" placeholder="Search">
+              <i class="icon-search"></i>
+            </div>
+          </form>
+
+          <ul class="nav navbar-nav navbar-left">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle dropdown-avatar" data-toggle="dropdown">
+              <span>
+                <img class="menu-avatar" src="../../images/avatars/avatar1.jpg" /> <span>John Smith <i class="icon-caret-down"></i></span>
+                <span class="badge badge-dark-red">5</span>
+              </span>
+              </a>
+              <ul class="dropdown-menu">
+
+                <!-- the first element is the one with the big avatar, add a with-image class to it -->
+
+                <li class="with-image">
+                  <div class="avatar">
+                    <img src="../../images/avatars/avatar1.jpg" />
+                  </div>
+                  <span>John Smith</span>
+                </li>
+
+                <li class="divider"></li>
+
+                <li><a href="#"><i class="icon-user"></i> <span>Profile</span></a></li>
+                <li><a href="#"><i class="icon-cog"></i> <span>Settings</span></a></li>
+                <li><a href="#"><i class="icon-envelope"></i> <span>Messages</span> <span class="label label-dark-red pull-right">5</span></a></li>
+                <li><a href="#"><i class="icon-off"></i> <span>Logout</span></a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+
+
+
+      </div><!-- /.navbar-collapse -->
+
+  
+</nav>
+<div class="sidebar-background">
+  <div class="primary-sidebar-background"></div>
+</div>
+
+<div class="primary-sidebar">
+
+  <!-- Main nav -->
+  <ul class="nav navbar-collapse collapse navbar-collapse-primary">
+    
+    
+
+        <li class="">
+          <span class="glow"></span>
+          <a href="../dashboard/dashboard.html">
+              <i class="icon-dashboard icon-2x"></i>
+              <span>Dashboard</span>
+          </a>
+        </li>
+
+    
+
+
+    
+
+        <li class="dark-nav ">
+
+          <span class="glow"></span>
+
+          
+
+          <a class="accordion-toggle collapsed " data-toggle="collapse" href="#tnnmk7rjLZ">
+              <i class="icon-beaker icon-2x"></i>
+                    <span>
+                      UI Lab
+                      <i class="icon-caret-down"></i>
+                    </span>
+
+          </a>
+
+          <ul id="tnnmk7rjLZ" class="collapse ">
+            
+                <li class="">
+                  <a href="../ui_lab/buttons.html">
+                      <i class="icon-hand-up"></i> Buttons
+                  </a>
+                </li>
+            
+                <li class="">
+                  <a href="../ui_lab/general.html">
+                      <i class="icon-beaker"></i> General elements
+                  </a>
+                </li>
+            
+                <li class="">
+                  <a href="../ui_lab/icons.html">
+                      <i class="icon-info-sign"></i> Icons
+                  </a>
+                </li>
+            
+                <li class="">
+                  <a href="../ui_lab/grid.html">
+                      <i class="icon-th-large"></i> Grid
+                  </a>
+                </li>
+            
+                <li class="">
+                  <a href="../ui_lab/tables.html">
+                      <i class="icon-table"></i> Tables
+                  </a>
+                </li>
+            
+                <li class="">
+                  <a href="../ui_lab/widgets.html">
+                      <i class="icon-plus-sign-alt"></i> Widgets
+                  </a>
+                </li>
+            
+          </ul>
+
+        </li>
+
+    
+
+
+    
+
+        <li class="active">
+          <span class="glow"></span>
+          <a href="forms.html">
+              <i class="icon-edit icon-2x"></i>
+              <span>Forms</span>
+          </a>
+        </li>
+
+    
+
+
+    
+
+        <li class="">
+          <span class="glow"></span>
+          <a href="../charts/charts.html">
+              <i class="icon-bar-chart icon-2x"></i>
+              <span>Charts</span>
+          </a>
+        </li>
+
+    
+
+
+    
+
+        <li class="dark-nav ">
+
+          <span class="glow"></span>
+
+          
+
+          <a class="accordion-toggle collapsed " data-toggle="collapse" href="#rxUnZ8LaAJ">
+              <i class="icon-link icon-2x"></i>
+                    <span>
+                      Others
+                      <i class="icon-caret-down"></i>
+                    </span>
+
+          </a>
+
+          <ul id="rxUnZ8LaAJ" class="collapse ">
+            
+                <li class="">
+                  <a href="../other/wizard.html">
+                      <i class="icon-magic"></i> Wizard
+                  </a>
+                </li>
+            
+                <li class="">
+                  <a href="../other/login.html">
+                      <i class="icon-user"></i> Login Page
+                  </a>
+                </li>
+            
+                <li class="">
+                  <a href="../other/sign_up.html">
+                      <i class="icon-user"></i> Sign Up Page
+                  </a>
+                </li>
+            
+                <li class="">
+                  <a href="../other/full_calendar.html">
+                      <i class="icon-calendar"></i> Full Calendar
+                  </a>
+                </li>
+            
+                <li class="">
+                  <a href="../other/error404.html">
+                      <i class="icon-ban-circle"></i> Error 404 page
+                  </a>
+                </li>
+            
+          </ul>
+
+        </li>
+
+    
+
+
+  </ul>
+
+  <div class="hidden-sm hidden-xs">
+    <div class="text-center" style="margin-top: 60px">
+      <div class="easy-pie-chart-percent" style="display: inline-block" data-percent="89"><span>89%</span></div>
+      <div style="padding-top: 20px"><b>CPU Usage</b></div>
+    </div>
+
+    <hr class="divider" style="margin-top: 60px">
+
+    <div class="sparkline-box side">
+
+      <div class="sparkline-row">
+        <h4 class="gray"><span>Orders</span> 847</h4>
+        <div class="sparkline big" data-color="gray"><!--22,16,13,20,16,18,12,25,21,21,25,16--></div>
+      </div>
+
+      <hr class="divider">
+      <div class="sparkline-row">
+        <h4 class="dark-green"><span>Income</span> $43.330</h4>
+        <div class="sparkline big" data-color="darkGreen"><!--19,14,28,17,5,19,19,3,7,6,4,12--></div>
+      </div>
+
+      <hr class="divider">
+      <div class="sparkline-row">
+        <h4 class="blue"><span>Reviews</span> 223</h4>
+        <div class="sparkline big" data-color="blue"><!--3,15,12,8,16,29,12,17,28,9,29,11--></div>
+      </div>
+
+      <hr class="divider">
+    </div>
+  </div>
+
+
+</div>
+<div class="main-content">
+  <div class="container">
+    <div class="row">
+
+      <div class="area-top clearfix">
+        <div class="pull-left header">
+          <h3 class="title">
+            <i class="icon-edit"></i>
+            Form Elements
+          </h3>
+          <h5>
+            <span>
+              A subtitle can go here
+            </span>
+          </h5>
+        </div>
+
+        <ul class="list-inline pull-right sparkline-box">
+
+          <li class="sparkline-row">
+            <h4 class="blue"><span>Orders</span> 847</h4>
+            <div class="sparkline big" data-color="blue"><!--17,7,29,26,17,5,9,19,4,27,21,22--></div>
+          </li>
+
+          <li class="sparkline-row">
+            <h4 class="green"><span>Reviews</span> 223</h4>
+            <div class="sparkline big" data-color="green"><!--7,16,29,4,9,21,22,23,19,10,16,4--></div>
+          </li>
+
+          <li class="sparkline-row">
+            <h4 class="red"><span>New visits</span> 7930</h4>
+            <div class="sparkline big"><!--7,13,24,6,10,21,17,29,18,12,5,20--></div>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container padded">
+    <div class="row">
+
+      <!-- Breadcrumb line -->
+
+      <div id="breadcrumbs">
+        <div class="breadcrumb-button blue">
+          <span class="breadcrumb-label"><i class="icon-home"></i> Home</span>
+          <span class="breadcrumb-arrow"><span></span></span>
+        </div>
+
+        
+
+        <div class="breadcrumb-button">
+          <span class="breadcrumb-label">
+            <i class="icon-edit"></i> Form Elements
+          </span>
+          <span class="breadcrumb-arrow"><span></span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+  <div class="col-md-12">
+
+    <div class="box">
+      <div class="box-header">
+        <span class="title">Forms</span>
+        <ul class="box-toolbar">
+          <li>
+            <i class="icon-refresh"></i>
+          </li>
+          <li>
+            <input type="checkbox" class="iButton-icons" checked="checked" />
+          </li>
+          <li class="toolbar-link">
+            <a href="#" class="dropdown" data-toggle="dropdown"><i class="icon-cog"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="#"><i class="icon-plus-sign"></i> Add</a></li>
+              <li><a href="#"><i class="icon-remove-sign"></i> Remove</a></li>
+              <li><a href="#"><i class="icon-pencil"></i> Edit</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div class="box-content">
+
+        <form class="fill-up">
+
+          <div class="row">
+            <div class="col-lg-6">
+
+              <ul class="padded separate-sections">
+
+                <li class="input">
+                  <input type="text" placeholder="Email"/>
+                </li>
+
+                <li class="input">
+                  <input type="text" placeholder="Address"/>
+                </li>
+
+                <li class="input">
+                  <input type="text" placeholder="Username"/>
+                </li>
+
+                <li class="input">
+                  <input type="password" placeholder="Password"/>
+                </li>
+
+                <li class="clearfix">
+                  <div class="note pull-right">Please use a secure password</div>
+                </li>
+
+                <li class="input">
+                  <input type="file" name="img">
+                </li>
+
+                <li>
+                  <label>Dropdown with search:</label>
+                  <select class="chzn-select" name="colors">
+<option value="Aero blue">Aero blue</option>
+<option value="Air Force blue (RAF)">Air Force blue (RAF)</option>
+<option value="Air Force blue (USAF)">Air Force blue (USAF)</option>
+<option value="Air superiority blue">Air superiority blue</option>
+<option value="Alabama Crimson">Alabama Crimson</option>
+<option value="Alice blue">Alice blue</option>
+<option value="Alizarin crimson">Alizarin crimson</option>
+<option value="Alloy orange">Alloy orange</option>
+<option value="Almond">Almond</option>
+<option value="Amaranth">Amaranth</option>
+<option value="Amazon">Amazon</option>
+<option value="Amber">Amber</option>
+<option value="SAE/ECE Amber (color)">SAE/ECE Amber (color)</option>
+<option value="American rose">American rose</option>
+<option value="Amethyst">Amethyst</option>
+<option value="Android Green">Android Green</option>
+<option value="Anti-flash white">Anti-flash white</option>
+<option value="Antique brass">Antique brass</option>
+<option value="Antique bronze">Antique bronze</option>
+<option value="Antique fuchsia ">Antique fuchsia </option></select>
+                </li>
+
+                <li>
+                  <label>Dropdown menu:</label>
+
+                  <select class="uniform" name="colors">
+<option value="American rose">American rose</option>
+<option value="Air superiority blue">Air superiority blue</option>
+<option value="Aero blue">Aero blue</option>
+<option value="Amaranth">Amaranth</option>
+<option value="Alabama Crimson">Alabama Crimson</option>
+<option value="Air Force blue (RAF)">Air Force blue (RAF)</option>
+<option value="Alloy orange">Alloy orange</option>
+<option value="Antique brass">Antique brass</option>
+<option value="Android Green">Android Green</option>
+<option value="Amethyst">Amethyst</option>
+<option value="Alice blue">Alice blue</option>
+<option value="SAE/ECE Amber (color)">SAE/ECE Amber (color)</option>
+<option value="Antique fuchsia ">Antique fuchsia </option>
+<option value="Amber">Amber</option>
+<option value="Anti-flash white">Anti-flash white</option>
+<option value="Alizarin crimson">Alizarin crimson</option>
+<option value="Antique bronze">Antique bronze</option>
+<option value="Almond">Almond</option>
+<option value="Air Force blue (USAF)">Air Force blue (USAF)</option>
+<option value="Amazon">Amazon</option></select>
+                </li>
+
+                <li>
+                  <label>Dropdown with multiple choice:</label>
+                  <select multiple="multiple" name="colors[]" class="chzn-select">
+                    <option value="SAE/ECE Amber (color)">SAE/ECE Amber (color)</option>
+                    <option value="Alloy orange">Alloy orange</option>
+                    <option value="Amethyst">Amethyst</option>
+                    <option value="Antique bronze">Antique bronze</option>
+                    <option value="Air superiority blue">Air superiority blue</option>
+                    <option value="Amber" selected="selected">Amber</option>
+                    <option value="Anti-flash white" selected="selected">Anti-flash white</option>
+                    <option value="Android Green">Android Green</option>
+                    <option value="Air Force blue (RAF)">Air Force blue (RAF)</option>
+                    <option value="Amazon">Amazon</option>
+                    <option value="Alabama Crimson">Alabama Crimson</option>
+                    <option value="Amaranth" selected="selected">Amaranth</option>
+                    <option value="Alizarin crimson">Alizarin crimson</option>
+                    <option value="Air Force blue (USAF)">Air Force blue (USAF)</option>
+                    <option value="American rose">American rose</option>
+                    <option value="Alice blue">Alice blue</option>
+                    <option value="Aero blue">Aero blue</option>
+                    <option value="Antique fuchsia ">Antique fuchsia </option>
+                    <option value="Antique brass">Antique brass</option>
+                    <option value="Almond">Almond</option></select>
+                </li>
+
+                <li class="input">
+                  <label>Tags:</label>
+                  <textarea class="tags" placeholder="This is a textarea">tag1,tag2,tag3</textarea>
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-lg-6">
+
+              <ul class="padded separate-sections">
+                <li class="input">
+                  <textarea placeholder="This is a textarea" rows="6"></textarea>
+                </li>
+
+                <li>
+                  <div class="row">
+
+                    <div class="col-lg-6">
+                      <div>
+                        <input type="checkbox" class="icheck" checked id="icheck1">
+                        <label for="icheck1">The number one option</label>
+                      </div>
+
+                      <div>
+                        <input type="checkbox" class="icheck" id="icheck2">
+                        <label for="icheck2">The number two option</label>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                      <div>
+                        <input type="checkbox" class="icheck" disabled id="icheck3">
+                        <label for="icheck3">Number three (disabled)</label>
+                      </div>
+
+                      <div>
+                        <input type="checkbox" class="icheck" checked disabled id="icheck4">
+                        <label for="icheck4">disabled & checked</label>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li>
+                  <input class="datepicker fill-up" type="text" placeholder="date picker">
+                </li>
+
+                <li>
+                  <div class="row">
+
+                    <div class="col-lg-6">
+
+                      <div>
+                        <input type="radio" name="optionsRadios[abc]" class="icheck" checked id="iradio1">
+                        <label for="iradio1">The number one option</label>
+                      </div>
+
+                      <div>
+                        <input type="radio" name="optionsRadios[abc]" class="icheck" id="iradio2">
+                        <label for="iradio2">The number two option</label>
+                      </div>
+
+                    </div>
+
+                    <div class="col-lg-6">
+
+                      <div>
+                        <input type="radio" class="icheck" disabled id="iradio3">
+                        <label for="iradio3">Number three (disabled)</label>
+                      </div>
+
+                      <div>
+                        <input type="radio" class="icheck" checked disabled id="iradio4">
+                        <label for="iradio4">disabled & checked</label>
+                      </div>
+
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row">
+                    <div class="col-md-12">
+
+                      <div class="note large">
+                        <i class="icon-warning-sign"></i> Warning: You have to complete all fields
+                      </div>
+
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non felis non orci congue mollis. Sed euismod magna sed nunc dignissim tincidunt. Maecenas faucibus varius elit.
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-blue">Save changes</button>
+            <button type="button" class="btn btn-default">Cancel</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-md-12">
+
+    <div class="box">
+      <div class="box-header">
+        <span class="title"><i class="icon-warning-sign"></i> Forms with validation</span>
+      </div>
+
+      <div class="box-content">
+
+        <form class="form-horizontal fill-up validatable">
+
+          <div class="padded">
+
+            <div class="form-group">
+              <label class="control-label col-lg-2">Email</label>
+              <div class="col-lg-10">
+                <input type="text" class="validate[required]" data-prompt-position="topLeft"/>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label col-lg-2">Address</label>
+              <div class="col-lg-10">
+                <input type="text" class="validate[required]" data-prompt-position="topLeft"/>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label col-lg-2">Username</label>
+              <div class="col-lg-10">
+                <input type="text" class="validate[required]" data-prompt-position="topLeft"/>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label col-lg-2">Password</label>
+              <div class="col-lg-10">
+                <input type="password" id="password" class="validate[required,minSize[4]]">
+                <span class="help-block note"><i class="icon-warning-sign"></i> Please use a secure password.</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="control-label col-lg-2">Confirmation</label>
+              <div class="col-lg-10">
+                <input type="password" id="password_confirmation" class="validate[required,equals[password],minSize[4]]"/>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-blue">Save changes</button>
+            <button type="button" class="btn btn-default">Cancel</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="box">
+  <div class="box-header"><span class="title">Bootstrap X-Editable</span></div>
+  <div class="box-content padded">
+    <table id="user" class="table table-bordered table-striped responsive" style="clear: both">
+  <tbody>
+  <tr>
+    <td width="35%">Simple text field</td>
+    <td width="65%"><a href="#" id="username" data-type="text" data-pk="1" data-original-title="Enter username">superuser</a></td>
+  </tr>
+  <tr>
+    <td>Empty text field, required</td>
+    <td><a href="#" id="firstname" data-type="text" data-pk="1" data-placement="right" data-placeholder="Required" data-original-title="Enter your firstname"></a></td>
+  </tr>
+  <tr>
+    <td>Select, local array, custom display</td>
+    <td><a href="#" id="sex" data-type="select" data-pk="1" data-value="" data-original-title="Select sex"></a></td>
+  </tr>
+  <tr>
+    <td>Select, remote array, no buttons</td>
+    <td><a href="#" id="group" data-type="select" data-pk="1" data-value="5" data-source="/groups" data-original-title="Select group">Admin</a></td>
+  </tr>
+  <tr>
+    <td>Select, error while loading</td>
+    <td><a href="#" id="status" data-type="select" data-pk="1" data-value="0" data-source="/status" data-original-title="Select status">Active</a></td>
+  </tr>
+
+  <tr>
+    <td>Combodate (date)</td>
+    <td><a href="#" id="dob" data-type="combodate" data-value="1984-05-15" data-format="YYYY-MM-DD" data-viewformat="DD/MM/YYYY" data-template="D / MMM / YYYY" data-pk="1"  data-original-title="Select Date of birth"></a></td>
+  </tr>
+  <tr>
+    <td>Combodate (datetime)</td>
+    <td><a href="#" id="event" data-type="combodate" data-template="D MMM YYYY  HH:mm" data-format="YYYY-MM-DD HH:mm" data-viewformat="MMM D, YYYY, HH:mm" data-pk="1"  data-original-title="Setup event date and time"></a></td>
+  </tr>
+
+
+
+  <tr>
+    <td>Textarea, buttons below. Submit by <i>ctrl+enter</i></td>
+    <td><a href="#" id="comments" data-type="textarea" data-pk="1" data-placeholder="Your comments here..." data-original-title="Enter comments">awesome
+      user!</a></td>
+  </tr>
+
+  <tr>
+    <td>Checklist</td>
+    <td><a href="#" id="fruits" data-type="checklist" data-value="2,3" data-original-title="Select fruits"></a></td>
+  </tr>
+
+  <tr>
+    <td>Select2 (tags mode)</td>
+    <td><a href="#" id="tags" data-type="select2" data-pk="1" data-original-title="Enter tags">html, javascript</a></td>
+  </tr>
+
+  <tr>
+    <td>Select2 (dropdown mode)</td>
+    <td><a href="#" id="country" data-type="select2" data-pk="1" data-value="BS" data-original-title="Select country"></a></td>
+  </tr>
+
+  <tr>
+    <td>Custom input, several fields</td>
+    <td><a href="#" id="address" data-type="address" data-pk="1" data-original-title="Please, fill address"></a></td>
+  </tr>
+
+
+  </tbody>
+</table>
+  </div>
+</div>
+
+
+
+
+  </div>
+</div>
+
+</body>
+</html>

@@ -14,6 +14,14 @@ module.exports = function (grunt) {
       '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
       ' Licensed <%= props.license %> */\n',
     // Task configuration
+    clean: {
+      dist: {
+        files: [{
+          dot: true,
+          src: ['dist/']
+        }]
+      }
+    },
     concat: {
       options: {
         banner: '<%= banner %>',
@@ -31,6 +39,16 @@ module.exports = function (grunt) {
       dist: {
         src: '<%= concat.dist.dest %>',
         dest: 'dist/design.min.js'
+      }
+    },
+    copy: {
+      dist: {
+        files: [{
+          expand: true,
+          cwd: 'site/',
+          src: ['**'],
+          dest: 'dist/'
+        }]
       }
     },
     jshint: {
@@ -84,6 +102,16 @@ module.exports = function (grunt) {
           open: true
         }
       }
+    },
+    buildcontrol: {
+      dist: {
+        options: {
+          remote: 'git@github.com:Gizra/arava-ect.git',
+          branch: 'gh-pages',
+          commit: true,
+          push: true
+        }
+      }
     }
   });
 
@@ -96,10 +124,10 @@ module.exports = function (grunt) {
 
   // Default task
   grunt.registerTask('build', [
+    'clean:dist',
     'jshint',
     'copy:dist',
-    'connect:livereload',
-    'watch'
+    'buildcontrol'
   ]);
 };
 
