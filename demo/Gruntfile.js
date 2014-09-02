@@ -70,10 +70,10 @@ module.exports = function (grunt) {
           livereload: '<%= connect.options.livereload %>'
         },
         files: [
-          'site/pages/{,*/}*.html',
-          'site/stylesheets/{,*/}*.css',
-          'site/javascripts/{,*/}*.js',
-          'site/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
+          'site/pages/**/*.html',
+          'site/stylesheets/**/*.css',
+          'site/javascripts/**/*.js',
+          'site/images/**/*.{png,jpg,jpeg,gif,webp,svg}'
         ]
       }
     },
@@ -82,8 +82,7 @@ module.exports = function (grunt) {
         port: 7000,
         // Change this to '0.0.0.0' to access the server from outside.
         hostname: 'localhost',
-        livereload: 35733,
-        keepalive: true
+        livereload: 35733
       },
       livereload: {
         options: {
