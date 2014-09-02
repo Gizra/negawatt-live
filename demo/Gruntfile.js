@@ -1,5 +1,9 @@
 module.exports = function (grunt) {
   'use strict';
+
+  // load all grunt tasks matching the `grunt-*` pattern
+  require('load-grunt-tasks')(grunt);
+
   // Project configuration
   grunt.initConfig({
     // Metadata
@@ -48,13 +52,7 @@ module.exports = function (grunt) {
       },
       gruntfile: {
         src: 'Gruntfile.js'
-      },
-      lib_test: {
-        src: ['lib/**/*.js', 'test/**/*.js']
       }
-    },
-    qunit: {
-      files: ['test/**/*.html']
     },
     watch: {
       gruntfile: {
@@ -89,13 +87,6 @@ module.exports = function (grunt) {
     }
   });
 
-  // These plugins provide necessary tasks
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-connect');
-
   // Default task
   grunt.registerTask('serve', [
     'jshint',
@@ -106,8 +97,7 @@ module.exports = function (grunt) {
   // Default task
   grunt.registerTask('build', [
     'jshint',
-    'concat',
-    'uglify',
+    'copy:dist',
     'connect:livereload',
     'watch'
   ]);
