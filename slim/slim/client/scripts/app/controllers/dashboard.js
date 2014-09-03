@@ -1,7 +1,7 @@
 'use strict';
 
-angular.module('aravaApp')
-  .controller('DashboardCtrl', function ($scope, Account, Counter) {
+angular.module('app')
+  .controller('DashboardAravaCtrl', function ($scope, Account, Counter) {
   var selection;
 
   // Map geolocation default value.

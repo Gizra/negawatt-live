@@ -3949,36 +3949,22 @@ img.img80_80 {
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gizra\/Dev\/arava-ect\/slim\/slim\/client\/styles\/ui\/components\/_timeline\.scss}line{font-family:\000033}}
-.ui-timline-container {
-  padding: 15px;
+.timeline-dashboard {
+  height: 550px;
+  overflow: scroll;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gizra\/Dev\/arava-ect\/slim\/slim\/client\/styles\/ui\/components\/_timeline\.scss}line{font-family:\0000311}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gizra\/Dev\/arava-ect\/slim\/slim\/client\/styles\/ui\/components\/_timeline\.scss}line{font-family:\000038}}
+.ui-timline-container {
+  padding-left: 21px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gizra\/Dev\/arava-ect\/slim\/slim\/client\/styles\/ui\/components\/_timeline\.scss}line{font-family:\0000314}}
 .ui-timline-left .ui-timeline:before {
   left: 0;
 }
-@media (min-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gizra\/Dev\/arava-ect\/slim\/slim\/client\/styles\/ui\/components\/_timeline\.scss}line{font-family:\0000316}}
-  .ui-timline-left .ui-timeline .tl-item:before {
-    display: none;
-  }
-}
-@media (min-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gizra\/Dev\/arava-ect\/slim\/slim\/client\/styles\/ui\/components\/_timeline\.scss}line{font-family:\0000322}}
-  .ui-timline-left .ui-timeline .tl-item .tl-caption {
-    margin-left: -55px;
-  }
-}
-@media (min-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gizra\/Dev\/arava-ect\/slim\/slim\/client\/styles\/ui\/components\/_timeline\.scss}line{font-family:\0000330}}
-  .ui-timline-left .ui-timeline .tl-item .tl-body .tl-time {
-    left: auto;
-    right: 15px;
-    color: #999999;
-  }
-}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gizra\/Dev\/arava-ect\/slim\/slim\/client\/styles\/ui\/components\/_timeline\.scss}line{font-family:\0000342}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gizra\/Dev\/arava-ect\/slim\/slim\/client\/styles\/ui\/components\/_timeline\.scss}line{font-family:\0000320}}
 .ui-timeline {
   display: table;
   position: relative;
@@ -3987,7 +3973,7 @@ img.img80_80 {
   border-spacing: 0;
   border-collapse: collapse;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gizra\/Dev\/arava-ect\/slim\/slim\/client\/styles\/ui\/components\/_timeline\.scss}line{font-family:\0000349}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gizra\/Dev\/arava-ect\/slim\/slim\/client\/styles\/ui\/components\/_timeline\.scss}line{font-family:\0000327}}
 .ui-timeline:before {
   background-color: #d5d5d5;
   bottom: 0px;
@@ -3998,90 +3984,33 @@ img.img80_80 {
   width: 1px;
   z-index: 0;
 }
-@media (min-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gizra\/Dev\/arava-ect\/slim\/slim\/client\/styles\/ui\/components\/_timeline\.scss}line{font-family:\0000349}}
-  .ui-timeline:before {
-    left: 50%;
-  }
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gizra\/Dev\/arava-ect\/slim\/slim\/client\/styles\/ui\/components\/_timeline\.scss}line{font-family:\0000363}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gizra\/Dev\/arava-ect\/slim\/slim\/client\/styles\/ui\/components\/_timeline\.scss}line{font-family:\0000338}}
 .ui-timeline .tl-item {
   display: table-row;
   margin-bottom: 5px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gizra\/Dev\/arava-ect\/slim\/slim\/client\/styles\/ui\/components\/_timeline\.scss}line{font-family:\0000366}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gizra\/Dev\/arava-ect\/slim\/slim\/client\/styles\/ui\/components\/_timeline\.scss}line{font-family:\0000341}}
 .ui-timeline .tl-item:before {
   display: none;
   content: "";
 }
-@media (min-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gizra\/Dev\/arava-ect\/slim\/slim\/client\/styles\/ui\/components\/_timeline\.scss}line{font-family:\0000366}}
-  .ui-timeline .tl-item:before {
-    display: block;
-    width: 50%;
-  }
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gizra\/Dev\/arava-ect\/slim\/slim\/client\/styles\/ui\/components\/_timeline\.scss}line{font-family:\0000375}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gizra\/Dev\/arava-ect\/slim\/slim\/client\/styles\/ui\/components\/_timeline\.scss}line{font-family:\0000346}}
 .ui-timeline .tl-item .tl-caption {
   width: 150px;
   margin-left: -55px;
 }
-@media (min-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gizra\/Dev\/arava-ect\/slim\/slim\/client\/styles\/ui\/components\/_timeline\.scss}line{font-family:\0000375}}
-  .ui-timeline .tl-item .tl-caption {
-    margin-left: -110px;
-  }
-}
-@media (min-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gizra\/Dev\/arava-ect\/slim\/slim\/client\/styles\/ui\/components\/_timeline\.scss}line{font-family:\0000384}}
-  .ui-timeline .tl-item.alt {
-    text-align: right;
-  }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gizra\/Dev\/arava-ect\/slim\/slim\/client\/styles\/ui\/components\/_timeline\.scss}line{font-family:\0000387}}
-  .ui-timeline .tl-item.alt:before {
-    display: none;
-  }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gizra\/Dev\/arava-ect\/slim\/slim\/client\/styles\/ui\/components\/_timeline\.scss}line{font-family:\0000390}}
-  .ui-timeline .tl-item.alt:after {
-    content: "";
-    display: block;
-    width: 50%;
-  }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gizra\/Dev\/arava-ect\/slim\/slim\/client\/styles\/ui\/components\/_timeline\.scss}line{font-family:\0000397}}
-  .ui-timeline .tl-item.alt .tl-body .tl-entry {
-    margin: 0 35px 15px 0;
-  }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gizra\/Dev\/arava-ect\/slim\/slim\/client\/styles\/ui\/components\/_timeline\.scss}line{font-family:\00003100}}
-  .ui-timeline .tl-item.alt .tl-body .tl-time {
-    right: -220px;
-    left: auto;
-    text-align: left;
-  }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gizra\/Dev\/arava-ect\/slim\/slim\/client\/styles\/ui\/components\/_timeline\.scss}line{font-family:\00003105}}
-  .ui-timeline .tl-item.alt .tl-body .tl-icon {
-    right: -53px;
-    left: auto;
-  }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gizra\/Dev\/arava-ect\/slim\/slim\/client\/styles\/ui\/components\/_timeline\.scss}line{font-family:\00003110}}
-  .ui-timeline .tl-item.alt .tl-body .tl-content:after {
-    right: -16px;
-    left: auto;
-    border: 8px solid transparent;
-    border-left: 8px solid rgba(255, 255, 255, 0.9);
-  }
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gizra\/Dev\/arava-ect\/slim\/slim\/client\/styles\/ui\/components\/_timeline\.scss}line{font-family:\00003121}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gizra\/Dev\/arava-ect\/slim\/slim\/client\/styles\/ui\/components\/_timeline\.scss}line{font-family:\0000351}}
 .ui-timeline .tl-item .tl-body {
   display: table-cell;
   width: 50%;
   vertical-align: top;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gizra\/Dev\/arava-ect\/slim\/slim\/client\/styles\/ui\/components\/_timeline\.scss}line{font-family:\00003126}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gizra\/Dev\/arava-ect\/slim\/slim\/client\/styles\/ui\/components\/_timeline\.scss}line{font-family:\0000356}}
 .ui-timeline .tl-item .tl-body .tl-entry {
   position: relative;
   margin: 0 0 15px 36px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gizra\/Dev\/arava-ect\/slim\/slim\/client\/styles\/ui\/components\/_timeline\.scss}line{font-family:\00003130}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gizra\/Dev\/arava-ect\/slim\/slim\/client\/styles\/ui\/components\/_timeline\.scss}line{font-family:\0000360}}
 .ui-timeline .tl-item .tl-body .tl-time {
   z-index: 1;
   position: absolute;
@@ -4090,31 +4019,23 @@ img.img80_80 {
   top: 5px;
   width: 150px;
   color: #999999;
-  line-height: 35px;
+  line-height: 10px;
   text-align: right;
 }
-@media (min-width: 768px) {
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gizra\/Dev\/arava-ect\/slim\/slim\/client\/styles\/ui\/components\/_timeline\.scss}line{font-family:\00003130}}
-  .ui-timeline .tl-item .tl-body .tl-time {
-    left: -220px;
-    right: auto;
-    color: #626262;
-  }
-}
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gizra\/Dev\/arava-ect\/slim\/slim\/client\/styles\/ui\/components\/_timeline\.scss}line{font-family:\00003146}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gizra\/Dev\/arava-ect\/slim\/slim\/client\/styles\/ui\/components\/_timeline\.scss}line{font-family:\0000371}}
 .ui-timeline .tl-item .tl-body .tl-icon {
   position: absolute;
   left: -53px;
   top: 5px;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gizra\/Dev\/arava-ect\/slim\/slim\/client\/styles\/ui\/components\/_timeline\.scss}line{font-family:\00003152}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gizra\/Dev\/arava-ect\/slim\/slim\/client\/styles\/ui\/components\/_timeline\.scss}line{font-family:\0000377}}
 .ui-timeline .tl-item .tl-body .tl-content {
   position: relative;
   padding: 15px;
   border-radius: 2px;
   background-color: rgba(255, 255, 255, 0.9);
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gizra\/Dev\/arava-ect\/slim\/slim\/client\/styles\/ui\/components\/_timeline\.scss}line{font-family:\00003157}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gizra\/Dev\/arava-ect\/slim\/slim\/client\/styles\/ui\/components\/_timeline\.scss}line{font-family:\0000382}}
 .ui-timeline .tl-item .tl-body .tl-content:after {
   content: " ";
   line-height: 0;

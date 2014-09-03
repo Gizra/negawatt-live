@@ -1,18 +1,40 @@
 $TL_content_bg:         rgba(255,255,255,.9);
 
-.timeline-dashboard {
-  height: 550px;
-  overflow: scroll;
-}
-
 .ui-timline-container {
-  padding-left: 21px;
+  padding: 15px;
+
+
 }
 
 .ui-timline-left {
   .ui-timeline {
     &:before {
       left: 0;
+    }
+
+    .tl-item {
+      &:before {
+        @media (min-width: $screen-sm) {
+          display: none;
+        }
+      }
+
+      .tl-caption {
+        @media (min-width: $screen-sm) {
+          margin-left: -55px;
+        }
+      }
+
+
+      .tl-body {
+        .tl-time {
+          @media (min-width: $screen-sm) {
+            left: auto;
+            right: 15px;
+            color: $gray-light;
+          }
+        }
+      }
     }
   }
 }
@@ -33,6 +55,9 @@ $TL_content_bg:         rgba(255,255,255,.9);
     top: 30px;
     width: 1px;
     z-index: 0;
+    @media (min-width: $screen-sm) {
+      left: 50%;
+    }
   }
 
   .tl-item {
@@ -41,11 +66,56 @@ $TL_content_bg:         rgba(255,255,255,.9);
     &:before {
       display: none;
       content: "";
+      @media (min-width: $screen-sm) {
+        display: block;
+        width: 50%;
+      }
     }
 
     .tl-caption {
       width: 150px;
       margin-left: -55px;
+      @media (min-width: $screen-sm) {
+        margin-left: -110px;
+      }
+
+    }
+
+    &.alt {
+      @media (min-width: $screen-sm) {
+        text-align: right;
+        &:before {
+          display: none;
+        }
+        &:after {
+          content: "";
+          display: block;
+          width: 50%;
+        }
+
+        .tl-body {
+          .tl-entry {
+            margin: 0 35px 15px 0;
+          }
+          .tl-time {
+            right: -220px;
+            left: auto;
+            text-align: left;
+          }
+          .tl-icon {
+            right: -53px;
+            left: auto;
+          }
+          .tl-content {
+            &:after {
+              right: -16px;
+              left: auto;
+              border: 8px solid transparent;
+              border-left: 8px solid $TL_content_bg;
+            }
+          }
+        }
+      }
     }
 
     .tl-body {
@@ -65,8 +135,13 @@ $TL_content_bg:         rgba(255,255,255,.9);
         top: 5px;
         width: 150px;
         color: $gray-light;
-        line-height: 10px;
+        line-height: 35px;
         text-align: right;
+        @media (min-width: $screen-sm) {
+          left: -220px;
+          right: auto;
+          color: $text-color;
+        }
       }
       .tl-icon {
         position: absolute;

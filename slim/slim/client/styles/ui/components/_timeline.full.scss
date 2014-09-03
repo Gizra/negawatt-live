@@ -1,12 +1,7 @@
 $TL_content_bg:         rgba(255,255,255,.9);
 
-.timeline-dashboard {
-  height: 550px;
-  overflow: scroll;
-}
-
 .ui-timline-container {
-  padding-left: 21px;
+  padding: 15px;
 }
 
 .ui-timline-left {
@@ -65,7 +60,7 @@ $TL_content_bg:         rgba(255,255,255,.9);
         top: 5px;
         width: 150px;
         color: $gray-light;
-        line-height: 10px;
+        line-height: 35px;
         text-align: right;
       }
       .tl-icon {
