@@ -3571,7 +3571,7 @@ img.img80_80 {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gizra\/Dev\/arava-ect\/slim\/slim\/client\/styles\/ui\/components\/_panels\.scss}line{font-family:\00003116}}
 .mini-box {
   min-height: 120px;
-  padding: 25px;
+  padding: 5px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gizra\/Dev\/arava-ect\/slim\/slim\/client\/styles\/ui\/components\/_panels\.scss}line{font-family:\00003119}}
 .mini-box .box-icon {
@@ -3591,7 +3591,7 @@ img.img80_80 {
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gizra\/Dev\/arava-ect\/slim\/slim\/client\/styles\/ui\/components\/_panels\.scss}line{font-family:\00003134}}
 .mini-box .btn-icon,
 .mini-box .btn-icon-lined {
-  margin: 0 15px 0 0;
+  margin: 10px 0 5px 0;
   font-size: 32px;
 }
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/gizra\/Dev\/arava-ect\/slim\/slim\/client\/styles\/ui\/components\/_panels\.scss}line{font-family:\00003141}}

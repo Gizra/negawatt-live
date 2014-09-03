@@ -89,5 +89,6 @@
     "intro": "",
     "landing": "",
     "landing page": "",
-    "calendar": ""
+    "calendar": "",
+    "lastYear": "Last Year"
 }
