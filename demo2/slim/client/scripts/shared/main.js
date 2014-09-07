@@ -77,64 +77,71 @@
     }
   ]).controller('DashboardCtrl', ['$scope', 'Account', 'Counter', function($scope, Account, Counter) {
     var selection;
+    $scope.name = 'קרית גת';
+    $scope.city = {
+      lat: 31.60456292,
+      lng: 34.77408885,
+      zoom: 14
+    };
 
     // DEMO HARDCODE - Set markers.
-    angular.extend($scope, {
-      arad: {
-        lat: 31.258,
-        lng: 35.21,
-        zoom: 15
-      },
-      markers: {
-        marker1: {
-          lat: 31.258,
-          lng: 35.214,
-          focus: false,
-          message: 'יסודי יעלים-עופרים',
-          title: 'יסודי יעלים-עופרים',
-          draggable: false
-        },
-        marker2: {
-          lat: 31.261,
-          lng: 35.215,
-          focus: false,
-          message: 'מקיף אורט ערד',
-          title: 'מקיף אורט ערד',
-          draggable: false
-        },
-        marker3: {
-          lat: 31.255,
-          lng: 35.207,
-          focus: false,
-          message: 'יסודי אבישור',
-          title: 'יסודי אבישור',
-          draggable: false
-        },
-        marker4: {
-          lat: 31.26,
-          lng: 35.203,
-          focus: false,
-          message: 'ממלכתי חלמיש',
-          title: 'ממלכתי חלמיש',
-          draggable: false
-        },
-        marker5: {
-          lat: 31.249,
-          lng: 35.217,
-          focus: false,
-          message: 'אולפנת בני עקיבא',
-          title: 'אולפנת בני עקיבא',
-          draggable: false
-        }
-      }
-    });
+
+//    angular.extend($scope, {
+//      arad: {
+//        lat: 31.6432251,
+//        lng: 34.804252,
+//        zoom: 8
+//      },
+//      markers: {
+//        marker1: {
+//          lat: 31.258,
+//          lng: 35.214,
+//          focus: false,
+//          message: 'יסודי יעלים-עופרים',
+//          title: 'יסודי יעלים-עופרים',
+//          draggable: false
+//        },
+//        marker2: {
+//          lat: 31.261,
+//          lng: 35.215,
+//          focus: false,
+//          message: 'מקיף אורט ערד',
+//          title: 'מקיף אורט ערד',
+//          draggable: false
+//        },
+//        marker3: {
+//          lat: 31.255,
+//          lng: 35.207,
+//          focus: false,
+//          message: 'יסודי אבישור',
+//          title: 'יסודי אבישור',
+//          draggable: false
+//        },
+//        marker4: {
+//          lat: 31.26,
+//          lng: 35.203,
+//          focus: false,
+//          message: 'ממלכתי חלמיש',
+//          title: 'ממלכתי חלמיש',
+//          draggable: false
+//        },
+//        marker5: {
+//          lat: 31.249,
+//          lng: 35.217,
+//          focus: false,
+//          message: 'אולפנת בני עקיבא',
+//          title: 'אולפנת בני עקיבא',
+//          draggable: false
+//        }
+//      }
+//    });
 
     // Get list of counters.
     Counter.get().then(function(response) {
-      $scope.counters = {
-        list: response.data.counters,
-        totals: response.data.totals
-      };
+      $scope.counters = response.data.counters;
+
+      $scope.totals = response.data.total;
+      console.log('COUNTERS:', response.data);
     });
 
     selection = {
@@ -147,11 +154,6 @@
       $scope.account = angular.extend(selection, response.data);
     });
 
-    $scope.$watch('counters', function(counters) {
-      if (counters) {
-        console.log('COUNTERS:', counters);
-      }
-    });
 
     $scope.$watch('account', function(account) {
       if (account) {
