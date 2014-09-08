@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('app')
-  .controller('AccountReportCtrl', ['$scope', 'Account', 'moment', function($scope, Account, moment) {
+  .controller('AccountReportCtrl', ['$scope', 'Account', function($scope, Account) {
     $scope.line1 = {};
     $scope.line1.options = {
       series: {
@@ -62,38 +62,20 @@ angular.module('app')
       {
         data: [ ],
         label: 'Trend'
-      },
-      {
-        data: [ ],
-        label: 'Other'
       }
     ];
-
-    refesh
 
     // Get account (city) consumption information.
     Account.getReport().then(function(response) {
       console.log(response.data1);
-      /*
-      $scope.line1.data = [
-        {
-          data: response.data1,
-          label: 'Trend'
-        }
-      ];
-      */
+
+      // Update data.
       $scope.line1.data[0].data = response.data1;
 
+      // Refresh chart.
+      $scope.$broadcast('refresh_report');
       console.log($scope.line1.data[0].data)
 
     });
-    /*
-    $scope.$watch('account', function(account) {
-      if (account) {
-        console.log('ACCOUNT:', account);
-      }
-    });
-   */
-
 
   }]);

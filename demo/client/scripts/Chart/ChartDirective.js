@@ -7,16 +7,17 @@
         scope: {
           data: '=',
           options: '=',
-          refesh: '&'
+          refresh: '&'
         },
         link: function(scope, ele, attrs) {
           var data, options, plot;
           data = scope.data;
           options = scope.options;
 
-          scope.refresh = function() {
-            console.log('refresing');
-          };
+          // Refresh report.
+          scope.$on('refresh_report', function() {
+            $.plot(ele[0], data, options);
+          });
 
           return plot = $.plot(ele[0], data, options);
         }
