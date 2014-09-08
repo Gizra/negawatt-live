@@ -12,7 +12,7 @@ angular.module('app')
      * @param selection
      */
     this.getReport = function(selection) {
-      var lineChart1,
+      var chart,
         deferred = $q.defer();
 
       // Define by default last year
@@ -23,8 +23,11 @@ angular.module('app')
         };
       }
 
-      lineChart1 = {};
-      lineChart1.data1 = [
+      // Get account data.
+
+
+      chart = {};
+      chart.data1 = [
         [1, 15],
         [2, 20],
         [3, 14],
@@ -36,7 +39,7 @@ angular.module('app')
         [9, 22]
       ];
 
-      deferred.resolve(lineChart1);
+      deferred.resolve(chart);
 
       return deferred.promise;
 

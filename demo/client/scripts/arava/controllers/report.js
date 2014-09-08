@@ -60,21 +60,26 @@ angular.module('app')
 
     $scope.line1.data = [
       {
-        data: [ ],
-        label: 'Trend'
+        label: 'Total Kwh.'
+      },
+      {
+        label: 'Maximum Kwh.'
+      },
+      {
+        label: 'Medium Kwh.'
+      },
+      {
+        label: 'Low Kwh.'
       }
     ];
 
     // Get account (city) consumption information.
     Account.getReport().then(function(response) {
-      console.log(response.data1);
-
       // Update data.
       $scope.line1.data[0].data = response.data1;
 
       // Refresh chart.
       $scope.$broadcast('refresh_report');
-      console.log($scope.line1.data[0].data)
 
     });
 
