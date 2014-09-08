@@ -237,7 +237,20 @@
               dot: true,
               cwd: '<%= yeoman.app %>',
               dest: '<%= yeoman.dist %>',
-              src: ['favicon.ico', 'bower_components/font-awesome/css/*', 'bower_components/font-awesome/fonts/*', 'bower_components/weather-icons/css/*', 'bower_components/weather-icons/font/*', 'fonts/**/*', 'i18n/**/*', 'images/**/*', 'styles/fonts/**/*', 'styles/img/**/*', 'styles/ui/images/*', 'views/**/*']
+              src: [
+                'favicon.ico',
+                'bower_components/font-awesome/css/*',
+                'bower_components/font-awesome/fonts/*',
+                'bower_components/weather-icons/css/*',
+                'bower_components/weather-icons/font/*',
+                'data/*',
+                'fonts/**/*', 'i18n/**/*', 'images/**/*',
+                'styles/fonts/**/*',
+                'styles/img/**/*',
+                'styles/ui/images/*',
+                'views/**/*',
+                'CNAME'
+              ]
             }, {
               expand: true,
               cwd: '.tmp',
