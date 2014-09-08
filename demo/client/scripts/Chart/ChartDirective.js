@@ -6,12 +6,18 @@
         restrict: 'A',
         scope: {
           data: '=',
-          options: '='
+          options: '=',
+          refesh: '&'
         },
         link: function(scope, ele, attrs) {
           var data, options, plot;
           data = scope.data;
           options = scope.options;
+
+          scope.refresh = function() {
+            console.log('refresing');
+          };
+
           return plot = $.plot(ele[0], data, options);
         }
       };
