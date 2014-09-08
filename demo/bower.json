@@ -28,7 +28,8 @@
     "flot": "~0.8.3",
     "flot.tooltip": "~0.8.0",
     "flot.curvedlines": "*",
-    "jvectormap": "~1.2.2"
+    "jvectormap": "~1.2.2",
+    "angular-moment": "~0.8.2"
   },
   "devDependencies": {
     "holderjs": "~2.3.1",
