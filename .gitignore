@@ -3,3 +3,5 @@ node_modules
 bower_components
 demo/config.json
 demo/dist/
+.tmp
+.sass-cache
