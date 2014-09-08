@@ -1,0 +1,4005 @@
+{"totals": {
+  "contracts": 215,
+  "counters": 252
+}, "counters": [
+  {
+    "id": 0,
+    "contract": 908249,
+    "contractStart": null,
+    "place": {
+      "address": "השופטים ע\"י מס 4 מאור רחו",
+      "description": "מאור רחובות",
+      "locality": "קרית גת",
+      "geolocation": {
+        "address_components": [
+          {
+            "long_name": "קרית גת",
+            "short_name": "ק\"ג",
+            "types": ["locality", "political"]
+          },
+          {
+            "long_name": "ישראל",
+            "short_name": "IL",
+            "types": ["country", "political"]
+          }
+        ],
+        "formatted_address": "קרית גת, ישראל",
+        "geometry": {
+          "bounds": {
+            "northeast": {
+              "lat": 31.6432251,
+              "lng": 34.804252
+            },
+            "southwest": {
+              "lat": 31.6146065,
+              "lng": 34.749627
+            }
+          },
+          "location": {
+            "lat": 31.611148,
+            "lng": 34.768459
+          },
+          "location_type": "APPROXIMATE",
+          "viewport": {
+            "northeast": {
+              "lat": 31.6432251,
+              "lng": 34.804252
+            },
+            "southwest": {
+              "lat": 31.5759471,
+              "lng": 34.749627
+            }
+          }
+        },
+        "partial_match": true,
+        "types": ["locality", "political"]
+      }
+    },
+    "counter": {
+      "code": 442,
+      "serial": 34473664
+    },
+    "installationDate": 1063054800000
+  },
+  {
+    "id": 1,
+    "contract": 919834,
+    "contractStart": null,
+    "place": {
+      "address": "שד העצמאות 30",
+      "description": "אולם כדורסל_שלאון",
+      "locality": "קרית גת",
+      "geolocation": {
+        "address_components": [
+          {
+            "long_name": "קרית גת",
+            "short_name": "ק\"ג",
+            "types": ["locality", "political"]
+          },
+          {
+            "long_name": "ישראל",
+            "short_name": "IL",
+            "types": ["country", "political"]
+          }
+        ],
+        "formatted_address": "קרית גת, ישראל",
+        "geometry": {
+          "bounds": {
+            "northeast": {
+              "lat": 31.6432251,
+              "lng": 34.804252
+            },
+            "southwest": {
+              "lat": 31.5759471,
+              "lng": 34.749627
+            }
+          },
+          "location": {
+            "lat": 31.6111984,
+            "lng": 34.7744589
+          },
+          "location_type": "APPROXIMATE",
+          "viewport": {
+            "northeast": {
+              "lat": 31.6432251,
+              "lng": 34.804252
+            },
+            "southwest": {
+              "lat": 31.5759471,
+              "lng": 34.749627
+            }
+          }
+        },
+        "partial_match": true,
+        "types": ["locality", "political"]
+      }
+    },
+    "counter": {
+      "code": 373,
+      "serial": 48245
+    },
+    "installationDate": 347925600000
+  },
+  {
+    "id": 2,
+    "contract": 920169,
+    "contractStart": 347839200000,
+    "place": {
+      "address": "ככר פז ע'י מועצת הפועלים",
+      "description": "מאור רחובות",
+      "locality": "קרית גת",
+      "geolocation": {
+        "address_components": [
+          {
+            "long_name": "קרית גת",
+            "short_name": "ק\"ג",
+            "types": ["locality", "political"]
+          },
+          {
+            "long_name": "ישראל",
+            "short_name": "IL",
+            "types": ["country", "political"]
+          }
+        ],
+        "formatted_address": "קרית גת, ישראל",
+        "geometry": {
+          "bounds": {
+            "northeast": {
+              "lat": 31.6432251,
+              "lng": 34.804252
+            },
+            "southwest": {
+              "lat": 31.5759471,
+              "lng": 34.749627
+            }
+          },
+          "location": {
+            "lat": 31.611148,
+            "lng": 34.768459
+          },
+          "location_type": "APPROXIMATE",
+          "viewport": {
+            "northeast": {
+              "lat": 31.6432251,
+              "lng": 34.804252
+            },
+            "southwest": {
+              "lat": 31.5759471,
+              "lng": 34.749627
+            }
+          }
+        },
+        "partial_match": true,
+        "types": ["locality", "political"]
+      }
+    },
+    "counter": {
+      "code": 442,
+      "serial": 35186452
+    },
+    "installationDate": null
+  },
+  {
+    "id": 3,
+    "contract": 930696,
+    "contractStart": 747525600000,
+    "place": {
+      "address": "הגבורה מאחורי מס 13 מ.ר",
+      "description": "מאור רחובות",
+      "locality": "קרית גת",
+      "geolocation": {
+        "address_components": [
+          {
+            "long_name": "קרית גת",
+            "short_name": "ק\"ג",
+            "types": ["locality", "political"]
+          },
+          {
+            "long_name": "ישראל",
+            "short_name": "IL",
+            "types": ["country", "political"]
+          }
+        ],
+        "formatted_address": "קרית גת, ישראל",
+        "geometry": {
+          "bounds": {
+            "northeast": {
+              "lat": 31.6432251,
+              "lng": 34.804252
+            },
+            "southwest": {
+              "lat": 31.5759471,
+              "lng": 34.749627
+            }
+          },
+          "location": {
+            "lat": 31.6027561,
+            "lng": 34.760065
+          },
+          "location_type": "APPROXIMATE",
+          "viewport": {
+            "northeast": {
+              "lat": 31.6432251,
+              "lng": 34.804252
+            },
+            "southwest": {
+              "lat": 31.5759471,
+              "lng": 34.749627
+            }
+          }
+        },
+        "partial_match": true,
+        "types": ["locality", "political"]
+      }
+    },
+    "counter": {
+      "code": 462,
+      "serial": 4138859
+    },
+    "installationDate": 1073340000000
+  },
+  {
+    "id": 4,
+    "contract": 931181,
+    "contractStart": null,
+    "place": {
+      "address": "מבוא ליבנה ע\"י 2 מאור רחו",
+      "description": "מאור רחובות",
+      "locality": "קרית גת",
+      "geolocation": {
+        "address_components": [
+          {
+            "long_name": "קרית גת",
+            "short_name": "ק\"ג",
+            "types": ["locality", "political"]
+          },
+          {
+            "long_name": "ישראל",
+            "short_name": "IL",
+            "types": ["country", "political"]
+          }
+        ],
+        "formatted_address": "קרית גת, ישראל",
+        "geometry": {
+          "bounds": {
+            "northeast": {
+              "lat": 31.6432251,
+              "lng": 34.804252
+            },
+            "southwest": {
+              "lat": 31.5759471,
+              "lng": 34.749627
+            }
+          },
+          "location": {
+            "lat": 31.6151037,
+            "lng": 34.7515321
+          },
+          "location_type": "APPROXIMATE",
+          "viewport": {
+            "northeast": {
+              "lat": 31.6432251,
+              "lng": 34.804252
+            },
+            "southwest": {
+              "lat": 31.5759471,
+              "lng": 34.749627
+            }
+          }
+        },
+        "partial_match": true,
+        "types": ["locality", "political"]
+      }
+    },
+    "counter": {
+      "code": 467,
+      "serial": 12569592
+    },
+    "installationDate": null
+  },
+  {
+    "id": 5,
+    "contract": 931216,
+    "contractStart": 655423200000,
+    "place": {
+      "address": "אדוריים ע\"י 134 מאור רחוב",
+      "description": "מאור רחובות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 491,
+      "serial": 13253801
+    },
+    "installationDate": 1373403600000
+  },
+  {
+    "id": 6,
+    "contract": 931676,
+    "contractStart": 158191200000,
+    "place": {
+      "address": "משעול ההגנה 4",
+      "description": "גן אצל",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 441,
+      "serial": 463817
+    },
+    "installationDate": null
+  },
+  {
+    "id": 7,
+    "contract": 934739,
+    "contractStart": 347839200000,
+    "place": {
+      "address": "התמרים ע\"י 3 מרור רחובות",
+      "description": "מאור רחובות ע'י 792",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 467,
+      "serial": 12572123
+    },
+    "installationDate": 1375650000000
+  },
+  {
+    "id": 8,
+    "contract": 934779,
+    "contractStart": null,
+    "place": {
+      "address": "התמרים 1 כ1",
+      "description": "מלבי",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 99,
+      "serial": 6018005
+    },
+    "installationDate": 844984800000
+  },
+  {
+    "id": 9,
+    "contract": 934819,
+    "contractStart": null,
+    "place": {
+      "address": "יהודה 67",
+      "description": "יעוץ נישואין",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 143,
+      "serial": 3698527
+    },
+    "installationDate": 973029600000
+  },
+  {
+    "id": 10,
+    "contract": 935074,
+    "contractStart": 610059600000,
+    "place": {
+      "address": "היסמין מועדון מועדון",
+      "description": "קידום נוער",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 491,
+      "serial": 10143505
+    },
+    "installationDate": null
+  },
+  {
+    "id": 11,
+    "contract": 935079,
+    "contractStart": null,
+    "place": {
+      "address": "היסמין גן ילדים גן ילדים",
+      "description": "גן היסמין",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 373,
+      "serial": 96777
+    },
+    "installationDate": 788911200000
+  },
+  {
+    "id": 12,
+    "contract": 935754,
+    "contractStart": 347752800000,
+    "place": {
+      "address": "שמואל הנביא ע\"י 8 מאור רח",
+      "description": "מאור רחובות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 467,
+      "serial": 12569594
+    },
+    "installationDate": null
+  },
+  {
+    "id": 13,
+    "contract": 947657,
+    "contractStart": null,
+    "place": {
+      "address": "מלכי ישראל ע\"י מס 149",
+      "description": "מאור רחובות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 462,
+      "serial": 2130403
+    },
+    "installationDate": 1159999200000
+  },
+  {
+    "id": 14,
+    "contract": 948697,
+    "contractStart": null,
+    "place": {
+      "address": "מבוא תש\"ח 3",
+      "description": "מקלט 33",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 442,
+      "serial": 36088587
+    },
+    "installationDate": null
+  },
+  {
+    "id": 15,
+    "contract": 948762,
+    "contractStart": null,
+    "place": {
+      "address": "שד העצמאות ע\"י מס 90 מקלט",
+      "description": "מקלט מס 6",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 442,
+      "serial": 36088565
+    },
+    "installationDate": null
+  },
+  {
+    "id": 16,
+    "contract": 952811,
+    "contractStart": 376524000000,
+    "place": {
+      "address": "שלמה המלך ע\"י 28 מאור רחו",
+      "description": "מאור רחובות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 467,
+      "serial": 12569586
+    },
+    "installationDate": null
+  },
+  {
+    "id": 17,
+    "contract": 953041,
+    "contractStart": null,
+    "place": {
+      "address": "דוד המלך 1",
+      "description": "תאורת רחובות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 454,
+      "serial": 64033415
+    },
+    "installationDate": 694908000000
+  },
+  {
+    "id": 18,
+    "contract": 968881,
+    "contractStart": null,
+    "place": {
+      "address": "שד לכיש 60 כ1",
+      "description": "דירות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 74,
+      "serial": 1203624
+    },
+    "installationDate": 158277600000
+  },
+  {
+    "id": 19,
+    "contract": 968886,
+    "contractStart": null,
+    "place": {
+      "address": "שד לכיש 60 כ1",
+      "description": "דירות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 74,
+      "serial": 1164318
+    },
+    "installationDate": 157759200000
+  },
+  {
+    "id": 20,
+    "contract": 969282,
+    "contractStart": 318636000000,
+    "place": {
+      "address": "יפתח הגלעדי ע\"י מס 5 מאור",
+      "description": "מאור רחובות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 442,
+      "serial": 27755209
+    },
+    "installationDate": null
+  },
+  {
+    "id": 21,
+    "contract": 969742,
+    "contractStart": 376524000000,
+    "place": {
+      "address": "דוד המלך ע\"י מס 48 מאור ר",
+      "description": "מאור רחובות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 442,
+      "serial": 27758128
+    },
+    "installationDate": 1089320400000
+  },
+  {
+    "id": 22,
+    "contract": 969796,
+    "contractStart": null,
+    "place": {
+      "address": "השופטים ע\"י 8 מאור רחובות",
+      "description": "מאור רחובות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 467,
+      "serial": 12512365
+    },
+    "installationDate": null
+  },
+  {
+    "id": 23,
+    "contract": 970401,
+    "contractStart": null,
+    "place": {
+      "address": "שבטי ישראל ע\"י 22 מאור רח",
+      "description": "מאור רחובות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 442,
+      "serial": 34467711
+    },
+    "installationDate": null
+  },
+  {
+    "id": 24,
+    "contract": 975780,
+    "contractStart": null,
+    "place": {
+      "address": "שד גת ע\"י מס 137 * מרגלית",
+      "description": "מאור רחובות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 462,
+      "serial": 4143762
+    },
+    "installationDate": 1123016400000
+  },
+  {
+    "id": 25,
+    "contract": 975855,
+    "contractStart": null,
+    "place": {
+      "address": "שד גת ע\"י מס 1 * שבטי ישר",
+      "description": "מאור רחובות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 462,
+      "serial": 4138192
+    },
+    "installationDate": 1073340000000
+  },
+  {
+    "id": 26,
+    "contract": 976390,
+    "contractStart": null,
+    "place": {
+      "address": "שד גת 54",
+      "description": "מקלט 36 ע\"י שד' גת 58",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 442,
+      "serial": 36088540
+    },
+    "installationDate": null
+  },
+  {
+    "id": 27,
+    "contract": 976455,
+    "contractStart": 318549600000,
+    "place": {
+      "address": "שד גת ע\"י מס 58 מקלט 11 מ",
+      "description": "מקלט 11__08-6878351",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 373,
+      "serial": 12333
+    },
+    "installationDate": 315871200000
+  },
+  {
+    "id": 28,
+    "contract": 982376,
+    "contractStart": null,
+    "place": {
+      "address": "אזור תעשיה ע\"י סוגת מקלט",
+      "description": "מקלט 101",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 442,
+      "serial": 32465161
+    },
+    "installationDate": 1091307600000
+  },
+  {
+    "id": 29,
+    "contract": 982501,
+    "contractStart": null,
+    "place": {
+      "address": "שד לכיש פינת דרך הדרום מא",
+      "description": "מאור רחובות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 462,
+      "serial": 4139727
+    },
+    "installationDate": 1159999200000
+  },
+  {
+    "id": 30,
+    "contract": 983036,
+    "contractStart": null,
+    "place": {
+      "address": "ככר פז תחת בית תרבות מאור",
+      "description": "מאור רחובות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 442,
+      "serial": 35186480
+    },
+    "installationDate": null
+  },
+  {
+    "id": 31,
+    "contract": 983091,
+    "contractStart": 87516000000,
+    "place": {
+      "address": "ככר פז המשמר האזרחי",
+      "description": "משמר אזרחי",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 442,
+      "serial": 34477185
+    },
+    "installationDate": null
+  },
+  {
+    "id": 32,
+    "contract": 986557,
+    "contractStart": 689896800000,
+    "place": {
+      "address": "שד לכיש 60 כ1",
+      "description": "דירות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 74,
+      "serial": 1203679
+    },
+    "installationDate": 158364000000
+  },
+  {
+    "id": 33,
+    "contract": 986567,
+    "contractStart": null,
+    "place": {
+      "address": "שד לכיש 60 כ1",
+      "description": "דירות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 74,
+      "serial": 1091398
+    },
+    "installationDate": 157759200000
+  },
+  {
+    "id": 34,
+    "contract": 986572,
+    "contractStart": 610923600000,
+    "place": {
+      "address": "שד לכיש 60 כ1",
+      "description": "דירות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 74,
+      "serial": 1203638
+    },
+    "installationDate": 158277600000
+  },
+  {
+    "id": 35,
+    "contract": 986577,
+    "contractStart": null,
+    "place": {
+      "address": "שד לכיש 60 כ1",
+      "description": "דירות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 74,
+      "serial": 1203513
+    },
+    "installationDate": 158277600000
+  },
+  {
+    "id": 36,
+    "contract": 999386,
+    "contractStart": 610059600000,
+    "place": {
+      "address": "הזית 33 כ1",
+      "description": "ארכיון(795)",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 100,
+      "serial": 1696281
+    },
+    "installationDate": 599695200000
+  },
+  {
+    "id": 37,
+    "contract": 999396,
+    "contractStart": 371167200000,
+    "place": {
+      "address": "התמרים ע\"י 1 מקלט 39 מקלט",
+      "description": "מקלט 39 ע'י 795",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 77,
+      "serial": 5029690
+    },
+    "installationDate": 347580000000
+  },
+  {
+    "id": 38,
+    "contract": 999416,
+    "contractStart": null,
+    "place": {
+      "address": "יהודה ע\"י 26 מאור רחובות",
+      "description": "מאור רחובות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 462,
+      "serial": 4142242
+    },
+    "installationDate": 1104703200000
+  },
+  {
+    "id": 39,
+    "contract": 999590,
+    "contractStart": 347752800000,
+    "place": {
+      "address": "רחבת אבצן ע\"י מס 5 ארגז 9",
+      "description": "ארגז 89 מאור רחובות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 462,
+      "serial": 4138194
+    },
+    "installationDate": 1073340000000
+  },
+  {
+    "id": 40,
+    "contract": 999895,
+    "contractStart": 347752800000,
+    "place": {
+      "address": "מלכי ישראל ע\"י מס 7 רחבת",
+      "description": "מ.רחובות ע\"י מלכי ישראל 5",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 467,
+      "serial": 12569644
+    },
+    "installationDate": null
+  },
+  {
+    "id": 41,
+    "contract": 999972,
+    "contractStart": 255477600000,
+    "place": {
+      "address": "שד לכיש 12",
+      "description": "עיריה הנבל",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 74,
+      "serial": 1397983
+    },
+    "installationDate": 252799200000
+  },
+  {
+    "id": 42,
+    "contract": 1000187,
+    "contractStart": null,
+    "place": {
+      "address": "שד העצמאות 34",
+      "description": "מאור רחובות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 462,
+      "serial": 4142265
+    },
+    "installationDate": 1107381600000
+  },
+  {
+    "id": 43,
+    "contract": 1000456,
+    "contractStart": null,
+    "place": {
+      "address": "השופטים  27 מאור רחובות מ",
+      "description": "מאור רחובות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 464,
+      "serial": 6172327
+    },
+    "installationDate": null
+  },
+  {
+    "id": 44,
+    "contract": 1000635,
+    "contractStart": null,
+    "place": {
+      "address": "אהוד בן גרא ע\"י 10 מאור ר",
+      "description": "מאור רחובות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 464,
+      "serial": 10187716
+    },
+    "installationDate": 1273006800000
+  },
+  {
+    "id": 45,
+    "contract": 1017047,
+    "contractStart": 178754400000,
+    "place": {
+      "address": "הזית 42",
+      "description": "רווחה",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 441,
+      "serial": 430063
+    },
+    "installationDate": 1065909600000
+  },
+  {
+    "id": 46,
+    "contract": 1017122,
+    "contractStart": 666136800000,
+    "place": {
+      "address": "- שד' משה ע\"י 1 מקלט מקלט",
+      "description": "מקלט 3",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 373,
+      "serial": 133418
+    },
+    "installationDate": 663458400000
+  },
+  {
+    "id": 47,
+    "contract": 1017392,
+    "contractStart": null,
+    "place": {
+      "address": "המרגלית 29",
+      "description": "מועדון קשישים",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 441,
+      "serial": 499094
+    },
+    "installationDate": null
+  },
+  {
+    "id": 48,
+    "contract": 1017907,
+    "contractStart": -217303200000,
+    "place": {
+      "address": "רחבת ירמיהו ע\"י 12 מחסן מ",
+      "description": "גן חבד",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 25,
+      "serial": 11104170
+    },
+    "installationDate": null
+  },
+  {
+    "id": 49,
+    "contract": 1019525,
+    "contractStart": null,
+    "place": {
+      "address": "שמואל הנביא 2",
+      "description": "מרכז פדגוגי",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 462,
+      "serial": 4138085
+    },
+    "installationDate": 1073340000000
+  },
+  {
+    "id": 50,
+    "contract": 1032655,
+    "contractStart": null,
+    "place": {
+      "address": "דרך הדרום ע\"י הצומת מאור",
+      "description": "מאור רחובות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 462,
+      "serial": 4143763
+    },
+    "installationDate": 1107381600000
+  },
+  {
+    "id": 51,
+    "contract": 1032895,
+    "contractStart": null,
+    "place": {
+      "address": "מבוא ניסן אזור תעשיה מאור",
+      "description": "מאור רחובות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 373,
+      "serial": 166896
+    },
+    "installationDate": 726012000000
+  },
+  {
+    "id": 52,
+    "contract": 1032925,
+    "contractStart": -18327600000,
+    "place": {
+      "address": "שד לכיש 4א",
+      "description": "מחסן הגא",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 147,
+      "serial": 3980182
+    },
+    "installationDate": null
+  },
+  {
+    "id": 53,
+    "contract": 1032955,
+    "contractStart": null,
+    "place": {
+      "address": "שד לכיש ע\"י הבריכה מאור ר",
+      "description": "מאור רחובות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 467,
+      "serial": 12512329
+    },
+    "installationDate": null
+  },
+  {
+    "id": 54,
+    "contract": 1033715,
+    "contractStart": 347839200000,
+    "place": {
+      "address": "הגפן ע'י 10 מאור רחובות מ",
+      "description": "מאור רחובות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 442,
+      "serial": 28588171
+    },
+    "installationDate": null
+  },
+  {
+    "id": 55,
+    "contract": 1033975,
+    "contractStart": 462837600000,
+    "place": {
+      "address": "הזית 1",
+      "description": "תאורת רחובות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 467,
+      "serial": 12512353
+    },
+    "installationDate": null
+  },
+  {
+    "id": 56,
+    "contract": 1050153,
+    "contractStart": 347752800000,
+    "place": {
+      "address": "שד לכיש ע\"י מס 63 מאור רח",
+      "description": "מאור רחובות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 74,
+      "serial": 1307781
+    },
+    "installationDate": 347752800000
+  },
+  {
+    "id": 57,
+    "contract": 1050275,
+    "contractStart": 221695200000,
+    "place": {
+      "address": "- ראובן ע\"י 26 מקלט מקלט",
+      "description": "מקלט 26",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 442,
+      "serial": 36088581
+    },
+    "installationDate": null
+  },
+  {
+    "id": 58,
+    "contract": 1050795,
+    "contractStart": null,
+    "place": {
+      "address": "מבוא בנימין ע\"י 10 מאור ר",
+      "description": "מאור רחובות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 467,
+      "serial": 12572142
+    },
+    "installationDate": 1375650000000
+  },
+  {
+    "id": 59,
+    "contract": 1063918,
+    "contractStart": null,
+    "place": {
+      "address": "דרך החרושת מול 12 מאור רח",
+      "description": "מאור רחובות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 467,
+      "serial": 12569635
+    },
+    "installationDate": null
+  },
+  {
+    "id": 60,
+    "contract": 1063938,
+    "contractStart": null,
+    "place": {
+      "address": "דרך החרושת ע\"י טדפי מאור",
+      "description": "מאור רחובות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 467,
+      "serial": 12512334
+    },
+    "installationDate": null
+  },
+  {
+    "id": 61,
+    "contract": 1064033,
+    "contractStart": null,
+    "place": {
+      "address": "מבוא סיון 16",
+      "description": "מחסן חרום",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 446,
+      "serial": 4253667
+    },
+    "installationDate": null
+  },
+  {
+    "id": 62,
+    "contract": 1064038,
+    "contractStart": null,
+    "place": {
+      "address": "מבוא סיון 16",
+      "description": "מחסן חירום",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 446,
+      "serial": 4253663
+    },
+    "installationDate": null
+  },
+  {
+    "id": 63,
+    "contract": 1082473,
+    "contractStart": null,
+    "place": {
+      "address": "התמרים ע\"י 16 מקלט 28 מקל",
+      "description": "מקלט 28 ע'י 788",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 442,
+      "serial": 36088553
+    },
+    "installationDate": null
+  },
+  {
+    "id": 64,
+    "contract": 1082588,
+    "contractStart": null,
+    "place": {
+      "address": "התמרים ע\"י 7 מקלט 6 מקלט",
+      "description": "מקלט 6",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 493,
+      "serial": 14286658
+    },
+    "installationDate": null
+  },
+  {
+    "id": 65,
+    "contract": 1082738,
+    "contractStart": null,
+    "place": {
+      "address": "יהודה 73",
+      "description": "מועדון",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 442,
+      "serial": 32464847
+    },
+    "installationDate": 1060203600000
+  },
+  {
+    "id": 66,
+    "contract": 1083063,
+    "contractStart": 339199200000,
+    "place": {
+      "address": "המרגלית ע\"י 38 מקלט 32 מק",
+      "description": "מקלט 32",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 442,
+      "serial": 32465155
+    },
+    "installationDate": 1083358800000
+  },
+  {
+    "id": 67,
+    "contract": 1083128,
+    "contractStart": null,
+    "place": {
+      "address": "הציפורן מקלט ע\"י בית 6",
+      "description": "מקלט 16",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 442,
+      "serial": 32465162
+    },
+    "installationDate": 1083358800000
+  },
+  {
+    "id": 68,
+    "contract": 1187364,
+    "contractStart": 211327200000,
+    "place": {
+      "address": "משעול השושן 11א",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 443,
+      "serial": 3032553
+    },
+    "installationDate": null
+  },
+  {
+    "id": 69,
+    "contract": 1200104,
+    "contractStart": null,
+    "place": {
+      "address": "מבצע חורב מקלט מקלט - מנה",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 490,
+      "serial": 38704584
+    },
+    "installationDate": 1230760800000
+  },
+  {
+    "id": 70,
+    "contract": 1200509,
+    "contractStart": null,
+    "place": {
+      "address": "גרופית מקלט מקלט - מנהרה",
+      "description": "מקלט ה",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 439,
+      "serial": 9014028
+    },
+    "installationDate": 1241125200000
+  },
+  {
+    "id": 71,
+    "contract": 1200719,
+    "contractStart": null,
+    "place": {
+      "address": "צומת דקל רימון מאור רחוב",
+      "description": "תאורת רחובות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 467,
+      "serial": 12512381
+    },
+    "installationDate": null
+  },
+  {
+    "id": 72,
+    "contract": 1200789,
+    "contractStart": null,
+    "place": {
+      "address": "הרמון 4",
+      "description": "מקלט",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 491,
+      "serial": 13230676
+    },
+    "installationDate": 1357596000000
+  },
+  {
+    "id": 73,
+    "contract": 1200789,
+    "contractStart": null,
+    "place": {
+      "address": "הרמון 4",
+      "description": "מקלט",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 327,
+      "serial": 39099258
+    },
+    "installationDate": 126828000000
+  },
+  {
+    "id": 74,
+    "contract": 1201254,
+    "contractStart": 724024800000,
+    "place": {
+      "address": "הפרדס 50",
+      "description": "תאורת רחובות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 464,
+      "serial": 10186812
+    },
+    "installationDate": null
+  },
+  {
+    "id": 75,
+    "contract": 1282101,
+    "contractStart": null,
+    "place": {
+      "address": "הכרמל ארגז 41 צומת הכרמל",
+      "description": "תאורת רחובות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 464,
+      "serial": 6175920
+    },
+    "installationDate": null
+  },
+  {
+    "id": 76,
+    "contract": 1282306,
+    "contractStart": null,
+    "place": {
+      "address": "מירון 2",
+      "description": "ביהס רשבי",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 373,
+      "serial": 28600
+    },
+    "installationDate": 315525600000
+  },
+  {
+    "id": 77,
+    "contract": 1282306,
+    "contractStart": null,
+    "place": {
+      "address": "מירון 2",
+      "description": "ביהס רשבי",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 442,
+      "serial": 39469478
+    },
+    "installationDate": null
+  },
+  {
+    "id": 78,
+    "contract": 1284682,
+    "contractStart": 347752800000,
+    "place": {
+      "address": "שדרת הגולן 18",
+      "description": "תאורת רחובות (864)",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 467,
+      "serial": 12572121
+    },
+    "installationDate": 1375650000000
+  },
+  {
+    "id": 79,
+    "contract": 1296606,
+    "contractStart": null,
+    "place": {
+      "address": "שד העצמאות ע\"י 80 מקלט 7",
+      "description": "(מקלט 7(767",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 442,
+      "serial": 32465174
+    },
+    "installationDate": 1083358800000
+  },
+  {
+    "id": 80,
+    "contract": 1296666,
+    "contractStart": null,
+    "place": {
+      "address": "האתרוג 4",
+      "description": "פעוטון ההדרים",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 442,
+      "serial": 36088541
+    },
+    "installationDate": null
+  },
+  {
+    "id": 81,
+    "contract": 1296666,
+    "contractStart": null,
+    "place": {
+      "address": "האתרוג 4",
+      "description": "פעוטון ההדרים",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 442,
+      "serial": 36088585
+    },
+    "installationDate": null
+  },
+  {
+    "id": 82,
+    "contract": 1296916,
+    "contractStart": 786751200000,
+    "place": {
+      "address": "עין גדי ע\"י מס 16 מקלט מק",
+      "description": "מקלט כב",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 490,
+      "serial": 38704679
+    },
+    "installationDate": null
+  },
+  {
+    "id": 83,
+    "contract": 1296976,
+    "contractStart": 668469600000,
+    "place": {
+      "address": "עין ירקעם ע\"י מס 7 מקלט מ",
+      "description": "מקלט כ",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 439,
+      "serial": 9014043
+    },
+    "installationDate": 1230760800000
+  },
+  {
+    "id": 84,
+    "contract": 1297316,
+    "contractStart": null,
+    "place": {
+      "address": "מבצע חירם מקלט",
+      "description": "מקלט כח",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 490,
+      "serial": 46953357
+    },
+    "installationDate": null
+  },
+  {
+    "id": 85,
+    "contract": 1297336,
+    "contractStart": null,
+    "place": {
+      "address": "מבצע יואב מקלט מקלט - מנה",
+      "description": "מקלט כז",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 490,
+      "serial": 38702529
+    },
+    "installationDate": 1200088800000
+  },
+  {
+    "id": 86,
+    "contract": 1297566,
+    "contractStart": null,
+    "place": {
+      "address": "רחבת יהל רחבת יהל - מקלט",
+      "description": "מקלט",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 439,
+      "serial": 9014034
+    },
+    "installationDate": 1230760800000
+  },
+  {
+    "id": 87,
+    "contract": 1297636,
+    "contractStart": null,
+    "place": {
+      "address": "עבדת מקלט מקלט - מנהרה",
+      "description": "מקלט",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 439,
+      "serial": 9014045
+    },
+    "installationDate": 1241125200000
+  },
+  {
+    "id": 88,
+    "contract": 1298032,
+    "contractStart": null,
+    "place": {
+      "address": "שד העצמאות ע\"י 56 מאור רח",
+      "description": "מאור רחובות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 464,
+      "serial": 6175199
+    },
+    "installationDate": 1194386400000
+  },
+  {
+    "id": 89,
+    "contract": 1298557,
+    "contractStart": null,
+    "place": {
+      "address": "רחבת עין עברונה ע\"י מס 11",
+      "description": "מקלט יח",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 439,
+      "serial": 9014042
+    },
+    "installationDate": 1230760800000
+  },
+  {
+    "id": 90,
+    "contract": 1298617,
+    "contractStart": 786751200000,
+    "place": {
+      "address": "רחבת עין צוקים ע\"י מס 19",
+      "description": "מקלט טו",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 373,
+      "serial": 175152
+    },
+    "installationDate": 757893600000
+  },
+  {
+    "id": 91,
+    "contract": 1339490,
+    "contractStart": null,
+    "place": {
+      "address": "מירון 5",
+      "description": "מועדון_רשבי",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 464,
+      "serial": 8185323
+    },
+    "installationDate": null
+  },
+  {
+    "id": 92,
+    "contract": 1339670,
+    "contractStart": 347752800000,
+    "place": {
+      "address": "שדרת הבשן 6",
+      "description": "תאורת רחוב",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 441,
+      "serial": 307268
+    },
+    "installationDate": 1086728400000
+  },
+  {
+    "id": 93,
+    "contract": 1339935,
+    "contractStart": null,
+    "place": {
+      "address": "השומרון 56",
+      "description": "מקלט 30",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 490,
+      "serial": 38702497
+    },
+    "installationDate": 1200088800000
+  },
+  {
+    "id": 94,
+    "contract": 1339940,
+    "contractStart": 347752800000,
+    "place": {
+      "address": "השומרון ע\"י מקלט מאור רחו",
+      "description": "תאורת רחוב",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 467,
+      "serial": 12572112
+    },
+    "installationDate": 1375650000000
+  },
+  {
+    "id": 95,
+    "contract": 1340220,
+    "contractStart": null,
+    "place": {
+      "address": "ארגז 45 מישעול הדישון מאו",
+      "description": "תאורת רחובות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 491,
+      "serial": 13250276
+    },
+    "installationDate": null
+  },
+  {
+    "id": 96,
+    "contract": 1354255,
+    "contractStart": null,
+    "place": {
+      "address": "עין מור ע\"י מס 21 מקלט מק",
+      "description": "מקלט כא",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 439,
+      "serial": 9014059
+    },
+    "installationDate": 1230760800000
+  },
+  {
+    "id": 97,
+    "contract": 1354375,
+    "contractStart": 773614800000,
+    "place": {
+      "address": "ר עין בוקק ע\"י מס 8 מקלט",
+      "description": "מקלט טז",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 490,
+      "serial": 38704616
+    },
+    "installationDate": 1230760800000
+  },
+  {
+    "id": 98,
+    "contract": 1354565,
+    "contractStart": null,
+    "place": {
+      "address": "מבצע נחשון מקלט",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 373,
+      "serial": 165946
+    },
+    "installationDate": 726184800000
+  },
+  {
+    "id": 99,
+    "contract": 1354690,
+    "contractStart": null,
+    "place": {
+      "address": "רחבת רותם מקלט מקלט - מנה",
+      "description": "מקלט כג",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 490,
+      "serial": 38704600
+    },
+    "installationDate": 1230760800000
+  },
+  {
+    "id": 100,
+    "contract": 1389508,
+    "contractStart": 339199200000,
+    "place": {
+      "address": "שדרת הבשן 6א",
+      "description": "מקלט 35",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 406,
+      "serial": 39064319
+    },
+    "installationDate": 315525600000
+  },
+  {
+    "id": 101,
+    "contract": 1404663,
+    "contractStart": 473810400000,
+    "place": {
+      "address": "הסייפן ע\"י 1 מקלט 22 מקלט",
+      "description": "מקלט 22",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 443,
+      "serial": 3032563
+    },
+    "installationDate": null
+  },
+  {
+    "id": 102,
+    "contract": 1404698,
+    "contractStart": null,
+    "place": {
+      "address": "מבוא הלוטם 12",
+      "description": "מועדונית רווחה",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 373,
+      "serial": 96442
+    },
+    "installationDate": 568677600000
+  },
+  {
+    "id": 103,
+    "contract": 1405653,
+    "contractStart": null,
+    "place": {
+      "address": "שער הדרום 'אזור' ה מאור ר",
+      "description": "תאורת רחובות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 467,
+      "serial": 12512370
+    },
+    "installationDate": null
+  },
+  {
+    "id": 104,
+    "contract": 1405758,
+    "contractStart": null,
+    "place": {
+      "address": "רחבת ימין מקלט מקלט - מנה",
+      "description": "מקלט כד",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 490,
+      "serial": 38702481
+    },
+    "installationDate": 1200088800000
+  },
+  {
+    "id": 105,
+    "contract": 1405813,
+    "contractStart": null,
+    "place": {
+      "address": "ר האלמוגים מקלט מקלט - מנ",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 490,
+      "serial": 38702566
+    },
+    "installationDate": 1200088800000
+  },
+  {
+    "id": 106,
+    "contract": 1900312,
+    "contractStart": 818632800000,
+    "place": {
+      "address": "שד צה\"ל 2",
+      "description": "מאור רחובות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 462,
+      "serial": 3133933
+    },
+    "installationDate": 1073340000000
+  },
+  {
+    "id": 107,
+    "contract": 1948390,
+    "contractStart": 813016800000,
+    "place": {
+      "address": "מיכה 8",
+      "description": "תאורת רחובות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 464,
+      "serial": 6176955
+    },
+    "installationDate": 1223416800000
+  },
+  {
+    "id": 108,
+    "contract": 1994941,
+    "contractStart": null,
+    "place": {
+      "address": "גרופית גרופית פינת הערבה",
+      "description": "תאורת רחובות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 445,
+      "serial": 4214634
+    },
+    "installationDate": 841870800000
+  },
+  {
+    "id": 109,
+    "contract": 2167019,
+    "contractStart": null,
+    "place": {
+      "address": "א תעשיה בצומת אינטל מ רחו",
+      "description": "תאורת רחובות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 462,
+      "serial": 3133975
+    },
+    "installationDate": 1073340000000
+  },
+  {
+    "id": 110,
+    "contract": 2183774,
+    "contractStart": 886456800000,
+    "place": {
+      "address": "מבוא בנימין 8",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 467,
+      "serial": 12572117
+    },
+    "installationDate": 1367701200000
+  },
+  {
+    "id": 111,
+    "contract": 2202823,
+    "contractStart": null,
+    "place": {
+      "address": "הארז 33",
+      "description": "מקלט 25",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 445,
+      "serial": 4214160
+    },
+    "installationDate": null
+  },
+  {
+    "id": 112,
+    "contract": 2264254,
+    "contractStart": null,
+    "place": {
+      "address": "הר חברון מרכזיית תאורה גל",
+      "description": "תאורת רחובות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 462,
+      "serial": 3135244
+    },
+    "installationDate": 1073340000000
+  },
+  {
+    "id": 113,
+    "contract": 2316110,
+    "contractStart": 860533200000,
+    "place": {
+      "address": "גאון הירדן 10",
+      "description": "גן ילדים",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 441,
+      "serial": 347250
+    },
+    "installationDate": 879026400000
+  },
+  {
+    "id": 114,
+    "contract": 2613956,
+    "contractStart": null,
+    "place": {
+      "address": "הגבורה תחנת פייס לבריאות",
+      "description": "מרפאת שיניים",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 441,
+      "serial": 453626
+    },
+    "installationDate": null
+  },
+  {
+    "id": 115,
+    "contract": 2986938,
+    "contractStart": null,
+    "place": {
+      "address": "עין עקרבים 2",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 441,
+      "serial": 505276
+    },
+    "installationDate": null
+  },
+  {
+    "id": 116,
+    "contract": 3005569,
+    "contractStart": null,
+    "place": {
+      "address": "הארז מ.ר עמ' 68/178 גב הב",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 462,
+      "serial": 3135320
+    },
+    "installationDate": 1073340000000
+  },
+  {
+    "id": 117,
+    "contract": 3060309,
+    "contractStart": null,
+    "place": {
+      "address": "שד גת 62 כ2",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 145,
+      "serial": 3032932
+    },
+    "installationDate": 758239200000
+  },
+  {
+    "id": 118,
+    "contract": 3100824,
+    "contractStart": null,
+    "place": {
+      "address": "שכונת גוגנהיים - מרכזיה ת",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 467,
+      "serial": 12572086
+    },
+    "installationDate": 1367701200000
+  },
+  {
+    "id": 119,
+    "contract": 3330773,
+    "contractStart": null,
+    "place": {
+      "address": "אזור תעשיה מתקן מים-מצפון",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 441,
+      "serial": 356078
+    },
+    "installationDate": null
+  },
+  {
+    "id": 120,
+    "contract": 3356686,
+    "contractStart": null,
+    "place": {
+      "address": "שדרת הגולן 2",
+      "description": "מועדון",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 442,
+      "serial": 32465181
+    },
+    "installationDate": null
+  },
+  {
+    "id": 121,
+    "contract": 3389749,
+    "contractStart": 936741600000,
+    "place": {
+      "address": "שד העצמאות ע\"י מס 88 * קו",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 464,
+      "serial": 6181893
+    },
+    "installationDate": null
+  },
+  {
+    "id": 122,
+    "contract": 3396669,
+    "contractStart": null,
+    "place": {
+      "address": "אדוריים 112",
+      "description": "גן ילדים",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 441,
+      "serial": 372935
+    },
+    "installationDate": null
+  },
+  {
+    "id": 123,
+    "contract": 3508021,
+    "contractStart": null,
+    "place": {
+      "address": "שד לכיש ע\"י מס 51 מאור רח",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 464,
+      "serial": 6178055
+    },
+    "installationDate": 1225922400000
+  },
+  {
+    "id": 124,
+    "contract": 3547876,
+    "contractStart": 750290400000,
+    "place": {
+      "address": "אזור תעשיה מאור רחובות מו",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 373,
+      "serial": 188050
+    },
+    "installationDate": 750290400000
+  },
+  {
+    "id": 125,
+    "contract": 3595102,
+    "contractStart": null,
+    "place": {
+      "address": "עובדה 25",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 439,
+      "serial": 9014056
+    },
+    "installationDate": 1238533200000
+  },
+  {
+    "id": 126,
+    "contract": 3662409,
+    "contractStart": null,
+    "place": {
+      "address": "טיילת מגדים",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 442,
+      "serial": 39816156
+    },
+    "installationDate": null
+  },
+  {
+    "id": 127,
+    "contract": 3709723,
+    "contractStart": null,
+    "place": {
+      "address": "מלכי ישראל ע\"י מס 1 * שד",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 462,
+      "serial": 4138330
+    },
+    "installationDate": null
+  },
+  {
+    "id": 128,
+    "contract": 3721305,
+    "contractStart": 1114894800000,
+    "place": {
+      "address": "מלכי ישראל תאורת אנדרטה",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 147,
+      "serial": 3931678
+    },
+    "installationDate": 1114894800000
+  },
+  {
+    "id": 129,
+    "contract": 3756851,
+    "contractStart": null,
+    "place": {
+      "address": "החלוץ 52",
+      "description": "ביהס תפארת שלמה",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 464,
+      "serial": 10194203
+    },
+    "installationDate": null
+  },
+  {
+    "id": 130,
+    "contract": 3769530,
+    "contractStart": null,
+    "place": {
+      "address": "נפתלי 26",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 491,
+      "serial": 12217755
+    },
+    "installationDate": null
+  },
+  {
+    "id": 131,
+    "contract": 3807879,
+    "contractStart": 1136498400000,
+    "place": {
+      "address": "שד לכיש 12",
+      "description": "בריכת שחיה",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 736,
+      "serial": 12591778
+    },
+    "installationDate": null
+  },
+  {
+    "id": 132,
+    "contract": 3807879,
+    "contractStart": 1136498400000,
+    "place": {
+      "address": "שד לכיש 12",
+      "description": "בריכת שחיה",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 736,
+      "serial": 12591809
+    },
+    "installationDate": null
+  },
+  {
+    "id": 133,
+    "contract": 3836742,
+    "contractStart": 1138831200000,
+    "place": {
+      "address": "מירון 5",
+      "description": "בית כנסת",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 446,
+      "serial": 3850974
+    },
+    "installationDate": 1138831200000
+  },
+  {
+    "id": 134,
+    "contract": 3876056,
+    "contractStart": 1149282000000,
+    "place": {
+      "address": "טיילת הבוסתן",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 467,
+      "serial": 12585743
+    },
+    "installationDate": null
+  },
+  {
+    "id": 135,
+    "contract": 4031277,
+    "contractStart": 1144789200000,
+    "place": {
+      "address": "דרך החרושת פינת הבונים",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 467,
+      "serial": 12511551
+    },
+    "installationDate": null
+  },
+  {
+    "id": 136,
+    "contract": 4035532,
+    "contractStart": 1160604000000,
+    "place": {
+      "address": "צומת לכיש שבטי ישראל רמזו",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 143,
+      "serial": 3579623
+    },
+    "installationDate": null
+  },
+  {
+    "id": 137,
+    "contract": 4050586,
+    "contractStart": null,
+    "place": {
+      "address": "ככר ה 87 מרכז",
+      "description": "בתוך בית המשפט",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 374,
+      "serial": 59374089
+    },
+    "installationDate": null
+  },
+  {
+    "id": 138,
+    "contract": 4057566,
+    "contractStart": 1160604000000,
+    "place": {
+      "address": "צומת לכיש שד גת מיזרקה",
+      "description": "מיזרקה לכיש-שד גת",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 491,
+      "serial": 13247919
+    },
+    "installationDate": null
+  },
+  {
+    "id": 139,
+    "contract": 4135634,
+    "contractStart": 988837200000,
+    "place": {
+      "address": "מלכי ישראל 183",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 732,
+      "serial": 102373
+    },
+    "installationDate": null
+  },
+  {
+    "id": 140,
+    "contract": 4135634,
+    "contractStart": 988837200000,
+    "place": {
+      "address": "מלכי ישראל 183",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 657,
+      "serial": 28820222
+    },
+    "installationDate": null
+  },
+  {
+    "id": 141,
+    "contract": 4135710,
+    "contractStart": null,
+    "place": {
+      "address": "כסלו מרכזית תאורה",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 149,
+      "serial": 5024372
+    },
+    "installationDate": null
+  },
+  {
+    "id": 142,
+    "contract": 4137214,
+    "contractStart": 1063141200000,
+    "place": {
+      "address": "שד העצמאות 66",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 733,
+      "serial": 3124158
+    },
+    "installationDate": 1052427600000
+  },
+  {
+    "id": 143,
+    "contract": 4137214,
+    "contractStart": 1063141200000,
+    "place": {
+      "address": "שד העצמאות 66",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 657,
+      "serial": 34389171
+    },
+    "installationDate": 1052427600000
+  },
+  {
+    "id": 144,
+    "contract": 4139719,
+    "contractStart": null,
+    "place": {
+      "address": "שד העצמאות 68",
+      "description": "ביהס וקס",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 735,
+      "serial": 5063081
+    },
+    "installationDate": 1139263200000
+  },
+  {
+    "id": 145,
+    "contract": 4139719,
+    "contractStart": null,
+    "place": {
+      "address": "שד העצמאות 68",
+      "description": "ביהס וקס",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 657,
+      "serial": 34390692
+    },
+    "installationDate": 1139263200000
+  },
+  {
+    "id": 146,
+    "contract": 4172354,
+    "contractStart": 1088802000000,
+    "place": {
+      "address": "מרכזית C מלכי ישראל מתחם",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 462,
+      "serial": 4140387
+    },
+    "installationDate": 1078178400000
+  },
+  {
+    "id": 147,
+    "contract": 4172384,
+    "contractStart": null,
+    "place": {
+      "address": "עין גדי ע\"י מס 22 מאור רח",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 462,
+      "serial": 3133926
+    },
+    "installationDate": null
+  },
+  {
+    "id": 148,
+    "contract": 4174940,
+    "contractStart": null,
+    "place": {
+      "address": "שד לכיש 48",
+      "description": "אולפנת צבייה",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 464,
+      "serial": 8185348
+    },
+    "installationDate": null
+  },
+  {
+    "id": 149,
+    "contract": 4176384,
+    "contractStart": 1189371600000,
+    "place": {
+      "address": "דרך החרושת 1א",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 736,
+      "serial": 13593731
+    },
+    "installationDate": null
+  },
+  {
+    "id": 150,
+    "contract": 4176384,
+    "contractStart": 1189371600000,
+    "place": {
+      "address": "דרך החרושת 1א",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 654,
+      "serial": 39531485
+    },
+    "installationDate": null
+  },
+  {
+    "id": 151,
+    "contract": 4189258,
+    "contractStart": 1160604000000,
+    "place": {
+      "address": "צומת לכיש השופטים רמזור",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 143,
+      "serial": 3579594
+    },
+    "installationDate": null
+  },
+  {
+    "id": 152,
+    "contract": 4195949,
+    "contractStart": null,
+    "place": {
+      "address": "יפתח הגלעדי 11",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 735,
+      "serial": 6065199
+    },
+    "installationDate": null
+  },
+  {
+    "id": 153,
+    "contract": 4195949,
+    "contractStart": null,
+    "place": {
+      "address": "יפתח הגלעדי 11",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 709,
+      "serial": 64808091
+    },
+    "installationDate": null
+  },
+  {
+    "id": 154,
+    "contract": 4227682,
+    "contractStart": null,
+    "place": {
+      "address": "גליקסון בית ספר בן צבי",
+      "description": "ביהס בן צבי",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 659,
+      "serial": 8003467
+    },
+    "installationDate": 1230933600000
+  },
+  {
+    "id": 155,
+    "contract": 4227682,
+    "contractStart": null,
+    "place": {
+      "address": "גליקסון בית ספר בן צבי",
+      "description": "ביהס בן צבי",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 735,
+      "serial": 8068808
+    },
+    "installationDate": 1230933600000
+  },
+  {
+    "id": 156,
+    "contract": 4227757,
+    "contractStart": null,
+    "place": {
+      "address": "הקוממיות מאור רחובות / פי",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 460,
+      "serial": 98997
+    },
+    "installationDate": null
+  },
+  {
+    "id": 157,
+    "contract": 4227762,
+    "contractStart": 468280800000,
+    "place": {
+      "address": "שד צה\"ל 7",
+      "description": "ביהס יד יצחק",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 605,
+      "serial": 1582424
+    },
+    "installationDate": null
+  },
+  {
+    "id": 158,
+    "contract": 4227762,
+    "contractStart": 468280800000,
+    "place": {
+      "address": "שד צה\"ל 7",
+      "description": "ביהס יד יצחק",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 605,
+      "serial": 1582607
+    },
+    "installationDate": null
+  },
+  {
+    "id": 159,
+    "contract": 4227762,
+    "contractStart": 468280800000,
+    "place": {
+      "address": "שד צה\"ל 7",
+      "description": "ביהס יד יצחק",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 605,
+      "serial": 1582691
+    },
+    "installationDate": null
+  },
+  {
+    "id": 160,
+    "contract": 4227762,
+    "contractStart": 468280800000,
+    "place": {
+      "address": "שד צה\"ל 7",
+      "description": "ביהס יד יצחק",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 733,
+      "serial": 4126337
+    },
+    "installationDate": null
+  },
+  {
+    "id": 161,
+    "contract": 4232152,
+    "contractStart": null,
+    "place": {
+      "address": "רחבת המעפיל 1",
+      "description": "ביהס מאיר",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 733,
+      "serial": 1121302
+    },
+    "installationDate": null
+  },
+  {
+    "id": 162,
+    "contract": 4232152,
+    "contractStart": null,
+    "place": {
+      "address": "רחבת המעפיל 1",
+      "description": "ביהס מאיר",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 657,
+      "serial": 30077390
+    },
+    "installationDate": null
+  },
+  {
+    "id": 163,
+    "contract": 4233637,
+    "contractStart": null,
+    "place": {
+      "address": "צומת דרך הדרום - מרכזית ת",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 735,
+      "serial": 9071796
+    },
+    "installationDate": null
+  },
+  {
+    "id": 164,
+    "contract": 4233637,
+    "contractStart": null,
+    "place": {
+      "address": "צומת דרך הדרום - מרכזית ת",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 657,
+      "serial": 32719468
+    },
+    "installationDate": 1099260000000
+  },
+  {
+    "id": 165,
+    "contract": 4235607,
+    "contractStart": null,
+    "place": {
+      "address": "שד העצמאות 68",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 658,
+      "serial": 3081863
+    },
+    "installationDate": 1139263200000
+  },
+  {
+    "id": 166,
+    "contract": 4235607,
+    "contractStart": null,
+    "place": {
+      "address": "שד העצמאות 68",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 735,
+      "serial": 5063354
+    },
+    "installationDate": 1139263200000
+  },
+  {
+    "id": 167,
+    "contract": 4236082,
+    "contractStart": null,
+    "place": {
+      "address": "ככר המעפיל 1",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 735,
+      "serial": 5062156
+    },
+    "installationDate": null
+  },
+  {
+    "id": 168,
+    "contract": 4236082,
+    "contractStart": null,
+    "place": {
+      "address": "ככר המעפיל 1",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 659,
+      "serial": 10005003
+    },
+    "installationDate": 1320876000000
+  },
+  {
+    "id": 169,
+    "contract": 4267992,
+    "contractStart": null,
+    "place": {
+      "address": "שד גת ע\"י מס 241 * גאון ה",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 464,
+      "serial": 6177592
+    },
+    "installationDate": 1257026400000
+  },
+  {
+    "id": 170,
+    "contract": 4268187,
+    "contractStart": null,
+    "place": {
+      "address": "ר באר אורה ע\"י מס 2 מאור",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 462,
+      "serial": 3130945
+    },
+    "installationDate": null
+  },
+  {
+    "id": 171,
+    "contract": 4288501,
+    "contractStart": 934146000000,
+    "place": {
+      "address": "שד צה\"ל 42א",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 460,
+      "serial": 98568
+    },
+    "installationDate": 936741600000
+  },
+  {
+    "id": 172,
+    "contract": 4288506,
+    "contractStart": null,
+    "place": {
+      "address": "גאון הירדן  ע\"י 14 מאור ר",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 460,
+      "serial": 100205
+    },
+    "installationDate": null
+  },
+  {
+    "id": 173,
+    "contract": 4303733,
+    "contractStart": null,
+    "place": {
+      "address": "האגוז ככר 71",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 439,
+      "serial": 4487830
+    },
+    "installationDate": null
+  },
+  {
+    "id": 174,
+    "contract": 4381554,
+    "contractStart": null,
+    "place": {
+      "address": "רחבת קטורה - מקלט מאור רח",
+      "description": "מקלט ג",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 439,
+      "serial": 9014052
+    },
+    "installationDate": 1230760800000
+  },
+  {
+    "id": 175,
+    "contract": 4383043,
+    "contractStart": 886975200000,
+    "place": {
+      "address": "דרך החרושת 1ג",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 735,
+      "serial": 5062699
+    },
+    "installationDate": null
+  },
+  {
+    "id": 176,
+    "contract": 4383043,
+    "contractStart": 886975200000,
+    "place": {
+      "address": "דרך החרושת 1ג",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 654,
+      "serial": 39532949
+    },
+    "installationDate": null
+  },
+  {
+    "id": 177,
+    "contract": 4383083,
+    "contractStart": 973807200000,
+    "place": {
+      "address": "שמואל הנביא 13",
+      "description": "ביהס אפרים בן דוד",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 732,
+      "serial": 101638
+    },
+    "installationDate": null
+  },
+  {
+    "id": 178,
+    "contract": 4383083,
+    "contractStart": 973807200000,
+    "place": {
+      "address": "שמואל הנביא 13",
+      "description": "ביהס אפרים בן דוד",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 657,
+      "serial": 27962965
+    },
+    "installationDate": null
+  },
+  {
+    "id": 179,
+    "contract": 4383093,
+    "contractStart": 768517200000,
+    "place": {
+      "address": "גאון הירדן 1",
+      "description": "ביהס רבין",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 735,
+      "serial": 10074844
+    },
+    "installationDate": 1378760400000
+  },
+  {
+    "id": 180,
+    "contract": 4383093,
+    "contractStart": 768517200000,
+    "place": {
+      "address": "גאון הירדן 1",
+      "description": "ביהס רבין",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 652,
+      "serial": 39104034
+    },
+    "installationDate": 1378760400000
+  },
+  {
+    "id": 181,
+    "contract": 4383103,
+    "contractStart": 934405200000,
+    "place": {
+      "address": "אשכולות פיס\" מרכז למדע ו\"",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 735,
+      "serial": 5062672
+    },
+    "installationDate": 934318800000
+  },
+  {
+    "id": 182,
+    "contract": 4383103,
+    "contractStart": 934405200000,
+    "place": {
+      "address": "אשכולות פיס\" מרכז למדע ו\"",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 656,
+      "serial": 39537531
+    },
+    "installationDate": 934318800000
+  },
+  {
+    "id": 183,
+    "contract": 4384075,
+    "contractStart": null,
+    "place": {
+      "address": "הקוממיות בי\"ס חמד",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 604,
+      "serial": 1472048
+    },
+    "installationDate": 1107640800000
+  },
+  {
+    "id": 184,
+    "contract": 4384075,
+    "contractStart": null,
+    "place": {
+      "address": "הקוממיות בי\"ס חמד",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 604,
+      "serial": 1472075
+    },
+    "installationDate": 1107640800000
+  },
+  {
+    "id": 185,
+    "contract": 4384075,
+    "contractStart": null,
+    "place": {
+      "address": "הקוממיות בי\"ס חמד",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 604,
+      "serial": 1473424
+    },
+    "installationDate": 1107640800000
+  },
+  {
+    "id": 186,
+    "contract": 4384075,
+    "contractStart": null,
+    "place": {
+      "address": "הקוממיות בי\"ס חמד",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 733,
+      "serial": 4127504
+    },
+    "installationDate": 1107640800000
+  },
+  {
+    "id": 187,
+    "contract": 4420187,
+    "contractStart": 1209934800000,
+    "place": {
+      "address": "אהוד בן גרא 7א",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 439,
+      "serial": 4860867
+    },
+    "installationDate": 1228428000000
+  },
+  {
+    "id": 188,
+    "contract": 4427267,
+    "contractStart": null,
+    "place": {
+      "address": "שד העצמאות 66",
+      "description": "ביהס משואה",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 439,
+      "serial": 4961779
+    },
+    "installationDate": 1199570400000
+  },
+  {
+    "id": 189,
+    "contract": 4526992,
+    "contractStart": 415836000000,
+    "place": {
+      "address": "הקוממיות 97",
+      "description": "אגף הנדסה",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 373,
+      "serial": 64356
+    },
+    "installationDate": 410652000000
+  },
+  {
+    "id": 190,
+    "contract": 4526992,
+    "contractStart": 415836000000,
+    "place": {
+      "address": "הקוממיות 97",
+      "description": "אגף הנדסה",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 373,
+      "serial": 66899
+    },
+    "installationDate": 410652000000
+  },
+  {
+    "id": 191,
+    "contract": 4558379,
+    "contractStart": null,
+    "place": {
+      "address": "הרמון מקלט ברימון 1 חניה",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 439,
+      "serial": 9014035
+    },
+    "installationDate": null
+  },
+  {
+    "id": 192,
+    "contract": 4607072,
+    "contractStart": 1238533200000,
+    "place": {
+      "address": "מבוא התבור 22",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 439,
+      "serial": 9014033
+    },
+    "installationDate": 1238533200000
+  },
+  {
+    "id": 193,
+    "contract": 4631541,
+    "contractStart": null,
+    "place": {
+      "address": "רחבת תמנע מקלט מקלט - מנה",
+      "description": "מקלט",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 490,
+      "serial": 38704677
+    },
+    "installationDate": null
+  },
+  {
+    "id": 194,
+    "contract": 4716619,
+    "contractStart": null,
+    "place": {
+      "address": "ככר פז 3",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 659,
+      "serial": 8004623
+    },
+    "installationDate": null
+  },
+  {
+    "id": 195,
+    "contract": 4716619,
+    "contractStart": null,
+    "place": {
+      "address": "ככר פז 3",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 735,
+      "serial": 9073556
+    },
+    "installationDate": null
+  },
+  {
+    "id": 196,
+    "contract": 4719890,
+    "contractStart": null,
+    "place": {
+      "address": "ככר ה 87 מרכז",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 605,
+      "serial": 1656369
+    },
+    "installationDate": -125978400000
+  },
+  {
+    "id": 197,
+    "contract": 4719890,
+    "contractStart": null,
+    "place": {
+      "address": "ככר ה 87 מרכז",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 605,
+      "serial": 1656484
+    },
+    "installationDate": -125978400000
+  },
+  {
+    "id": 198,
+    "contract": 4719890,
+    "contractStart": null,
+    "place": {
+      "address": "ככר ה 87 מרכז",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 605,
+      "serial": 1656485
+    },
+    "installationDate": -125978400000
+  },
+  {
+    "id": 199,
+    "contract": 4719890,
+    "contractStart": null,
+    "place": {
+      "address": "ככר ה 87 מרכז",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 735,
+      "serial": 8069984
+    },
+    "installationDate": -125978400000
+  },
+  {
+    "id": 200,
+    "contract": 4761773,
+    "contractStart": 1238533200000,
+    "place": {
+      "address": "רחבת חלוצה מקלט מקלט - מנ",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 439,
+      "serial": 9014030
+    },
+    "installationDate": 1238533200000
+  },
+  {
+    "id": 201,
+    "contract": 4775070,
+    "contractStart": 1259618400000,
+    "place": {
+      "address": "הדישון אשקובית מקלט - מנה",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 439,
+      "serial": 9013985
+    },
+    "installationDate": 1259618400000
+  },
+  {
+    "id": 202,
+    "contract": 4858217,
+    "contractStart": 1250024400000,
+    "place": {
+      "address": "הקוממיות קוממיות מרכזיה 1",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 490,
+      "serial": 46949820
+    },
+    "installationDate": 1257976800000
+  },
+  {
+    "id": 203,
+    "contract": 4883210,
+    "contractStart": null,
+    "place": {
+      "address": "מבוא ישעיהו מרכזית מאור",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 439,
+      "serial": 9015391
+    },
+    "installationDate": null
+  },
+  {
+    "id": 204,
+    "contract": 5027850,
+    "contractStart": 1252702800000,
+    "place": {
+      "address": "קוממיות מרכזיה 2 מגרש ספו",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 490,
+      "serial": 46949791
+    },
+    "installationDate": 1257976800000
+  },
+  {
+    "id": 205,
+    "contract": 5075794,
+    "contractStart": null,
+    "place": {
+      "address": "המרגלית 31",
+      "description": "גן כרמית",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 491,
+      "serial": 10139043
+    },
+    "installationDate": null
+  },
+  {
+    "id": 206,
+    "contract": 5089681,
+    "contractStart": 1273352400000,
+    "place": {
+      "address": "שד גת 94א",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 490,
+      "serial": 47292196
+    },
+    "installationDate": 1278622800000
+  },
+  {
+    "id": 207,
+    "contract": 5145451,
+    "contractStart": null,
+    "place": {
+      "address": "הגפן 5",
+      "description": "חנות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 102,
+      "serial": 1777061
+    },
+    "installationDate": 694389600000
+  },
+  {
+    "id": 208,
+    "contract": 5193531,
+    "contractStart": null,
+    "place": {
+      "address": "הגפן 5",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 735,
+      "serial": 9074237
+    },
+    "installationDate": 733615200000
+  },
+  {
+    "id": 209,
+    "contract": 5193531,
+    "contractStart": null,
+    "place": {
+      "address": "הגפן 5",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 709,
+      "serial": 64036521
+    },
+    "installationDate": 733615200000
+  },
+  {
+    "id": 210,
+    "contract": 5238557,
+    "contractStart": 1301864400000,
+    "place": {
+      "address": "שד לכיש 48",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 491,
+      "serial": 10147478
+    },
+    "installationDate": 1315083600000
+  },
+  {
+    "id": 211,
+    "contract": 5293119,
+    "contractStart": 1323295200000,
+    "place": {
+      "address": "ככר הנגב 1",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 658,
+      "serial": 3081061
+    },
+    "installationDate": null
+  },
+  {
+    "id": 212,
+    "contract": 5293119,
+    "contractStart": 1323295200000,
+    "place": {
+      "address": "ככר הנגב 1",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 709,
+      "serial": 65200458
+    },
+    "installationDate": null
+  },
+  {
+    "id": 213,
+    "contract": 5293119,
+    "contractStart": 1323295200000,
+    "place": {
+      "address": "ככר הנגב 1",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 759,
+      "serial": 65494173
+    },
+    "installationDate": null
+  },
+  {
+    "id": 214,
+    "contract": 5348152,
+    "contractStart": null,
+    "place": {
+      "address": "רחבת צופר מקלט מקלט - מנה",
+      "description": "מקלט א",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 439,
+      "serial": 9014039
+    },
+    "installationDate": 1241125200000
+  },
+  {
+    "id": 215,
+    "contract": 5385147,
+    "contractStart": null,
+    "place": {
+      "address": "אזור תעשיה מקלט ע\"י סוגת",
+      "description": "מקלט",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 25,
+      "serial": 11103240
+    },
+    "installationDate": null
+  },
+  {
+    "id": 216,
+    "contract": 5446293,
+    "contractStart": null,
+    "place": {
+      "address": "שד העצמאות 47",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 605,
+      "serial": 1715970
+    },
+    "installationDate": null
+  },
+  {
+    "id": 217,
+    "contract": 5446293,
+    "contractStart": null,
+    "place": {
+      "address": "שד העצמאות 47",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 605,
+      "serial": 1716036
+    },
+    "installationDate": null
+  },
+  {
+    "id": 218,
+    "contract": 5446293,
+    "contractStart": null,
+    "place": {
+      "address": "שד העצמאות 47",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 605,
+      "serial": 1716052
+    },
+    "installationDate": null
+  },
+  {
+    "id": 219,
+    "contract": 5446293,
+    "contractStart": null,
+    "place": {
+      "address": "שד העצמאות 47",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 705,
+      "serial": 56498609
+    },
+    "installationDate": null
+  },
+  {
+    "id": 220,
+    "contract": 5446293,
+    "contractStart": null,
+    "place": {
+      "address": "שד העצמאות 47",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 757,
+      "serial": 58131955
+    },
+    "installationDate": null
+  },
+  {
+    "id": 221,
+    "contract": 5496142,
+    "contractStart": null,
+    "place": {
+      "address": "ישראל פולק פינת סיון ע\"י",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 490,
+      "serial": 47192798
+    },
+    "installationDate": null
+  },
+  {
+    "id": 222,
+    "contract": 5558608,
+    "contractStart": null,
+    "place": {
+      "address": "הגפן 5",
+      "description": "חנות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 454,
+      "serial": 63373942
+    },
+    "installationDate": 694389600000
+  },
+  {
+    "id": 223,
+    "contract": 5579397,
+    "contractStart": null,
+    "place": {
+      "address": "ככר פז 2",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 467,
+      "serial": 14002954
+    },
+    "installationDate": null
+  },
+  {
+    "id": 224,
+    "contract": 5581480,
+    "contractStart": null,
+    "place": {
+      "address": "ככר פז 3",
+      "description": "ארכיון העירייה",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 491,
+      "serial": 11165600
+    },
+    "installationDate": null
+  },
+  {
+    "id": 225,
+    "contract": 5608747,
+    "contractStart": null,
+    "place": {
+      "address": "מגרש ספורט ע\"י שד' העצמאו",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 467,
+      "serial": 12566868
+    },
+    "installationDate": null
+  },
+  {
+    "id": 226,
+    "contract": 5675967,
+    "contractStart": null,
+    "place": {
+      "address": "הזית שוק עירוני",
+      "description": "הזית 50/1",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 24,
+      "serial": 10130087
+    },
+    "installationDate": null
+  },
+  {
+    "id": 227,
+    "contract": 5694610,
+    "contractStart": null,
+    "place": {
+      "address": "שד לכיש 10",
+      "description": "אמפיתאטרון",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 659,
+      "serial": 10005835
+    },
+    "installationDate": null
+  },
+  {
+    "id": 228,
+    "contract": 5694610,
+    "contractStart": null,
+    "place": {
+      "address": "שד לכיש 10",
+      "description": "אמפיתאטרון",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 735,
+      "serial": 10077382
+    },
+    "installationDate": 1365627600000
+  },
+  {
+    "id": 229,
+    "contract": 5699241,
+    "contractStart": null,
+    "place": {
+      "address": "הזית שוק עירוני",
+      "description": "שוק",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 492,
+      "serial": 11059862
+    },
+    "installationDate": null
+  },
+  {
+    "id": 230,
+    "contract": 5842478,
+    "contractStart": null,
+    "place": {
+      "address": "הזית שוק עירוני",
+      "description": "שוק",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 25,
+      "serial": 11104392
+    },
+    "installationDate": null
+  },
+  {
+    "id": 231,
+    "contract": 5926666,
+    "contractStart": null,
+    "place": {
+      "address": "מלכי ישראל 134 כ1",
+      "description": "עירייה",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 27,
+      "serial": 12014987
+    },
+    "installationDate": null
+  },
+  {
+    "id": 232,
+    "contract": 5955825,
+    "contractStart": null,
+    "place": {
+      "address": "רובע הבנים A מרכזייה",
+      "description": "מרכזית מאור",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 467,
+      "serial": 12577266
+    },
+    "installationDate": null
+  },
+  {
+    "id": 233,
+    "contract": 6013017,
+    "contractStart": null,
+    "place": {
+      "address": "שד לכיש פינת העצמאות מיזר",
+      "description": "מיזרקה לכיש העצמאות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 491,
+      "serial": 13247935
+    },
+    "installationDate": null
+  },
+  {
+    "id": 234,
+    "contract": 6014410,
+    "contractStart": 1375563600000,
+    "place": {
+      "address": "מבוא סיון מרכזית מאור פינ",
+      "description": "מ.רחובות",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 467,
+      "serial": 12569610
+    },
+    "installationDate": null
+  },
+  {
+    "id": 235,
+    "contract": 6043781,
+    "contractStart": 1373490000000,
+    "place": {
+      "address": "שלמה המלך מגרש ספורט פינת",
+      "description": "מגרש כדורסל",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 491,
+      "serial": 13247858
+    },
+    "installationDate": 1373490000000
+  },
+  {
+    "id": 236,
+    "contract": 6072568,
+    "contractStart": null,
+    "place": {
+      "address": "אפק 4 כ1",
+      "description": "משרד",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 27,
+      "serial": 12014804
+    },
+    "installationDate": null
+  },
+  {
+    "id": 237,
+    "contract": 6134669,
+    "contractStart": 1412629200000,
+    "place": {
+      "address": "רחבת יששכר ע\"י מס 9 מקלט",
+      "description": "מקלט",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 493,
+      "serial": 14286688
+    },
+    "installationDate": 1412629200000
+  },
+  {
+    "id": 238,
+    "contract": 6142286,
+    "contractStart": null,
+    "place": {
+      "address": "ככר פז 2",
+      "description": "משרד",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 147,
+      "serial": 3909668
+    },
+    "installationDate": 1060203600000
+  },
+  {
+    "id": 239,
+    "contract": 6144901,
+    "contractStart": 1399064400000,
+    "place": {
+      "address": "הגלבוע 9",
+      "description": "מקלט 13",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 493,
+      "serial": 14286686
+    },
+    "installationDate": 1407358800000
+  },
+  {
+    "id": 240,
+    "contract": 6144906,
+    "contractStart": 1399064400000,
+    "place": {
+      "address": "משעול השושן 58",
+      "description": "מקלט 24",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 373,
+      "serial": 31275
+    },
+    "installationDate": 253231200000
+  },
+  {
+    "id": 241,
+    "contract": 6145699,
+    "contractStart": null,
+    "place": {
+      "address": "גוגנהיים 1 137/162",
+      "description": "צופרים לשעת חירום",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 27,
+      "serial": 14017600
+    },
+    "installationDate": null
+  },
+  {
+    "id": 242,
+    "contract": 6179806,
+    "contractStart": null,
+    "place": {
+      "address": "הגפן 5",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 100,
+      "serial": 1731947
+    },
+    "installationDate": 663026400000
+  },
+  {
+    "id": 243,
+    "contract": 6224036,
+    "contractStart": null,
+    "place": {
+      "address": "רחבת ירמיהו ע\"י 23 מקלט 9",
+      "description": "מקלט 29",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 442,
+      "serial": 36098002
+    },
+    "installationDate": null
+  },
+  {
+    "id": 244,
+    "contract": 6247661,
+    "contractStart": 1410037200000,
+    "place": {
+      "address": "משעול מנשה 5א",
+      "description": "מקלט 204",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 493,
+      "serial": 14286668
+    },
+    "installationDate": null
+  },
+  {
+    "id": 245,
+    "contract": 6263066,
+    "contractStart": null,
+    "place": {
+      "address": "הגפן 8א",
+      "description": "מקלט",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 493,
+      "serial": 14286662
+    },
+    "installationDate": null
+  },
+  {
+    "id": 246,
+    "contract": 6286398,
+    "contractStart": null,
+    "place": {
+      "address": "ככר פז 2",
+      "description": "משרד",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 27,
+      "serial": 12014889
+    },
+    "installationDate": null
+  },
+  {
+    "id": 247,
+    "contract": 6372818,
+    "contractStart": null,
+    "place": {
+      "address": "שמואל הנביא 2",
+      "description": "בית כנסת",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 493,
+      "serial": 14286731
+    },
+    "installationDate": 1391724000000
+  },
+  {
+    "id": 248,
+    "contract": 6375580,
+    "contractStart": null,
+    "place": {
+      "address": "ככר פז 21",
+      "description": "",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 143,
+      "serial": 3548036
+    },
+    "installationDate": null
+  },
+  {
+    "id": 249,
+    "contract": 6405508,
+    "contractStart": null,
+    "place": {
+      "address": "רובע הבנים 2 42/362",
+      "description": "צופרים לשעת חירום",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 27,
+      "serial": 14017596
+    },
+    "installationDate": null
+  },
+  {
+    "id": 250,
+    "contract": 6429643,
+    "contractStart": null,
+    "place": {
+      "address": "מבוא שניר 1",
+      "description": "להרצת מערכות גן ילדים",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 493,
+      "serial": 14296623
+    },
+    "installationDate": null
+  },
+  {
+    "id": 251,
+    "contract": 6436663,
+    "contractStart": null,
+    "place": {
+      "address": "ישראל פולק מקלט 100",
+      "description": "מקלט",
+      "locality": "קרית גת"
+    },
+    "counter": {
+      "code": 493,
+      "serial": 14286650
+    },
+    "installationDate": 1396904400000
+  }
+]}

@@ -1,0 +1,320 @@
+{
+  "counters": {
+    "counter0": {
+      "id": 0,
+      "contract": 908249,
+      "contractStart": null,
+      "title": "השופטים ע\"י מס 4 מאור רחו",
+      "message": "description: מאור רחובות <\/br> contract 908249, code: 442, serial: 34473664",
+      "lat": 31.611148,
+      "lng": 34.768459,
+      "place": {
+        "address": "השופטים ע\"י מס 4 מאור רחו",
+        "description": "מאור רחובות",
+        "locality": "קרית גת",
+        "geolocation": {
+          "address_components": [
+            {
+              "long_name": "קרית גת",
+              "short_name": "ק\"ג",
+              "types": ["locality", "political"]
+            },
+            {
+              "long_name": "ישראל",
+              "short_name": "IL",
+              "types": ["country", "political"]
+            }
+          ],
+          "formatted_address": "קרית גת, ישראל",
+          "geometry": {
+            "bounds": {
+              "northeast": {
+                "lat": 31.6432251,
+                "lng": 34.804252
+              },
+              "southwest": {
+                "lat": 31.6146065,
+                "lng": 34.749627
+              }
+            },
+            "location": {
+              "lat": 31.611148,
+              "lng": 34.768459
+            },
+            "location_type": "APPROXIMATE",
+            "viewport": {
+              "northeast": {
+                "lat": 31.6432251,
+                "lng": 34.804252
+              },
+              "southwest": {
+                "lat": 31.5759471,
+                "lng": 34.749627
+              }
+            }
+          },
+          "partial_match": true,
+          "types": ["locality", "political"]
+        }
+      },
+      "counter": {
+        "code": 442,
+        "serial": 34473664
+      },
+      "installationDate": 1063054800000
+    },
+    "counter1": {
+      "id": 1,
+      "contract": 919834,
+      "contractStart": null,
+      "title": "שד העצמאות 30",
+      "message": "<b>Description:<\/b>אולם כדורסל_שלאון<\/br><b>Address:<\/b>שד העצמאות 30<\/br><b>Contract #:<\/b> 919834<\/br><b>Counter code:<\/b> 373<\/br><b>Counter serial:<\/b> 48245",
+      "lat": 31.6111984,
+      "lng": 34.7744589,
+      "place": {
+        "address": "שד העצמאות 30",
+        "description": "אולם כדורסל_שלאון",
+        "locality": "קרית גת",
+        "geolocation": {
+          "address_components": [
+            {
+              "long_name": "קרית גת",
+              "short_name": "ק\"ג",
+              "types": ["locality", "political"]
+            },
+            {
+              "long_name": "ישראל",
+              "short_name": "IL",
+              "types": ["country", "political"]
+            }
+          ],
+          "formatted_address": "קרית גת, ישראל",
+          "geometry": {
+            "bounds": {
+              "northeast": {
+                "lat": 31.6432251,
+                "lng": 34.804252
+              },
+              "southwest": {
+                "lat": 31.5759471,
+                "lng": 34.749627
+              }
+            },
+            "location": {
+              "lat": 31.6111984,
+              "lng": 34.7744589
+            },
+            "location_type": "APPROXIMATE",
+            "viewport": {
+              "northeast": {
+                "lat": 31.6432251,
+                "lng": 34.804252
+              },
+              "southwest": {
+                "lat": 31.5759471,
+                "lng": 34.749627
+              }
+            }
+          },
+          "partial_match": true,
+          "types": ["locality", "political"]
+        }
+      },
+      "counter": {
+        "code": 373,
+        "serial": 48245
+      },
+      "installationDate": 347925600000
+    },
+    "counter2": {
+      "id": 2,
+      "contract": 920169,
+      "contractStart": 347839200000,
+      "lat": 31.611148,
+      "lng": 34.768459,
+      "title": "ככר פז ע'י מועצת הפועלים",
+      "message": "<b>Description:<\/b> מאור רחובות<\/br><b>Address:<\/b> מבככר פז עי מועצת הפועלים<\/br><b>Contract #:<\/b> 920169<\/br><b>Counter code:<\/b> 442<\/br><b>Counter serial:<\/b> 35186452",
+      "place": {
+        "address": "ככר פז ע'י מועצת הפועלים",
+        "description": "מאור רחובות",
+        "locality": "קרית גת",
+        "geolocation": {
+          "address_components": [
+            {
+              "long_name": "קרית גת",
+              "short_name": "ק\"ג",
+              "types": ["locality", "political"]
+            },
+            {
+              "long_name": "ישראל",
+              "short_name": "IL",
+              "types": ["country", "political"]
+            }
+          ],
+          "formatted_address": "קרית גת, ישראל",
+          "geometry": {
+            "bounds": {
+              "northeast": {
+                "lat": 31.6432251,
+                "lng": 34.804252
+              },
+              "southwest": {
+                "lat": 31.5759471,
+                "lng": 34.749627
+              }
+            },
+            "location": {
+              "lat": 31.611148,
+              "lng": 34.768459
+            },
+            "location_type": "APPROXIMATE",
+            "viewport": {
+              "northeast": {
+                "lat": 31.6432251,
+                "lng": 34.804252
+              },
+              "southwest": {
+                "lat": 31.5759471,
+                "lng": 34.749627
+              }
+            }
+          },
+          "partial_match": true,
+          "types": ["locality", "political"]
+        }
+      },
+      "counter": {
+        "code": 442,
+        "serial": 35186452
+      },
+      "installationDate": null
+    },
+    "counter3": {
+      "id": 3,
+      "contract": 930696,
+      "contractStart": 747525600000,
+      "lat": 31.6027561,
+      "lng": 34.760065,
+      "title": "הגבורה מאחורי מס 13 מ.ר",
+      "message": "contract:  \n code: \n  \n serial: ",
+      "message": "<b>Description:<\/b>מאור רחובות<\/br><b>Address:<\/b>שדהגבורה מאחורי מס 13 מ.ר<\/br><b>Contract #:<\/b> 930696<\/br><b>Counter code:<\/b> 462<\/br><b>Counter serial:<\/b> 4138859",
+      "place": {
+        "address": "הגבורה מאחורי מס 13 מ.ר",
+        "description": "מאור רחובות",
+        "locality": "קרית גת",
+        "geolocation": {
+          "address_components": [
+            {
+              "long_name": "קרית גת",
+              "short_name": "ק\"ג",
+              "types": ["locality", "political"]
+            },
+            {
+              "long_name": "ישראל",
+              "short_name": "IL",
+              "types": ["country", "political"]
+            }
+          ],
+          "formatted_address": "קרית גת, ישראל",
+          "geometry": {
+            "bounds": {
+              "northeast": {
+                "lat": 31.6432251,
+                "lng": 34.804252
+              },
+              "southwest": {
+                "lat": 31.5759471,
+                "lng": 34.749627
+              }
+            },
+            "location": {
+              "lat": 31.6027561,
+              "lng": 34.760065
+            },
+            "location_type": "APPROXIMATE",
+            "viewport": {
+              "northeast": {
+                "lat": 31.6432251,
+                "lng": 34.804252
+              },
+              "southwest": {
+                "lat": 31.5759471,
+                "lng": 34.749627
+              }
+            }
+          },
+          "partial_match": true,
+          "types": ["locality", "political"]
+        }
+      },
+      "counter": {
+        "code": 462,
+        "serial": 4138859
+      },
+      "installationDate": 1073340000000
+    },
+    "counter4": {
+      "id": 4,
+      "contract": 931181,
+      "contractStart": null,
+      "lat": 31.6151037,
+      "lng": 34.7515321,
+      "title": "מבוא ליבנה ע\"י 2 מאור רחו",
+      "message": "<b>Description:<\/b> מאור רחובות<\/br><b>Address:<\/b> מבוא ליבנה ע\" 2 מאור רחו<\/br><b>Contract #:<\/b> 931181<\/br><b>Counter code:<\/b> 467<\/br><b>Counter serial:<\/b> 12569592",
+      "place": {
+        "address": "מבוא ליבנה ע\"י 2 מאור רחו",
+        "description": "מאור רחובות",
+        "locality": "קרית גת",
+        "geolocation": {
+          "address_components": [
+            {
+              "long_name": "קרית גת",
+              "short_name": "ק\"ג",
+              "types": ["locality", "political"]
+            },
+            {
+              "long_name": "ישראל",
+              "short_name": "IL",
+              "types": ["country", "political"]
+            }
+          ],
+          "formatted_address": "קרית גת, ישראל",
+          "geometry": {
+            "bounds": {
+              "northeast": {
+                "lat": 31.6432251,
+                "lng": 34.804252
+              },
+              "southwest": {
+                "lat": 31.5759471,
+                "lng": 34.749627
+              }
+            },
+            "location": {
+              "lat": 31.6151037,
+              "lng": 34.7515321
+            },
+            "location_type": "APPROXIMATE",
+            "viewport": {
+              "northeast": {
+                "lat": 31.6432251,
+                "lng": 34.804252
+              },
+              "southwest": {
+                "lat": 31.5759471,
+                "lng": 34.749627
+              }
+            }
+          },
+          "partial_match": true,
+          "types": ["locality", "political"]
+        }
+      },
+      "counter": {
+        "code": 467,
+        "serial": 12569592
+      },
+      "installationDate": null
+    }
+  }
+}
