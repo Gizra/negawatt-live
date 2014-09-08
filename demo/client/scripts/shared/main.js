@@ -92,7 +92,6 @@
       $scope.counters = response.data.counters;
 
       $scope.totals = response.data.total;
-      console.log('COUNTERS:', response.data);
     });
 
   }]);

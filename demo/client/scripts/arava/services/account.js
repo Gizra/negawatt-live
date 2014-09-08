@@ -4,6 +4,23 @@ angular.module('app')
   .service('Account', function Detector($http, $q, moment, BACKEND_URL) {
     var account = this;
 
+    function lastYear(data) {
+      var series = [];
+
+      // Remove sites.
+      data = angular.fromJson(data);
+
+      // Create array.
+      angular.forEach(data.months, function(month, index) {
+        this.push([
+            moment(month.date).format('M'),
+            month.kwh
+          ]);
+      }, series);
+
+      return series;
+    }
+
     /**
      * Get report (to draw chart) data from a selection of time.
      *
@@ -25,21 +42,16 @@ angular.module('app')
 
       // Get account data.
 
+      account.get(selection, lastYear).then(function(response) {
+        console.log('response:', response.data);
 
-      chart = {};
-      chart.data1 = [
-        [1, 15],
-        [2, 20],
-        [3, 14],
-        [4, 10],
-        [5, 10],
-        [6, 40],
-        [7, 30],
-        [8, 26],
-        [9, 22]
-      ];
+        chart = {};
+        chart.data1 = response.data;
 
-      deferred.resolve(chart);
+        deferred.resolve(chart);
+
+      });
+
 
       return deferred.promise;
 
@@ -60,12 +72,18 @@ angular.module('app')
      *
      * @returns {*}
      */
-    this.get = function (selection) {
-      return $http({
+    this.get = function (selection, transformResponse) {
+      var options = {
         method: 'GET',
         url: BACKEND_URL + '/account',
         params: selection
-      });
+      };
+
+      if (transformResponse) {
+        options.transformResponse = transformResponse
+      };
+
+      return $http(options);
     };
 
 
