@@ -39,22 +39,6 @@ angular.module('app')
         tickColor: "#f9f9f9",
         borderWidth: 1,
         borderColor: "#eeeeee"
-      },
-      xaxis: {
-        ticks: [
-          [1, 'Jan.'],
-          [2, 'Feb.'],
-          [3, 'Mar.'],
-          [4, 'Apr.'],
-          [5, 'May'],
-          [6, 'June'],
-          [7, 'July'],
-          [8, 'Aug.'],
-          [9, 'Sept.'],
-          [10, 'Oct.'],
-          [11, 'Nov.'],
-          [12, 'Dec.']
-        ]
       }
     };
 
