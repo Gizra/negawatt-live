@@ -24,7 +24,8 @@
     'app.task',
     'app.chart.ctrls',
     'app.chart.directives',
-    'app.page.ctrls'
+    'app.page.ctrls',
+    'angularMoment'
   ]).config([
     '$routeProvider', function($routeProvider) {
       var routes, setRoutes;
