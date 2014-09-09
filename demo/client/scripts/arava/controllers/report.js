@@ -74,9 +74,9 @@ angular.module('app')
     ];
 
     // Get account (city) consumption information.
-    Account.getReport().then(function(response) {
+    Account.reportChange().then(function(response) {
       // Update data.
-      $scope.line1.data[0].data = response.data1;
+      $scope.line1.data[0].data = response.data;
 
       // Refresh chart.
       $scope.$broadcast('refresh_report');
