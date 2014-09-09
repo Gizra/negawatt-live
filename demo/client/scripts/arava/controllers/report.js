@@ -30,44 +30,7 @@ angular.module('app')
     }
 
     $scope.line1 = {};
-    $scope.line1.options = {
-      series: {
-        lines: {
-          show: true,
-          fill: true,
-          fillColor: {
-            colors: [
-              {
-                opacity: 0
-              },
-              {
-                opacity: 0.3
-              }
-            ]
-          }
-        },
-        points: {
-          show: true,
-          lineWidth: 2,
-          fill: true,
-          fillColor: "#ffffff",
-          symbol: "circle",
-          radius: 5
-        }
-      },
-      colors: [$scope.color.primary, $scope.color.infoAlt],
-      tooltip: true,
-      tooltipOpts: {
-        defaultTheme: false
-      },
-      grid: {
-        hoverable: true,
-        clickable: true,
-        tickColor: "#f9f9f9",
-        borderWidth: 1,
-        borderColor: "#eeeeee"
-      }
-    };
+//    $scope.line1.options = ;
     $scope.line1.data = [
       {
         label: 'Total Kwh.'
@@ -88,9 +51,9 @@ angular.module('app')
       // Set selection of type report.
       setReport(type);
 
-      console.log(Chart.options(type).axis, type);
-
-      $scope.line1.options.xaxis = Chart.options(type).axis;
+      // Update x axis labels.
+//      $scope.line1.options.xaxis = Chart.options(type).axis;
+      $scope.line1.options = Chart.options(type);
 
       // Get account (city) consumption information.
       Account.getReport(type).then(function(response) {
@@ -101,7 +64,6 @@ angular.module('app')
         $scope.$broadcast('report_change');
 
       });
-
     };
 
     // Select last year report like default.
