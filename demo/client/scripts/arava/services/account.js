@@ -37,6 +37,38 @@ angular.module('app')
     }
 
     /**
+     * Transform response data from account collection into and array, that
+     * contain array with week number and kwh consumed.
+     *
+     * [
+     *   [1, 3455667]
+     *   [2, 5695667]
+     *   [3, 5558124]
+     *   [4, 9864567]
+     *   ...
+     * ]
+     *
+     * @param data
+     * @returns {Array}
+     */
+    function lastMonth(data) {
+      var series = [];
+
+      // Remove sites.
+      data = angular.fromJson(data);
+
+      // Create array.
+      angular.forEach(data.months, function(month, index) {
+        this.push([
+          moment(month.date).format('M'),
+          month.kwh
+        ]);
+      }, series);
+
+      return series;
+    }
+
+    /**
      * Get report (to draw chart) data from a selection of time.
      *
      * If not exists selection by default ask by the last months.
@@ -55,10 +87,19 @@ angular.module('app')
         };
       }
 
+      if (angular.isString(selection)) {
+        switch (selection) {
+          case 'lastMonth':
+            selection = {
+              start: moment().subtract(1, 'months').format('YYYYMM'),
+              end: moment().subtract(1, 'months').format('YYYYMM')
+            };
+            break;
+        }
+      }
+
       // Get account data.
       account.get(selection, lastYear).then(function(response) {
-        console.log('response:', response.data);
-
         chart = {};
         chart.data = response.data;
 
@@ -95,7 +136,7 @@ angular.module('app')
 
       if (transformResponse) {
         options.transformResponse = transformResponse
-      };
+      }
 
       return $http(options);
     };
