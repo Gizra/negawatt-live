@@ -2,6 +2,10 @@
 
 angular.module('app')
   .controller('AccountReportCtrl', ['$scope', 'Account', function($scope, Account) {
+    // Select by default report of the last year.
+//    $scope.typeReport = 'lastYear';
+
+
     $scope.line1 = {};
     $scope.line1.options = {
       series: {
@@ -41,7 +45,6 @@ angular.module('app')
         borderColor: "#eeeeee"
       }
     };
-
     $scope.line1.data = [
       {
         label: 'Total Kwh.'
@@ -57,14 +60,44 @@ angular.module('app')
       }
     ];
 
-    // Get account (city) consumption information.
-    Account.getReport().then(function(response) {
-      // Update data.
-      $scope.line1.data[0].data = response.data;
+    // Private.
+    function setReport(type) {
+      $scope.selected = {};
+      $scope.typeReport = type;
 
-      // Refresh chart.
-      $scope.$broadcast('report_change');
+      switch (type) {
+        case 'current':
+          $scope.selected.current = {'selected': true };
+          break;
+        case 'lastWeek':
+          $scope.selected.lastWeek = {'selected': true };
+          break;
+        case 'lastMonth':
+          $scope.selected.lastMonth = {'selected': true };
+          break;
+        case 'lastYear':
+          $scope.selected.lastYear = {'selected': true };
+          break;
+      }
+    }
 
-    });
+    $scope.selectReport = function(type) {
+
+      // Set selection of type report.
+      setReport(type);
+
+      // Get account (city) consumption information.
+      Account.getReport(type).then(function(response) {
+        // Update data.
+        $scope.line1.data[0].data = response.data;
+
+        // Refresh chart.
+        $scope.$broadcast('report_change');
+
+      });
+
+    };
+
+    $scope.selectReport();
 
   }]);

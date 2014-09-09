@@ -81,13 +81,13 @@
     </section>
   </section>
 
-  <section class="dasboard-chart">
+  <section class="dasboard-chart" data-ng-controller="AccountReportCtrl">
     <div class="row">
       <div class="col-sm-4">
         <!-- Stats -->
         <div class="row text-center">
           <div class="col-sm-6">
-            <div class="panel mini-box">
+            <div class="panel mini-box" ng-class="selected.lastCurrent" ng-click="selectReport('lastCurrent')">
                 <span class="btn-icon btn-icon-round btn-icon-lg-alt bg-success">
                     <span class="ti-stats-up"></span>
                 </span>
@@ -99,7 +99,7 @@
             </div>
           </div>
           <div class="col-sm-6">
-            <div class="panel mini-box">
+            <div class="panel mini-box" ng-class="selected.lastWeek" ng-click="selectReport('lastWeek')">
                 <span class="btn-icon btn-icon-round btn-icon-lg-alt bg-info">
                     <i class="ti-calendar"></i>
                 </span>
@@ -110,7 +110,7 @@
             </div>
           </div>
           <div class="col-sm-6">
-            <div class="panel mini-box">
+            <div class="panel mini-box" ng-class="selected.lastMonth" ng-click="selectReport('lastMonth')">
                 <span class="btn-icon btn-icon-round btn-icon-lg-alt bg-warning">
                     <i class="ti-calendar"></i>
                 </span>
@@ -121,7 +121,7 @@
             </div>
           </div>
           <div class="col-sm-6">
-            <div class="panel mini-box">
+            <div class="panel mini-box" ng-class="selected.lastYear" ng-click="selectReport('lastYear')">
                 <span class="btn-icon btn-icon-round btn-icon-lg-alt bg-danger">
                     <i class="ti-calendar"></i>
                 </span>
@@ -134,7 +134,7 @@
         </div>
       </div>
       <div class="col-sm-8">
-        <div class="panel panel-default" data-ng-controller="AccountReportCtrl">
+        <div class="panel panel-default">
           <div class="panel-body">
             <div data-flot-chart
                  data-data="line1.data"
