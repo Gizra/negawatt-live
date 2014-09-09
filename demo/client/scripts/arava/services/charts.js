@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('app')
-  .service('Counter', function ($q, $http, BACKEND_URL) {
+  .service('Chart', function () {
 
     /**
      * Return options for type of reports.
@@ -12,7 +12,7 @@ angular.module('app')
       var options = {};
 
       switch (type) {
-        case 'lineLastYear':
+        case 'lastYear':
           options.axis = {
             ticks: [
               [1, 'Jan'],
@@ -30,7 +30,7 @@ angular.module('app')
             ]
           };
           break;
-        case 'lineLastMonth':
+        case 'lastMonth':
           options.axis = {
             ticks: [
               [1, 'week 1'],
@@ -40,7 +40,7 @@ angular.module('app')
             ]
           };
           break;
-        case 'lineLastWeek':
+        case 'lastWeek':
           options.axis = {
             ticks: [
               [1, 'Sunday'],

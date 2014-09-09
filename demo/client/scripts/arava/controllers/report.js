@@ -1,10 +1,33 @@
 'use strict';
 
 angular.module('app')
-  .controller('AccountReportCtrl', ['$scope', 'Account', function($scope, Account) {
-    // Select by default report of the last year.
-//    $scope.typeReport = 'lastYear';
+  .controller('AccountReportCtrl', ['$scope', 'Account', 'Chart', function($scope, Account, Chart) {
+    // Private functions.
+    /**
+     * Set type report into scope property and handle ng-class options.
+     *
+     * @param type
+     *   string indicating the type of report ('current'. 'lastWeek', 'lastMonth', 'lastYear')
+     */
+    function setReport(type) {
+      $scope.selected = {};
+      $scope.typeReport = type;
 
+      switch (type) {
+        case 'current':
+          $scope.selected.current = {'selected': true };
+          break;
+        case 'lastWeek':
+          $scope.selected.lastWeek = {'selected': true };
+          break;
+        case 'lastMonth':
+          $scope.selected.lastMonth = {'selected': true };
+          break;
+        case 'lastYear':
+          $scope.selected.lastYear = {'selected': true };
+          break;
+      }
+    }
 
     $scope.line1 = {};
     $scope.line1.options = {
@@ -60,31 +83,14 @@ angular.module('app')
       }
     ];
 
-    // Private.
-    function setReport(type) {
-      $scope.selected = {};
-      $scope.typeReport = type;
-
-      switch (type) {
-        case 'current':
-          $scope.selected.current = {'selected': true };
-          break;
-        case 'lastWeek':
-          $scope.selected.lastWeek = {'selected': true };
-          break;
-        case 'lastMonth':
-          $scope.selected.lastMonth = {'selected': true };
-          break;
-        case 'lastYear':
-          $scope.selected.lastYear = {'selected': true };
-          break;
-      }
-    }
-
     $scope.selectReport = function(type) {
 
       // Set selection of type report.
       setReport(type);
+
+      console.log(Chart.options(type).axis, type);
+
+      $scope.line1.options.xaxis = Chart.options(type).axis;
 
       // Get account (city) consumption information.
       Account.getReport(type).then(function(response) {
@@ -98,6 +104,7 @@ angular.module('app')
 
     };
 
-    $scope.selectReport();
+    // Select last year report like default.
+    $scope.selectReport('lastYear');
 
   }]);

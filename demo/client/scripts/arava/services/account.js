@@ -89,6 +89,12 @@ angular.module('app')
 
       if (angular.isString(selection)) {
         switch (selection) {
+          case 'lastYear':
+            selection = {
+              start: moment().format('YYYY') + '01',
+              end: moment().format('YYYYMM')
+            };
+            break;
           case 'lastMonth':
             selection = {
               start: moment().subtract(1, 'months').format('YYYYMM'),
