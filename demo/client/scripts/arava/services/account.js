@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('app')
-  .service('Account', function Detector($http, $q, moment, BACKEND_URL) {
+  .service('Account', function Detector($http, $q, moment, BACKEND_URL, $filter) {
     var account = this;
 
     /**
@@ -77,6 +77,7 @@ angular.module('app')
      */
     this.getReport = function(selection) {
       var chart,
+        fnTransform,
         deferred = $q.defer();
 
       // Define by default last year
@@ -85,8 +86,10 @@ angular.module('app')
           start: moment().format('YYYY') + '01',
           end: moment().format('YYYYMM')
         };
+        fnTransform = lastYear;
       }
 
+      // Create selection depending the value.
       if (angular.isString(selection)) {
         switch (selection) {
           case 'lastYear':
@@ -94,28 +97,28 @@ angular.module('app')
               start: moment().format('YYYY') + '01',
               end: moment().format('YYYYMM')
             };
+            fnTransform = lastYear;
             break;
           case 'lastMonth':
             selection = {
               start: moment().subtract(1, 'months').format('YYYYMM'),
               end: moment().subtract(1, 'months').format('YYYYMM')
             };
+            fnTransform = lastMonth;
             break;
         }
       }
 
       // Get account data.
-      account.get(selection, lastYear).then(function(response) {
+      account.get(selection, fnTransform).then(function(response) {
+        console.log(fnTransform.name, response);
         chart = {};
         chart.data = response.data;
 
         deferred.resolve(chart);
-
       });
 
-
       return deferred.promise;
-
     };
 
     /**
