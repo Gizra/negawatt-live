@@ -43,7 +43,7 @@ angular.module('app')
      *
      * @param selection
      */
-    this.reportChange = function(selection) {
+    this.getReport = function(selection) {
       var chart,
         deferred = $q.defer();
 
