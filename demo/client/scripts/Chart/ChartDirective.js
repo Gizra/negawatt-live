@@ -6,8 +6,7 @@
         restrict: 'A',
         scope: {
           data: '=',
-          options: '=',
-          refresh: '&'
+          options: '='
         },
         link: function(scope, ele, attrs) {
           var data, options, plot;
@@ -15,7 +14,7 @@
           options = scope.options;
 
           // Refresh report.
-          scope.$on('refresh_report', function() {
+          scope.$on('report_change', function() {
             $.plot(ele[0], data, options);
           });
 
