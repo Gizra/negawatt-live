@@ -119,10 +119,9 @@
 
     &.selected,
     &:hover {
-      background: rgba(0, 0, 0, 0.07);
+      background: rgba(91, 144, 191, 0.25);
       .box-info p {
-        color: white;
-        font-weight: bold;
+        color: rgb(45, 56, 68);
       }
     }
     .box-icon {
