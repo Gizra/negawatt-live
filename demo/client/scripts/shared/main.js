@@ -80,18 +80,19 @@
    * Dashboard controller.
    */
   .controller('DashboardCtrl', ['$scope', 'Counter', function($scope, Counter) {
-    $scope.name = 'קרית גת';
-    $scope.city = {
-      lat: 31.60456292,
-      lng: 34.77408885,
-      zoom: 14
-    };
+      $scope.city = {
+        "name": 'קרית גת',
+        "lat": 31.603466403994243,
+        "lng": 34.77099895477295,
+        "zoom": 14
+      };
 
     // Get list of counters.
     Counter.get().then(function(response) {
+      $scope.city = response.data.city;
       $scope.counters = response.data.counters;
-
-      $scope.totals = response.data.total;
+      $scope.status = response.data.status;
+      $scope.totals = response.data.totals;
     });
 
   }]);
