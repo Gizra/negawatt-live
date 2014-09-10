@@ -103,7 +103,7 @@ angular.module('app')
           break;
       }
 
-      return angular.extend(options, basicOptions);;
+      return angular.extend(options, basicOptions);
     };
 
   });
