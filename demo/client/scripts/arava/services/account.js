@@ -125,25 +125,19 @@ angular.module('app')
       if (angular.isString(selection)) {
         switch (selection) {
           case 'lastYear':
+            fnTransform = lastYear;
             selection = {
               start: moment().format('YYYY') + '01',
               end: moment().format('YYYYMM')
             };
-            fnTransform = lastYear;
             break;
           case 'lastMonth':
-            selection = {
-              start: moment().subtract(1, 'months').format('YYYYMM'),
-              end: moment().subtract(1, 'months').format('YYYYMM')
-            };
-            fnTransform = lastMonth;
-            break;
           case 'lastWeek':
+            fnTransform = (selection==='lastMonth') ? lastMonth : lastWeek;
             selection = {
               start: moment().subtract(1, 'months').format('YYYYMM'),
               end: moment().subtract(1, 'months').format('YYYYMM')
             };
-            fnTransform = lastWeek;
             break;
         }
       }
