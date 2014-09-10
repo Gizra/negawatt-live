@@ -44,7 +44,6 @@ angular.module('app')
      *   [1, 3455667]
      *   [2, 5695667]
      *   [3, 5558124]
-     *   [4, 9864567]
      *   ...
      * ]
      *
@@ -58,10 +57,43 @@ angular.module('app')
       data = angular.fromJson(data);
 
       // Create array.
-      angular.forEach(data.months, function(month, index) {
+      angular.forEach(data.weeks, function(week, index) {
         this.push([
-          moment(month.date).format('M'),
-          month.kwh
+          index,
+          week.kwh
+        ]);
+      }, series);
+
+      return series;
+    }
+
+    /**
+     * Transform response data from account collection into and array, that
+     * contain array with days of the number of days and kwh consumed in a week.
+     *
+     * [
+     *   [1, 3455667]
+     *   [2, 5695667]
+     *   [3, 5558124]
+     *   [4, 4355663]
+     *   [5, 8231424]
+     *   ...
+     * ]
+     *
+     * @param data
+     * @returns {Array}
+     */
+    function lastWeek(data) {
+      var series = [];
+
+      // Remove sites.
+      data = angular.fromJson(data);
+
+      // Create array.
+      angular.forEach(data.days, function(day, index) {
+        this.push([
+          index,
+          day.kwh
         ]);
       }, series);
 
@@ -106,12 +138,18 @@ angular.module('app')
             };
             fnTransform = lastMonth;
             break;
+          case 'lastWeek':
+            selection = {
+              start: moment().subtract(1, 'months').format('YYYYMM'),
+              end: moment().subtract(1, 'months').format('YYYYMM')
+            };
+            fnTransform = lastWeek;
+            break;
         }
       }
 
       // Get account data.
       account.get(selection, fnTransform).then(function(response) {
-        console.log(fnTransform.name, response);
         chart = {};
         chart.data = response.data;
 
@@ -126,6 +164,8 @@ angular.module('app')
      *
      * @param selection
      *  Based in a period of time.
+     * @param transformResponse
+     *  Function to transform the data.
      *
      *  {
      *    start: string, // format YYYYMM for both.
@@ -149,7 +189,5 @@ angular.module('app')
 
       return $http(options);
     };
-
-
 
   });
