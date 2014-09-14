@@ -5,7 +5,7 @@
       var $window;
       $window = $(window);
       $scope.main = {
-        brand: 'Arava ECT - Gizra POC',
+        brand: 'NegaWatt - Gizra POC',
         name: 'Erad'
       };
       $scope.pageTransitionOpts = [
