@@ -155,9 +155,7 @@
             </div>
           </div>
         </div>
-
       </div>
-
       <div class="col-sm-8">
         <div class="panel panel-default">
           <div class="panel-body">
@@ -168,6 +166,52 @@
               ></div>
           </div>
         </div>
+      </div>
+      <div class="col-sm-6 col-full">
+        <section class="panel panel-box">
+          <div class="panel-top-sm bg-success">
+            <div class="text-center">
+              TOTAL CONSUMPTION
+            </div>
+            <div class="divider divider-xl"></div>
+            <div class="divider divider-lg"></div>
+          </div>
+          <div class="panel-icon bg-success panel-icon-sm">
+            <i class="ti-bolt"></i>
+          </div>
+          <div class="panel-bottom bg-reverse">
+            <ul class="list-justified text-center">
+              <li>
+                <p class="size-h2 color-success"><i class="ti-stats-up"></i></p>
+                <p class="text-muted">High</p>
+                <div class="divider"></div>
+                <p class="">{{totals.top.kwh | number}} Kwh.</p>
+                <p class="">{{totals.top.percent | number}} %</p>
+              </li>
+              <li>
+                <p class="size-h2 color-success"><i class="ti-pulse"></i></p>
+                <p class="text-muted">Medium</p>
+                <div class="divider"></div>
+                <p class="">{{totals.medium.kwh | number}} Kwh.</p>
+                <p class="">{{totals.medium.percent | number}} %</p>
+              </li>
+              <li>
+                <p class="size-h2 color-success"><i class="ti-stats-down"></i></p>
+                <p class="text-muted">Low</p>
+                <div class="divider"></div>
+                <p class="">{{totals.low.kwh | number}} Kwh.</p>
+                <p class="">{{totals.low.percent | number}} %</p>
+              </li>
+              <li>
+                <p class="size-h2 color-success"><i class="ti-plug"></i></p>
+                <p class="text-muted">Not Used</p>
+                <div class="divider"></div>
+                <p class="">{{totals.noUsed.kwh | number}} Kwh.</p>
+                <p class="">{{totals.noUsed.percent | number}} %</p>
+              </li>
+            </ul>
+          </div>
+        </section>
       </div>
     </div>
   </section>
