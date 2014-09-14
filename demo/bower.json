@@ -29,7 +29,8 @@
     "flot.tooltip": "~0.8.0",
     "flot.curvedlines": "*",
     "jvectormap": "~1.2.2",
-    "angular-moment": "~0.8.2"
+    "angular-moment": "~0.8.2",
+    "angular-auth": "https://github.com/Gizra/angular-auth.git"
   },
   "devDependencies": {
     "holderjs": "~2.3.1",

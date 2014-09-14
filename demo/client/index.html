@@ -81,6 +81,7 @@
         <!-- endbuild -->
 
         <!-- build:js scripts/ui.js -->
+        <script src="bower_components/angular-auth/src/angular-auth.js"></script>
         <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
         <script src="bower_components/jquery-spinner/dist/jquery.spinner.min.js"></script>
         <script src="bower_components/seiyria-bootstrap-slider/dist/bootstrap-slider.min.js"></script>
@@ -110,13 +111,16 @@
 
         <!-- build:js({.tmp,client}) scripts/app.js -->
         <script src="scripts/app.js"></script>
-        <script src="scripts/arava/services/account.js"></script>
         <script src="scripts/arava/services/config.js"></script>
+        <script src="scripts/arava/services/session.js"></script>
+        <script src="scripts/arava/services/account.js"></script>
         <script src="scripts/arava/services/counter.js"></script>
         <script src="scripts/arava/services/charts.js"></script>
         <script src="scripts/arava/services/message.js"></script>
-        <script src="scripts/arava/services/message.js"></script>
         <script src="scripts/arava/controllers/report.js"></script>
+        <script src="scripts/arava/controllers/drupal.js"></script>
+        <script src="scripts/arava/controllers/login.js"></script>
+        <script src="scripts/arava/controllers/profile.js"></script>
         <script src="scripts/shared/main.js"></script>
         <script src="scripts/shared/directives.js"></script>
         <script src="scripts/shared/localize.js"></script>
