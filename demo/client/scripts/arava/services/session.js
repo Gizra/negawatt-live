@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('ehApp')
+angular.module('app')
   .service('userProfile', function($http, $q, User, storage, $rootScope, Drupal) {
     var userProfile = this;
 

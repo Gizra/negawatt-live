@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('ehApp')
+angular.module('app')
   .service('Drupal', function($window) {
     var self = this;
 
