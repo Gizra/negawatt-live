@@ -25,7 +25,8 @@
     'app.chart.ctrls',
     'app.chart.directives',
     'app.page.ctrls',
-    'angularMoment'
+    'angularMoment',
+    'gz.angular-auth'
   ]).config([
     '$routeProvider', function($routeProvider) {
       var routes, setRoutes;
