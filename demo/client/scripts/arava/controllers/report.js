@@ -1,63 +1,35 @@
 'use strict';
 
 angular.module('app')
-  .controller('AccountReportCtrl', ['$scope', 'Account', function($scope, Account) {
-    $scope.line1 = {};
-    $scope.line1.options = {
-      series: {
-        lines: {
-          show: true,
-          fill: true,
-          fillColor: {
-            colors: [
-              {
-                opacity: 0
-              },
-              {
-                opacity: 0.3
-              }
-            ]
-          }
-        },
-        points: {
-          show: true,
-          lineWidth: 2,
-          fill: true,
-          fillColor: "#ffffff",
-          symbol: "circle",
-          radius: 5
-        }
-      },
-      colors: [$scope.color.primary, $scope.color.infoAlt],
-      tooltip: true,
-      tooltipOpts: {
-        defaultTheme: false
-      },
-      grid: {
-        hoverable: true,
-        clickable: true,
-        tickColor: "#f9f9f9",
-        borderWidth: 1,
-        borderColor: "#eeeeee"
-      },
-      xaxis: {
-        ticks: [
-          [1, 'Jan.'],
-          [2, 'Feb.'],
-          [3, 'Mar.'],
-          [4, 'Apr.'],
-          [5, 'May'],
-          [6, 'June'],
-          [7, 'July'],
-          [8, 'Aug.'],
-          [9, 'Sept.'],
-          [10, 'Oct.'],
-          [11, 'Nov.'],
-          [12, 'Dec.']
-        ]
-      }
-    };
+  .controller('AccountReportCtrl', ['$scope', 'Account', 'Chart', function($scope, Account, Chart) {
+    // Private functions.
+    /**
+     * Set type report into scope property and handle ng-class options.
+     *
+     * @param type
+     *   string indicating the type of report ('current'. 'lastWeek', 'lastMonth', 'lastYear')
+     */
+    function setReport(type) {
+      $scope.selected = {};
+      $scope.typeReport = type;
 
+      switch (type) {
+        case 'current':
+          $scope.selected.current = {'selected': true };
+          break;
+        case 'lastWeek':
+          $scope.selected.lastWeek = {'selected': true };
+          break;
+        case 'lastMonth':
+          $scope.selected.lastMonth = {'selected': true };
+          break;
+        case 'lastYear':
+          $scope.selected.lastYear = {'selected': true };
+          break;
+      }
+    }
+
+    $scope.line1 = {};
     $scope.line1.data = [
       {
         label: 'Total Kwh.'
@@ -73,14 +45,31 @@ angular.module('app')
       }
     ];
 
-    // Get account (city) consumption information.
-    Account.getReport().then(function(response) {
-      // Update data.
-      $scope.line1.data[0].data = response.data;
+    /**
+     * Switch by the between the different types of charts (monthly, weekly, daily)     *
+     *
+     * @param type
+     *   string that indicate the type of the report. (lastYear, lastMonth, lastWeek)
+     */
+    $scope.selectReport = function(type) {
+      // Set selection of type report.
+      setReport(type);
 
-      // Refresh chart.
-      $scope.$broadcast('report_change');
+      // Update x axis labels.
+      $scope.line1.options = Chart.options(type);
 
-    });
+      // Get account (city) consumption information.
+      Account.getReport(type).then(function(response) {
+        // Update data.
+        $scope.line1.data[0].data = response.data;
+
+        // Refresh chart.
+        $scope.$broadcast('report_change');
+
+      });
+    };
+
+    // Select last year report like default.
+    $scope.selectReport('lastYear');
 
   }]);

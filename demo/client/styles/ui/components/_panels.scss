@@ -116,6 +116,14 @@
 .mini-box {
     min-height: 120px;
     padding: 5px;
+
+    &.selected,
+    &:hover {
+      background: rgba(91, 144, 191, 0.25);
+      .box-info p {
+        color: rgb(45, 56, 68);
+      }
+    }
     .box-icon {
         display: inline-block;
         width: 70px;

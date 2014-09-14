@@ -2,7 +2,7 @@
 
   <section>
     <section class="panel panel-default">
-      <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> {{name}}</strong></div>
+      <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> {{city.name}}</strong></div>
       <div class="panel-body">
 
         <div class="row">
@@ -81,13 +81,13 @@
     </section>
   </section>
 
-  <section class="dasboard-chart">
+  <section class="dasboard-chart" data-ng-controller="AccountReportCtrl">
     <div class="row">
       <div class="col-sm-4">
         <!-- Stats -->
         <div class="row text-center">
           <div class="col-sm-6">
-            <div class="panel mini-box">
+            <div class="panel mini-box" ng-class="selected.lastCurrent" ng-click="selectReport('lastCurrent')">
                 <span class="btn-icon btn-icon-round btn-icon-lg-alt bg-success">
                     <span class="ti-stats-up"></span>
                 </span>
@@ -99,7 +99,7 @@
             </div>
           </div>
           <div class="col-sm-6">
-            <div class="panel mini-box">
+            <div class="panel mini-box" ng-class="selected.lastWeek" ng-click="selectReport('lastWeek')">
                 <span class="btn-icon btn-icon-round btn-icon-lg-alt bg-info">
                     <i class="ti-calendar"></i>
                 </span>
@@ -110,7 +110,7 @@
             </div>
           </div>
           <div class="col-sm-6">
-            <div class="panel mini-box">
+            <div class="panel mini-box" ng-class="selected.lastMonth" ng-click="selectReport('lastMonth')">
                 <span class="btn-icon btn-icon-round btn-icon-lg-alt bg-warning">
                     <i class="ti-calendar"></i>
                 </span>
@@ -121,7 +121,7 @@
             </div>
           </div>
           <div class="col-sm-6">
-            <div class="panel mini-box">
+            <div class="panel mini-box" ng-class="selected.lastYear" ng-click="selectReport('lastYear')">
                 <span class="btn-icon btn-icon-round btn-icon-lg-alt bg-danger">
                     <i class="ti-calendar"></i>
                 </span>
@@ -132,9 +132,34 @@
             </div>
           </div>
         </div>
+        <div class="col-sm-12 col-full">
+          <div class="panel panel-profile">
+            <div class="panel-heading text-center bg-info">
+              <p class="regular-paragraph"><i class="ti-harddrive icon"></i>Current status counters</p>
+            </div>
+            <div class="list-justified-container">
+              <ul class="list-justified text-center">
+                <li>
+                  <p class="size-h3">{{status.operative}}</p>
+                  <p class="text-muted">Operative</p>
+                </li>
+                <li>
+                  <p class="size-h3">{{status.detached}}</p>
+                  <p class="text-muted">Detached</p>
+                </li>
+                <li>
+                  <p class="size-h3">{{status.creating}}</p>
+                  <p class="text-muted">Creating</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
       </div>
+
       <div class="col-sm-8">
-        <div class="panel panel-default" data-ng-controller="AccountReportCtrl">
+        <div class="panel panel-default">
           <div class="panel-body">
             <div data-flot-chart
                  data-data="line1.data"
