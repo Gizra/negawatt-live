@@ -1,4 +1,4 @@
-<div class="page-signin">
+<div class="page-signin" >
 
     <div class="signin-header">
         <section class="logo text-center">
@@ -6,18 +6,19 @@
         </section>
     </div>
 
-    <div class="signin-body">
+    <div class="signin-body" ng-controller="LoginCtrl">
         <div class="container">
             <div class="form-container">
 
-                <form class="form-horizontal">
+                <form name="formUser" class="form-horizontal">
                     <fieldset>
                         <div class="form-group">
                             <div class="input-group input-group-first">
                                 <span class="input-group-addon">
                                     <span class="ti-email"></span>
                                 </span>
-                                <input type="email"
+                                <input ng-model="formUser.username"
+                                       type="email"
                                        class="form-control input-lg"
                                        placeholder="Username"
                                        >
@@ -28,16 +29,24 @@
                                 <span class="input-group-addon">
                                     <span class="ti-lock"></span>
                                 </span>
-                                <input type="password"
+                                <input ng-model="formUser.password"
+                                       type="password"
                                        class="form-control input-lg"
                                        placeholder="Password"
                                        >
                             </div>
                         </div>
 
-                        <div class="divider divider-xl"></div>
+                        <div class="divider"></div>
+                        <section class="additional-info" ng-show="formUser.status.error">
+                          <p class="text-center">
+                            Error: message test error.
+                          </p>
+                        </section>
+
+                        <div class="divider" ng-class="{'divider-xl': formUser.status.error}"></div>
                         <div class="form-group">
-                            <a href="#/" class="btn btn-primary btn-lg btn-block text-center">Log in</a>
+                            <a ng-click="login(formUser)" href="" class="btn btn-primary btn-lg btn-block text-center">Log in</a>
                         </div>
                     </fieldset>
                 </form>
@@ -50,7 +59,8 @@
                         <a href="#/pages/signup">Sign up</a>
                     </p>
                 </section>
-                
+
+
             </div>
         </div>
     </div>
