@@ -30,7 +30,6 @@ angular.module('app')
     }
 
     $scope.line1 = {};
-//    $scope.line1.options = ;
     $scope.line1.data = [
       {
         label: 'Total Kwh.'
@@ -46,13 +45,17 @@ angular.module('app')
       }
     ];
 
+    /**
+     * Switch by the between the different types of charts (monthly, weekly, daily)     *
+     *
+     * @param type
+     *   string that indicate the type of the report. (lastYear, lastMonth, lastWeek)
+     */
     $scope.selectReport = function(type) {
-
       // Set selection of type report.
       setReport(type);
 
       // Update x axis labels.
-//      $scope.line1.options.xaxis = Chart.options(type).axis;
       $scope.line1.options = Chart.options(type);
 
       // Get account (city) consumption information.

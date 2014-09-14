@@ -24,7 +24,6 @@ angular.module('app')
      */
     this.get = function() {
     var url = BACKEND_URL + '/dashboard';
-//      var url = 'data/counters.json';
 
       return $http({
         method: 'GET',
