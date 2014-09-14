@@ -5,7 +5,7 @@
       var $window;
       $window = $(window);
       $scope.main = {
-        brand: 'NegaWatt - Gizra POC',
+        brand: 'NegaWatt - POC',
         name: 'Erad'
       };
       $scope.pageTransitionOpts = [
