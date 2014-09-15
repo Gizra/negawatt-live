@@ -248,8 +248,7 @@
                 'styles/fonts/**/*',
                 'styles/img/**/*',
                 'styles/ui/images/*',
-                'views/**/*',
-                'CNAME'
+                'views/**/*'
               ]
             }, {
               expand: true,
@@ -261,6 +260,13 @@
               cwd: '.tmp/images',
               dest: '<%= yeoman.dist %>/images',
               src: ['generated/*']
+            },
+            // Copy the file that define domains/subdomains redirected to the gh-pages site.
+            {
+              expand: true,
+              cwd: '<%= yeoman.app %>',
+              src: 'CNAME',
+              dest: '<%= yeoman.dist %>'
             }
           ]
         },
