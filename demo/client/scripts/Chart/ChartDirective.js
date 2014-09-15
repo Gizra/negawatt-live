@@ -1,7 +1,7 @@
 (function() {
   'use strict';
-  angular.module('app.chart.directives', []).directive('flotChart', [
-    function() {
+  angular.module('app.chart.directives', []).directive('flotChart', ['$compile',
+    function($compile) {
       return {
         restrict: 'A',
         scope: {
@@ -9,16 +9,29 @@
           options: '='
         },
         link: function(scope, ele, attrs) {
-          var data, options, plot;
+          var data, options, plot, template, clone;
           data = scope.data;
           options = scope.options;
+          template =  '<p class="flotchart-spinner text-center">'
+                      + '<i class="fa fa-spin fa-refresh fa-3x">'
+                      + '</i>'
+                    + '</p>';
+          clone = ele.clone();
 
           // Refresh report.
           scope.$on('report_change', function() {
             $.plot(ele[0], data, options);
           });
 
-          return plot = $.plot(ele[0], data, options);
+          scope.busy = function(variable) {
+
+          };
+
+          plot = $.plot(ele[0], data, options);
+
+          console.log(ele.append(template));
+
+          return plot;
         }
       };
     }
