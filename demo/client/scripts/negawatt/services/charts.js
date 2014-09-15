@@ -37,7 +37,7 @@ angular.module('app')
           radius: 5
         }
       },
-      colors: [colors.primary, colors.infoAlt],
+      colors: [colors.danger, colors.warning, colors.info, colors.success],
       tooltip: true,
       tooltipOpts: {
         defaultTheme: false

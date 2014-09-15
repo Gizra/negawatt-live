@@ -2,6 +2,60 @@
 
 angular.module('app')
   .controller('AccountReportCtrl', ['$scope', 'Account', 'Chart', function($scope, Account, Chart) {
+
+    $scope.pieChart = {};
+    $scope.pieChart.data = [
+      {
+        label: "Health",
+        data: 12
+      }, {
+        label: "Outdoor",
+        data: 30
+      }, {
+        label: "Municipality",
+        data: 20
+      }, {
+        label: "Welfare",
+        data: 19
+      }, {
+        label: "Religious Services",
+        data: 12
+      }, {
+        label: "Security",
+        data: 30
+      }, {
+        label: "Sports",
+        data: 20
+      }, {
+        label: "Organization",
+        data: 50
+      }, {
+        label: "Water",
+        data: 45
+      }
+    ];
+    $scope.pieChart.options = {
+      series: {
+        pie: {
+          show: true
+        }
+      },
+      legend: {
+        show: false
+      },
+      grid: {
+        hoverable: true,
+        clickable: true
+      },
+      colors: [$scope.color.primary, $scope.color.success, $scope.color.info, $scope.color.warning, $scope.color.danger],
+      tooltip: true,
+      tooltipOpts: {
+        content: "%p.0%, %s",
+        defaultTheme: false
+      }
+    };
+
+
     // Private functions.
     /**
      * Set type report into scope property and handle ng-class options.
@@ -32,16 +86,16 @@ angular.module('app')
     $scope.line1 = {};
     $scope.line1.data = [
       {
-        label: 'Total Kwh.'
+        label: 'highRate Kwh.'
       },
       {
-        label: 'Maximum Kwh.'
+        label: 'mediumRate Kwh.'
       },
       {
-        label: 'Medium Kwh.'
+        label: 'lowRate Kwh.'
       },
       {
-        label: 'Low Kwh.'
+        label: 'fixedRate Kwh.'
       }
     ];
 
@@ -61,11 +115,14 @@ angular.module('app')
       // Get account (city) consumption information.
       Account.getReport(type).then(function(response) {
         // Update data.
-        $scope.line1.data[0].data = response.data;
+        $scope.line1.data[0].data = response.data.high;
+        // Update detailed.
+        $scope.line1.data[1].data = response.data.medium;
+        $scope.line1.data[2].data = response.data.low;
+        $scope.line1.data[3].data = response.data.fixed;
 
         // Refresh chart.
         $scope.$broadcast('report_change');
-
       });
     };
 

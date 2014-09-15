@@ -20,17 +20,40 @@ angular.module('app')
      * @returns {Array}
      */
     function lastYear(data) {
-      var series = [];
+      var actual;
+      var series = {
+        high: [],
+        medium: [],
+        low: [],
+        fixed: []
+      };
 
       // Remove sites.
       data = angular.fromJson(data);
 
       // Create array.
       angular.forEach(data.months, function(month, index) {
-        this.push([
-            moment(month.date).format('M'),
-            month.kwh
+        actual = moment(month.date).format('M');
+
+        this.high.push([
+            actual,
+            month.top.kwh
           ]);
+
+        this.medium.push([
+          actual,
+          month.medium.kwh
+        ]);
+
+        this.low.push([
+          actual,
+          month.low.kwh
+        ]);
+
+        this.fixed.push([
+          actual,
+          month.noUsed.kwh
+        ]);
       }, series);
 
       return series;
