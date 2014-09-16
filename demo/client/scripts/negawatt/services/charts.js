@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('app')
-  .service('Chart', function () {
+  .service('Chart', function ($http) {
     var colors = {
       primary: '#5B90BF',
       success: '#A3BE8C',
@@ -105,5 +105,20 @@ angular.module('app')
 
       return angular.extend(options, basicOptions);
     };
+
+    /**
+     *
+     * @param name
+     * @returns {*}
+     */
+    this.getPieChart = function(name) {
+      var chart = {};
+
+      return $http({
+        url: '../data/' + name + '.json',
+        method: 'GET'
+      });
+
+    }
 
   });

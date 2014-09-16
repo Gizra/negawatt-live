@@ -1,7 +1,7 @@
 (function() {
   'use strict';
-  angular.module('app.chart.directives', []).directive('flotChart', [
-    function() {
+  angular.module('app.chart.directives', []).directive('flotChart', ['$rootScope',
+    function($rootScope) {
       return {
         restrict: 'A',
         scope: {
@@ -9,16 +9,46 @@
           options: '='
         },
         link: function(scope, ele, attrs) {
-          var data, options, plot;
+          var data,
+            options,
+            plot,
+            chart;
+
           data = scope.data;
           options = scope.options;
 
-          // Refresh report.
-          scope.$on('report_change', function() {
-            $.plot(ele[0], data, options);
+          /**
+           * Binding events according the type of element.
+           *
+           * @param type
+           */
+          function bindingEvents(type) {
+            var label;
+
+            switch (type) {
+              case 'pieChart':
+                ele.bind('plotclick', function(events, pos, item){
+                  if (item) {
+                    label = plot.getData()[item.seriesIndex].label;
+                    $rootScope.$broadcast('piechart_clicked', {serieClicked: label});
+                  }
+                });
+                break;
+            }
+
+          }
+
+          // Refresh report with new data.
+          scope.$on('report_change', function(events, args) {
+            chart = events.targetScope[args.chart];
+            if (ele.data().name === args.chart) {
+              plot = $.plot(ele[0], chart.data, chart.options);
+            }
+
+            bindingEvents(args.chart);
           });
 
-          return plot = $.plot(ele[0], data, options);
+          return plot;
         }
       };
     }

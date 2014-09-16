@@ -31,6 +31,7 @@
         pageTransition: $scope.pageTransitionOpts[0],
         skin: '11'
       };
+
       $scope.$watch('admin', function(newVal, oldVal) {
         if (newVal.menu === 'horizontal' && oldVal.menu === 'vertical') {
           $rootScope.$broadcast('nav:reset');
@@ -54,6 +55,12 @@
           $scope.admin.fixedSidebar = false;
         }
       }, true);
+
+      // Listener event click of piechart.
+      $scope.$on('piechart_clicked', function(events, args) {
+        console.log(args.serieClicked);
+      });
+
       return $scope.color = {
         primary: '#5B90BF',
         success: '#A3BE8C',
@@ -90,6 +97,7 @@
     // Get list of counters.
     Counter.get().then(function(response) {
       $scope.city = response.data.city;
+      $scope.city.zoom = 13;
       $scope.counters = response.data.counters;
       $scope.status = response.data.status;
       $scope.totals = response.data.totals;

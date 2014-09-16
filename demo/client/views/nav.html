@@ -10,7 +10,7 @@
       <a href="#/ui"><i class="ti-direction-alt"></i><span data-i18n="Groups"></span></a>
       <ul>
         <li ng-repeat="item in menus">
-          <a href="#/detail/blank"><i class="ti-angle-right"></i><span data-i18n="{{item.name}}"></span></a>
+          <a ng-href="{{item.url}}"><i class="ti-angle-right"></i><span data-i18n="{{item.name}}"></span></a>
         </li>
       </ul>
     </li>
