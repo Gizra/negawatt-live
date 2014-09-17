@@ -41,7 +41,7 @@ angular.module('app')
         }
       },
       legend: {
-        show: false
+        show: true
       },
       grid: {
         hoverable: true,
