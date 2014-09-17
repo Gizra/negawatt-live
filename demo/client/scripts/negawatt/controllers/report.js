@@ -6,32 +6,32 @@ angular.module('app')
     $scope.pieChart = {};
     $scope.pieChart.data = [
       {
-        label: "Health",
-        data: 12
+        label: "תאורת חוץ",
+        data: 3126998
       }, {
-        label: "Outdoor",
-        data: 30
+        label: "חינוך",
+        data: 2852161
       }, {
-        label: "Municipality",
-        data: 20
+        label: "עיריה",
+        data: 646544
       }, {
-        label: "Welfare",
-        data: 19
+        label: "רווחה",
+        data: 312385
       }, {
-        label: "Religious Services",
-        data: 12
+        label: "שרותי דת",
+        data: 161725
       }, {
-        label: "Security",
-        data: 30
+        label: "בריאות",
+        data: 79081
       }, {
-        label: "Sports",
-        data: 20
+        label: "בטחון",
+        data: 71611
       }, {
-        label: "Organization",
-        data: 50
+        label: "ספורט",
+        data: 46440
       }, {
-        label: "Water",
-        data: 45
+        label: "עמותה",
+        data: 26378
       }
     ];
     $scope.pieChart.options = {
