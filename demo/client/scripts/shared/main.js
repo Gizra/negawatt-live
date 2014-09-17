@@ -6,7 +6,7 @@
       $window = $(window);
       $scope.rtlActivated = true;
       $scope.main = {
-        brand: 'NegaWatt - POC',
+        brand: 'NegaWatt',
         name: 'Erad'
       };
       $scope.pageTransitionOpts = [
