@@ -86,16 +86,16 @@ angular.module('app')
     $scope.line1 = {};
     $scope.line1.data = [
       {
-        label: 'highRate Kwh.'
+        label: 'תעריף שיא'
       },
       {
-        label: 'mediumRate Kwh.'
+        label: 'תעריף גבע'
       },
       {
-        label: 'lowRate Kwh.'
+        label: 'תעריף שפל'
       },
       {
-        label: 'fixedRate Kwh.'
+        label: 'ללא תעו״ז'
       }
     ];
 
