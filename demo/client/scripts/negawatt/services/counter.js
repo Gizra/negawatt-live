@@ -23,7 +23,7 @@ angular.module('app')
      * @returns {*}
      */
     this.get = function() {
-    var url = BACKEND_URL + '/dashboard';
+    var url = '../data/dashboard.json';
 
       return $http({
         method: 'GET',
