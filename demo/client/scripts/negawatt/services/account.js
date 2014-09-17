@@ -207,4 +207,11 @@ angular.module('app')
       return $http(options);
     };
 
+    this.getGroups = function() {
+      return $http({
+        method: 'GET',
+        url: '../data/menus.json'
+      });
+    };
+
   });

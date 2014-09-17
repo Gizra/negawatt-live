@@ -32,7 +32,7 @@
       routes = [
         'dashboard',
         'detail/blank',
-        'detail/group'
+        'detail/group/:id'
       ];
       setRoutes = function(route) {
         var config, url;

@@ -1,0 +1,49 @@
+{
+  "menus": [
+    {
+      "id": 0,
+      "name":"Health",
+      "url": "#/detail/group/0"
+    },
+    {
+      "id": 1,
+      "name":"Outdoor",
+      "url": "#/detail/group/1"
+    },
+    {
+      "id": 2,
+      "name":"Municipality",
+      "url": "#/detail/group/2"
+    },
+    {
+      "id": 3,
+      "name":"Welfare",
+      "url": "#/detail/group/3"
+    },
+    {
+      "id": 4,
+      "name":"Religious service",
+      "url": "#/detail/group/4"
+    },
+    {
+      "id": 5,
+      "name":"Security",
+      "url": "#/detail/group/5"
+    },
+    {
+      "id": 6,
+      "name":"Sports",
+      "url": "#/detail/group/6"
+    },
+    {
+      "id": 7,
+      "name":"Organization",
+      "url": "#/detail/group/7"
+    },
+    {
+      "id": 8,
+      "name":"Water",
+      "url": "#/detail/group/8"
+    }
+  ]
+}

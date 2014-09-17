@@ -30,7 +30,7 @@
                 ele.bind('plotclick', function(events, pos, item){
                   if (item) {
                     label = plot.getData()[item.seriesIndex].label;
-                    $rootScope.$broadcast('piechart_clicked', {serieClicked: label});
+                    $rootScope.$broadcast('piechart_clicked', {serieClicked: label, id: item.seriesIndex});
                   }
                 });
                 break;

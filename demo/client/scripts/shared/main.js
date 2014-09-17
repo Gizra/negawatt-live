@@ -90,17 +90,22 @@
       $scope.city = {
         "name": 'קרית גת',
         "lat": 31.603466403994243,
-        "lng": 34.77099895477295,
-        "zoom": 14
+        "lng": 34.770998954772950,
+        "zoom": 12
       };
+
+      $scope.counters = {};
+      $scope.status = {};
+      $scope.totals = {};
 
     // Get list of counters.
     Counter.get().then(function(response) {
-      $scope.city = response.data.city;
+      angular.extend($scope.city, response.data.city);
       $scope.city.zoom = 13;
-      $scope.counters = response.data.counters;
-      $scope.status = response.data.status;
-      $scope.totals = response.data.totals;
+
+      angular.extend($scope.counters, response.data.counters);
+      angular.extend($scope.status, response.data.status);
+      angular.extend($scope.totals, response.data.totals);
     });
 
   }]);
