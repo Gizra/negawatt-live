@@ -4,6 +4,7 @@
     '$scope', '$rootScope', function($scope, $rootScope) {
       var $window;
       $window = $(window);
+      $scope.rtlActivated = true;
       $scope.main = {
         brand: 'NegaWatt - POC',
         name: 'Erad'
