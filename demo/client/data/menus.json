@@ -2,47 +2,47 @@
   "menus": [
     {
       "id": 0,
-      "name":"Health",
+      "name":"תאורת חוץ",
       "url": "#/detail/group/0"
     },
     {
       "id": 1,
-      "name":"Outdoor",
+      "name":"חינוך",
       "url": "#/detail/group/1"
     },
     {
       "id": 2,
-      "name":"Municipality",
+      "name":"עיריה",
       "url": "#/detail/group/2"
     },
     {
       "id": 3,
-      "name":"Welfare",
+      "name":"רווחה",
       "url": "#/detail/group/3"
     },
     {
       "id": 4,
-      "name":"Religious service",
+      "name":"שרותי דת",
       "url": "#/detail/group/4"
     },
     {
       "id": 5,
-      "name":"Security",
+      "name":"בריאות",
       "url": "#/detail/group/5"
     },
     {
       "id": 6,
-      "name":"Sports",
+      "name":"בטחון",
       "url": "#/detail/group/6"
     },
     {
       "id": 7,
-      "name":"Organization",
+      "name":"ספורט",
       "url": "#/detail/group/7"
     },
     {
       "id": 8,
-      "name":"Water",
+      "name":"עמותה",
       "url": "#/detail/group/8"
     }
   ]

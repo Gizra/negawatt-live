@@ -1,40 +1,32 @@
 {
   "data": [
     {
-      "label": "Health",
-      "data": 12
-    },
-    {
-      "label": "Outdoor",
-      "data": 30
-    },
-    {
-      "label": "Municipality",
-      "data": 20
-    },
-    {
-      "label": "Welfare",
-      "data": 19
-    },
-    {
-      "label": "Religious Services",
-      "data": 12
-    },
-    {
-      "label": "Security",
-      "data": 30
-    },
-    {
-      "label": "Sports",
-      "data": 20
-    },
-    {
-      "label": "Organization",
-      "data": 50
-    },
-    {
-      "label": "Water",
-      "data": 45
+      "label": "תאורת חוץ",
+      "data": 3126998
+    }, {
+      "label": "חינוך",
+      "data": 2852161
+    }, {
+      "label": "עיריה",
+      "data": 646544
+    }, {
+      "label": "רווחה",
+      "data": 312385
+    }, {
+      "label": "שרותי דת",
+      "data": 161725
+    }, {
+      "label": "בריאות",
+      "data": 79081
+    }, {
+      "label": "בטחון",
+      "data": 71611
+    }, {
+      "label": "ספורט",
+      "data": 46440
+    }, {
+      "label": "עמותה",
+      "data": 26378
     }
   ],
   "options": {
@@ -44,10 +36,10 @@
       }
     },
     "legend": {
-      "show": false
+      "show": true
     },
     "grid": {
-      "hoverable": false,
+      "hoverable": true,
       "clickable": true
     },
     "colors": [
