@@ -2,5 +2,5 @@
 
 angular.module('app')
   .constant('ENV', 'development')
-  .constant('BACKEND_URL', 'http://arava.herokuapp.com');
+  .constant('BACKEND_URL', 'http://localhost/negawatt-server/www');
 
