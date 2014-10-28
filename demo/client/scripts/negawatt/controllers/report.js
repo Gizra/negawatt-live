@@ -1,7 +1,13 @@
 'use strict';
 
 angular.module('app')
-  .controller('AccountReportCtrl', ['$scope', 'Account', 'Chart', function($scope, Account, Chart) {
+  .controller('AccountReportCtrl', [
+    '$scope',
+    'Account',
+    'Chart',
+    'Electricity',
+    'Utils',
+    function($scope, Account, Chart, Electricity, Utils) {
 
     $scope.pieChart = {};
     $scope.pieChart.data = [
@@ -100,6 +106,20 @@ angular.module('app')
     ];
 
     /**
+     * Get the chart data and plot.
+     */
+    $scope.getChartData = function() {
+      var filters = {
+        meter: 257,
+        type: 'month'
+      };
+
+      Electricity.get(Utils.createQueryString(filters)).then(function(data) {
+        console.log(data)
+      });
+    }
+
+    /**
      * Switch by the between the different types of charts (monthly, weekly, daily)     *
      *
      * @param type
@@ -127,6 +147,6 @@ angular.module('app')
     };
 
     // Select last year report like default.
-    $scope.selectReport('lastYear');
+    $scope.getChartData();
 
   }]);

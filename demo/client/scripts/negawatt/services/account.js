@@ -4,6 +4,7 @@ angular.module('app')
   .service('Account', function Detector($http, $q, moment, BACKEND_URL, $filter) {
     var account = this;
 
+
     /**
      * Transform response data from account collection into and array, that
      * contain array with month number and kwh consumed.
