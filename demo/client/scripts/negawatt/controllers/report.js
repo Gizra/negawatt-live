@@ -23,8 +23,11 @@ angular.module('app')
       Electricity.get(Utils.createQueryString(filters))
         .then(Chart.getLineChart)
         .then(function(response) {
+          $scope.line1 = response.chart.line1;
+
           // Refresh the chart.
           $scope.$broadcast('report_change');
+
           console.log(response);
         });
 
