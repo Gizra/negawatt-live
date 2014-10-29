@@ -1,12 +1,33 @@
 'use strict';
 
 angular.module('app')
-  .service('ChartLine', function ($q) {
+  .service('ChartLine', function ($q, moment) {
 
     /**
-     *  From the data getted from de server transfor
+     *  From the object getted from de server transforming to chart object format.
      *
-     *  Example:
+     *  source object:
+     *  --------------
+     *
+     *   {
+     *      data: [
+     *        {
+     *          0: Object
+     *          id: 38
+     *          kwh: "10936"
+     *          meter: Object
+     *          min_power_factor: "0"
+     *          rate_type: "flat"
+     *          timestamp: "1356991200"
+     *          type: "month"
+     *        },
+     *        ...
+     *      ]
+     *   }
+     *
+     *
+     *  target object:
+     *  --------------
      *
      *    datasets: [
      *      {
@@ -28,34 +49,37 @@ angular.module('app')
      *        pointHighlightFill: '#fff',
      *        pointHighlightStroke: 'rgba(151,187,205,1)',
      *        data: [28, 48, 40, 19, 86, 27, 90]
-     *      }
+     *      },
+     *      ...
      *   ]
      *
      *
-     * @param data
-     * @returns {Array} - datasets
+     * @param {source} source object.
+     * @returns {Array} - target data datasets.
      **/
     function transformDataToDatasets(data) {
-      var datasets = [];
+      var datasets = [],
+        data = data.data,
+        values = [],
+        timestamp;
 
-      var getLabel = function(timestamp) {
-        return 'label';
-      };
+      // Get the year of the  timestamp first item.
+      timestamp = moment.unix(data[0].timestamp).format('YYYY');
 
-      var getData = function() {
-        return [28, 48, 40, 19, 86, 27, 90];
-      };
+      angular.forEach(data, function(item) {
+        this.push(item.kwh);
+      }, values);
 
       // This version only support charts with one line.
       datasets.push({
-        label: getLabel(data.timestamp),
+        label: timestamp,
         fillColor: 'rgba(151,187,205,0.2)',
         strokeColor: 'rgba(151,187,205,1)',
         pointColor: 'rgba(151,187,205,1)',
         pointStrokeColor: '#fff',
         pointHighlightFill: '#fff',
         pointHighlightStroke: 'rgba(151,187,205,1)',
-        data: getData(data)
+        data: values
       })
 
       return datasets;
@@ -71,13 +95,13 @@ angular.module('app')
       var deferred = $q.defer();
       var line = {};
 
-      // Chart.js Data
+      // Chart.js Data.
       line.data = {
         labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'November', 'Dicember'],
         datasets: transformDataToDatasets(response.data)
       };
 
-      // Chart.js Options
+      // Chart.js Exmaple Options.
       line.options =  {
 
         // Sets the chart to be responsive
