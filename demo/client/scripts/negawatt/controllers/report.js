@@ -26,20 +26,13 @@ angular.module('app')
       Electricity.get(Utils.createQueryString(filters))
         .then(Chart.getLineChart)
         .then(function(response) {
-          $scope.line = response;
+          $scope.data = response.data;
+          $scope.options = response.options;
 
-          console.log($scope.line);
+          console.log($scope.line, $scope.options );
         });
 
     };
-
-    $scope.$watch('line', function(newData) {
-      if (!newData.data.length) {
-        return;
-      }
-      // Refresh the chart.
-      $scope.$broadcast('report_change', newData);
-    });
 
     // Select last year report like default.
     plotChart();

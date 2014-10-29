@@ -25,7 +25,8 @@
     'app.chart.ctrls',
     'app.chart.directives',
     'app.page.ctrls',
-    'angularMoment'
+    'angularMoment',
+    'tc.chartjs'
   ]).config([
     '$routeProvider',
     '$httpProvider',

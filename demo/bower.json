@@ -31,7 +31,9 @@
     "jvectormap": "~1.2.2",
     "angular-moment": "~0.8.2",
     "angular-leaflet-directive": "~0.7.9",
-    "leaflet-dist": "~0.7.2"
+    "leaflet-dist": "~0.7.2",
+    "chartjs": "~0.2.0",
+    "tc-angular-chartjs": "~1.0.9"
   },
   "devDependencies": {
     "holderjs": "~2.3.1",
