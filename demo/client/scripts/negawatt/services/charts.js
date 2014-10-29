@@ -13,22 +13,4 @@ angular.module('app')
       gray: '#DCDCDC'
     };
 
-    /**
-     * Return labels for line of reports.
-     *
-     * @param {string} - type
-     * @returns {*}
-     */
-    Chart.getLabels = function(type) {
-      var labels = [];
-
-      switch (type) {
-        case 'months':
-          labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'November', 'Dicember'];
-          break;
-      }
-
-      return labels;
-    };
-
   });

@@ -1,11 +1,9 @@
 'use strict';
 
 angular.module('app')
-  .controller('AccountReportCtrl', function($scope, ChartLine, Electricity, Utils) {
-    //$scope.pieChart = Chart.mockPieChart();
-    //$scope.line = {
-    //  data: []
-    //};
+  .controller('AccountReportCtrl', function($scope, ChartLine, ChartPie, Electricity, Utils) {
+
+    $scope.pie = ChartPie.mockPieChart();
 
     /**
      * Get the chart data and plot.
@@ -20,10 +18,12 @@ angular.module('app')
       Electricity.get(Utils.createQueryString(filters))
         .then(ChartLine.getLineChart)
         .then(function(response) {
-          $scope.data = response.data;
-          $scope.options = response.options;
+          $scope.line = {
+            data: response.data,
+            options: response.options
+          }
 
-          console.log($scope.line, $scope.options );
+          console.log($scope.line);
         });
 
     };
