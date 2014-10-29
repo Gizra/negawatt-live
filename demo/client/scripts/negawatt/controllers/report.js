@@ -9,6 +9,9 @@ angular.module('app')
     function($scope, Chart, Electricity, Utils) {
 
     $scope.pieChart = Chart.mockPieChart();
+    $scope.line = {
+      data: []
+    };
 
     /**
      * Get the chart data and plot.
@@ -23,15 +26,20 @@ angular.module('app')
       Electricity.get(Utils.createQueryString(filters))
         .then(Chart.getLineChart)
         .then(function(response) {
-          $scope.line1 = response.chart.line1;
+          $scope.line = response;
 
-          // Refresh the chart.
-          $scope.$broadcast('report_change');
-
-          console.log(response);
+          console.log($scope.line);
         });
 
     };
+
+    $scope.$watch('line', function(newData) {
+      if (!newData.data.length) {
+        return;
+      }
+      // Refresh the chart.
+      $scope.$broadcast('report_change', newData);
+    });
 
     // Select last year report like default.
     plotChart();

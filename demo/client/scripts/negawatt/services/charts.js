@@ -216,46 +216,46 @@ angular.module('app')
      * @returns {$q.promise}
      */
     this.getLineChart = function(response) {
-      var chart,
-        deferred = $q.defer();
+      var deferred = $q.defer();
 
-      function chartData() {
-        return [
-          [1, response.data.data.kwh]
-        ]
-      }
+      //function chartData() {
+      //  return [
+      //    [1, response.data.data.kwh]
+      //  ]
+      ////}
 
       // Define basic label confifuration.
-      chart = {
-        line1: {
-          options: Chart.options('lastYear'),
-          data: [
-            {
-              label: 'תעריף שיא',
-              data: chartData
-            }
-          ]
-        }
-      };
+      //chart = {
+      //  line1: {
+      //    data: [
+      //      {
+      //        label: 'תעריף שיא',
+      //        data: chartData
+      //      }
+      //    ]
+      //  }
+      //};
 
       //// Update x axis labels.
       //$scope.line1;
       //
       ////Update y axis data.
-      chart.line1.data[0].data= [
-        [1,125],
-        [2,345],
-        [3,245],
-        [4,658],
-        [5,659],
-        [6,125],
-        [7,345],
-        [8,245],
-        [9,658],
-        [10,659],
-        [11,659],
-        [12,659]
-      ];
+      var data = {
+        data: [
+          [1,125],
+          [2,345],
+          [3,245],
+          [4,658],
+          [5,659],
+          [6,125],
+          [7,345],
+          [8,245],
+          [9,658],
+          [10,659],
+          [11,659],
+          [12,659]
+        ]
+      };
 
       //
       //data: [
@@ -278,7 +278,7 @@ angular.module('app')
       //$scope.line1.data[2].data = response.data.low;
       //$scope.line1.data[3].data = response.data.fixed;
 
-      deferred.resolve(chart);
+      deferred.resolve(data);
       return deferred.promise;
     }
 

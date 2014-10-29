@@ -14,7 +14,10 @@
           options = scope.options;
 
           // Refresh report.
-          scope.$on('report_change', function() {
+          scope.$on('report_change', function(event, args) {
+            if (args) {
+              data = args.data;
+            }
             $.plot(ele[0], data, options);
           });
 
