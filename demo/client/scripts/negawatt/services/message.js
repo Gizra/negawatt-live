@@ -26,6 +26,6 @@ angular.module('app')
 
       // Return object.
       return deferred.promise;
-    }
+    };
 
   });

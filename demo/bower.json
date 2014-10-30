@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "dependencies": {
     "jquery": "~2.1.0",
-    "angular": "~1.2.0",
-    "angular-resource": "~1.2.0",
-    "angular-cookies": "~1.2.0",
-    "angular-sanitize": "~1.2.0",
-    "angular-route": "~1.2.0",
-    "angular-animate": "~1.2.0",
-    "angular-touch": "~1.2.0",
+    "angular": "<=1.2.26",
+    "angular-resource": "<=1.2.26",
+    "angular-cookies": "<=1.2.26",
+    "angular-sanitize": "<=1.2.26",
+    "angular-route": "<=1.2.26",
+    "angular-animate": "<=1.2.26",
+    "angular-touch": "<=1.2.26",
     "font-awesome": "~4.1.0",
     "toastr": "~2.0.1",
     "seiyria-bootstrap-slider": "~1.9.0",
@@ -29,12 +29,20 @@
     "flot.tooltip": "~0.8.0",
     "flot.curvedlines": "*",
     "jvectormap": "~1.2.2",
-    "angular-moment": "~0.8.2"
+    "angular-moment": "~0.8.2",
+    "angular-leaflet-directive": "~0.7.9",
+    "leaflet-dist": "~0.7.2",
+    "chartjs": "~0.2.0",
+    "tc-angular-chartjs": "~1.0.9"
   },
   "devDependencies": {
     "holderjs": "~2.3.1",
     "responsive-tables": "*",
     "bourbon": "~3.2.1",
     "bootstrap-sass-official": "~3.2.0"
+  },
+  "resolutions": {
+    "angular": "<= 1.2.26",
+    "jquery": ">= 1.7.1"
   }
 }

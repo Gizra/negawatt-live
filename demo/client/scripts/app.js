@@ -25,9 +25,12 @@
     'app.chart.ctrls',
     'app.chart.directives',
     'app.page.ctrls',
-    'angularMoment'
+    'angularMoment',
+    'tc.chartjs'
   ]).config([
-    '$routeProvider', function($routeProvider) {
+    '$routeProvider',
+    '$httpProvider',
+    function($routeProvider, $httpProvider) {
       var routes, setRoutes;
       routes = ['dashboard', 'ui/typography', 'ui/buttons', 'ui/icons', 'ui/grids', 'ui/widgets', 'ui/components', 'ui/boxes', 'ui/timeline', 'ui/nested-lists', 'ui/pricing-tables', 'ui/maps', 'tables/static', 'tables/dynamic', 'tables/responsive', 'forms/elements', 'forms/layouts', 'forms/validation', 'forms/wizard', 'charts/charts', 'charts/flot', 'pages/404', 'pages/500', 'pages/blank', 'pages/forgot-password', 'pages/invoice', 'pages/lock-screen', 'pages/profile', 'pages/invoice', 'pages/signin', 'pages/signup', 'mail/compose', 'mail/inbox', 'mail/single', 'tasks/tasks'];
       setRoutes = function(route) {
@@ -49,6 +52,10 @@
       }).otherwise({
         redirectTo: '/404'
       });
+
+      // Use x-www-form-urlencoded Content-Type
+      $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
+
     }
   ]);
 
