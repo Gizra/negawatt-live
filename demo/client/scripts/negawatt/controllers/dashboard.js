@@ -10,6 +10,7 @@ angular.module('app')
     };
 
     $scope.account = {};
+    $scope.events =  {};
 
     var gettingAccount = Account.getAccount(defaultAccount);
     //var gettingMeters = Meter.get();
@@ -17,8 +18,6 @@ angular.module('app')
 
     gettingAccount.then(function(response) {
       $scope.account = response.data;
-      $scope.events =  {};
-      $scope.markerSelected = {};
     });
 
     // Get list of meters.

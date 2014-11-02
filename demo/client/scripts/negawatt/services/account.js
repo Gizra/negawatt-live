@@ -14,8 +14,9 @@ angular.module('app')
     function oneAccount(data) {
       data = JSON.parse(data).data[0];
 
-      data.lat = data.location.lat;
-      data.lng = data.location.lng;
+      data.lat = parseFloat(data.location.lat);
+      data.lng = parseFloat(data.location.lng);
+      data.zoom = parseInt(data.zoom);
 
       delete data['location'];
 
