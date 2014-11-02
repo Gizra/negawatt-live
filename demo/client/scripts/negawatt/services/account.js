@@ -12,7 +12,8 @@ angular.module('app')
      */
     function transformResponse(data) {
       data = JSON.parse(data);
-      data.meter_list = Meter.toObject(data.meter);
+      data.meters = Meter.toObject(data.meter_list);
+      delete data['meter_list'];
 
       return data;
     }
@@ -23,7 +24,7 @@ angular.module('app')
      * @returns {*}
      */
     this.get = function () {
-      var url = BACKEND_URL + '/api/accounts?filter[id]';
+      var url = BACKEND_URL + '/api/accounts?filter[label]=Kiriat Gat';
 
       return $http({
         headers: {
