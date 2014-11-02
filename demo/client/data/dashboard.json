@@ -25,8 +25,8 @@
     "kwh": 874507,
     "percent": 17.67
   }
-}, "counters": {
-  "counter0": {
+}, "meters": {
+  "meter0": {
     "id": 0,
     "contract": 908249,
     "contractStart": null,
@@ -83,13 +83,13 @@
         "types": ["locality", "political"]
       }
     },
-    "counter": {
+    "meter": {
       "code": 442,
       "serial": 34473664
     },
     "installationDate": 1063054800000
   },
-  "counter1": {
+  "meter1": {
     "id": 1,
     "contract": 919834,
     "contractStart": null,
@@ -146,13 +146,13 @@
         "types": ["locality", "political"]
       }
     },
-    "counter": {
+    "meter": {
       "code": 373,
       "serial": 48245
     },
     "installationDate": 347925600000
   },
-  "counter2": {
+  "meter2": {
     "id": 2,
     "contract": 920169,
     "contractStart": 347839200000,
@@ -209,13 +209,13 @@
         "types": ["locality", "political"]
       }
     },
-    "counter": {
+    "meter": {
       "code": 442,
       "serial": 35186452
     },
     "installationDate": null
   },
-  "counter3": {
+  "meter3": {
     "id": 3,
     "contract": 930696,
     "contractStart": 747525600000,
@@ -272,13 +272,13 @@
         "types": ["locality", "political"]
       }
     },
-    "counter": {
+    "meter": {
       "code": 462,
       "serial": 4138859
     },
     "installationDate": 1073340000000
   },
-  "counter4": {
+  "meter4": {
     "id": 4,
     "contract": 931181,
     "contractStart": null,
@@ -335,7 +335,7 @@
         "types": ["locality", "political"]
       }
     },
-    "counter": {
+    "meter": {
       "code": 467,
       "serial": 12569592
     },

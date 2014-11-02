@@ -80,7 +80,7 @@
   /**
    * Dashboard controller.
    */
-  .controller('DashboardCtrl', ['$scope', 'Counter', function($scope, Counter) {
+  .controller('DashboardCtrl', ['$scope', 'Meter', function($scope, Meter) {
       $scope.city = {
         "name": 'קרית גת',
         "lat": 31.603466403994243,
@@ -88,10 +88,10 @@
         "zoom": 14
       };
 
-    // Get list of counters.
-    Counter.get().then(function(response) {
+    // Get list of meters.
+    Meter.get().then(function(response) {
       $scope.city = response.data.city;
-      $scope.counters = response.data.counters;
+      $scope.meters = response.data.meters;
       $scope.status = response.data.status;
       $scope.totals = response.data.totals;
     });

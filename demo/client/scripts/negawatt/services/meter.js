@@ -1,10 +1,10 @@
 'use strict';
 
 angular.module('app')
-  .service('Meter', function ($q, $http, BACKEND_URL) {
+  .service('Meter', function ($q, $http) {
 
     /**
-     * Return counters
+     * Return meters mock data
      *
      *   {
      *     lists: [
