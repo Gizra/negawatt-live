@@ -6,7 +6,7 @@ angular.module('app')
     /**
      * Return electricity consumption data (Kwh).
      *
-     * @param {string} - query string to apply in the request.
+     * @param {string} filters - query string to apply in the request.
      * @returns {$q.promise}
      */
     this.get = function(filters) {

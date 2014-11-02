@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('app')
-  .service('Counter', function ($q, $http, BACKEND_URL) {
+  .service('Meter', function ($q, $http, BACKEND_URL) {
 
     /**
      * Return counters
