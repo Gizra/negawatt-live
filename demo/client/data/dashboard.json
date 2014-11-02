@@ -27,7 +27,7 @@
   }
 }, "meters": {
   "meter0": {
-    "id": 0,
+    "id": 257,
     "contract": 908249,
     "contractStart": null,
     "title": "השופטים עי מס 4 מאור רחו",
@@ -90,7 +90,7 @@
     "installationDate": 1063054800000
   },
   "meter1": {
-    "id": 1,
+    "id": 258,
     "contract": 919834,
     "contractStart": null,
     "title": "שד העצמאות 30",

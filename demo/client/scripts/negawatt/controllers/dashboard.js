@@ -18,9 +18,15 @@ angular.module('app')
 
     // Get list of meters.
     Meter.get().then(function (response) {
+
+      console.log(response);
+
       $scope.city = response.data.city;
+
       $scope.meters = response.data.meters;
+
       $scope.status = response.data.status;
+
       $scope.totals = response.data.totals;
     });
 
