@@ -8,9 +8,9 @@ angular.module('app')
     /**
      * Get the chart data and plot.
      */
-    function plotChart() {
+    function plotChart(meterSelected) {
       var filters = {
-        meter: 258,
+        meter: meterSelected,
         type: 'month'
       };
 
@@ -29,6 +29,8 @@ angular.module('app')
     }
 
     // Select last year report like default.
-    plotChart();
+    if ($scope.meterSelected) {
+      plotChart($scope.meterSelected.id);
+    }
 
   });

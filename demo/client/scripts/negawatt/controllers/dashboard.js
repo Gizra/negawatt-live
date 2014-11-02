@@ -12,12 +12,9 @@ angular.module('app')
       'zoom': 14
     };
 
-    $scope.events = {
-      markers: {
-        enable: ['click'],
-        logic: 'emit'
-      }
-    };
+    $scope.events = {};
+
+    $scope.markerSelected = {};
 
     // Get list of meters.
     Meter.get().then(function (response) {
@@ -27,8 +24,8 @@ angular.module('app')
       $scope.totals = response.data.totals;
     });
 
-    $scope.$on('leafletDirectiveMap.click', function(event){
-      console.log('event:', event);
+    $scope.$on('leafletDirectiveMarker.click', function(event, args){
+      $scope.markerSelected = $scope.meters[args.markerName];
     });
 
   });
