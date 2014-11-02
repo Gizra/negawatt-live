@@ -3,8 +3,6 @@
 angular.module('app')
   .controller('AccountReportCtrl', function($scope, ChartLine, ChartPie, Electricity, Utils) {
 
-    $scope.pie = ChartPie.mockPieChart();
-
     /**
      * Get the chart data and plot.
      */
@@ -23,14 +21,18 @@ angular.module('app')
             options: response.options
           };
 
-          console.log($scope.line);
         });
 
     }
 
-    // Select last year report like default.
-    if ($scope.meterSelected) {
+    $scope.$on('negawatt.markerSelected', function(event, meterSelected) {
+      console.log('meterSelected', $scope.meterSelected);
+      $scope.meterSelected = meterSelected;
+
+      $scope.pie = ChartPie.mockPieChart();
+
+      // Select last year report like default.
       plotChart($scope.meterSelected.id);
-    }
+    });
 
   });

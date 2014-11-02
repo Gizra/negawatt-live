@@ -25,7 +25,8 @@ angular.module('app')
     });
 
     $scope.$on('leafletDirectiveMarker.click', function(event, args){
-      $scope.markerSelected = $scope.meters[args.markerName];
+      $scope.meterSelected = $scope.meters[args.markerName];
+      $scope.$broadcast('negawatt.markerSelected', $scope.meterSelected);
     });
 
   });
