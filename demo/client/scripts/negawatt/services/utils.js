@@ -6,12 +6,12 @@
 'use strict';
 
 angular.module('app')
-  .factory('Utils', function ($q, $http, BACKEND_URL) {
+  .service('Utils', function () {
 
     /**
      * Return query string for restful module. (Drupal 7.0)
      *
-     * @param {*} - object with filters, where the key is the name of the field to
+     * @param {*} filters - object with filters, where the key is the name of the field to
      * filter the response, equal the value.
      *
      *  {
@@ -28,8 +28,7 @@ angular.module('app')
         queryString = ((angular.isUndefined(queryString)) ? '?' : queryString + '&') + 'filter[' + key + ']=' + value;
       }, queryString);
 
-      return queryString
+      return queryString;
     };
 
-    return this;
   });
