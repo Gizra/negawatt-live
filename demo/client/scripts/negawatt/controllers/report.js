@@ -21,12 +21,12 @@ angular.module('app')
           $scope.line = {
             data: response.data,
             options: response.options
-          }
+          };
 
           console.log($scope.line);
         });
 
-    };
+    }
 
     // Select last year report like default.
     plotChart();
