@@ -46,6 +46,10 @@ angular.module('app')
 
       angular.forEach(angular.fromJson(list).data, function(item) {
         meters[item.id] = item;
+        meters[item.id].lat = parseFloat(item.location.lat);
+        meters[item.id].lng = parseFloat(item.location.lng);
+
+        delete item['location'];
       });
 
       return meters;
