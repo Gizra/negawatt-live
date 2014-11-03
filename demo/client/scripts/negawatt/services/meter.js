@@ -56,9 +56,6 @@ angular.module('app')
       var url = BACKEND_URL + '/api/iec_meters';
 
       return $http({
-        headers: {
-          'X-CSRF-Token': 'C3j6TUuskEiVQd7Bm3U2Xe_W2Ya6On659x3ObHgVs_0'
-        },
         method: 'GET',
         withCredentials:  true,
         url: url
