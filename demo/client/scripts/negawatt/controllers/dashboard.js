@@ -12,13 +12,22 @@ angular.module('app')
     $scope.account = {};
     $scope.events =  {};
 
-    var gettingAccount = Account.getAccount(defaultAccount);
-    //var gettingMeters = Meter.get();
-    //var gettingElectricity = Electricity.get();
+    // Get initial data from server.
+    Account.getAccount(defaultAccount)
+      .then(function(response) {
+        $scope.account = response.data;
 
-    gettingAccount.then(function(response) {
-      $scope.account = response.data;
-    });
+        Meter.get().then(function(response) {
+          $scope.meters = response.data;
+
+          Electricity.get().then(function(response) {
+
+          });
+
+        });
+
+      });
+
 
     // Get list of meters.
     //Meter.get().then(function (response) {
@@ -37,6 +46,10 @@ angular.module('app')
     $scope.$on('leafletDirectiveMarker.click', function(event, args){
       $scope.meterSelected = $scope.meters[args.markerName];
       $scope.$broadcast('negawatt.markerSelected', $scope.meterSelected);
+    });
+
+    $scope.$on('negawatt.account.loaded', function(event, account) {
+      $scope.account = account;
     });
 
   });

@@ -2,6 +2,7 @@
 
 angular.module('app')
   .service('Meter', function ($q, $http, BACKEND_URL) {
+    var Meter = this;
 
     /**
      * Convert the array of list of meters to and object of meters.
@@ -41,7 +42,11 @@ angular.module('app')
      *
      */
     this.toObject = function(list) {
+      var meters = {};
 
+      angular.forEach(angular.fromJson(list).data, function(item) {
+        meters[item.id] = item;
+      });
 
       return meters;
     };
@@ -58,7 +63,8 @@ angular.module('app')
       return $http({
         method: 'GET',
         withCredentials:  true,
-        url: url
+        url: url,
+        transformResponse: Meter.toObject
       });
     };
 
