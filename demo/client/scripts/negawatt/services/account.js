@@ -59,4 +59,19 @@ angular.module('app')
     };
 
 
+    /**
+     * Get leaflet map center object.
+     *
+     * @param account
+     * @returns {{zoom: *, lat: *, lng: *}}
+     */
+    this.getMapCenter = function(account) {
+      return {
+        zoom: account.zoom,
+        lat: account.lat,
+        lng: account.lng
+      };
+    };
+
+
   });
