@@ -26,7 +26,6 @@ angular.module('app')
     }
 
     $scope.$on('negawatt.markerSelected', function(event, meterSelected) {
-      console.log('meterSelected', $scope.meterSelected);
       $scope.meterSelected = meterSelected;
 
       $scope.pie = ChartPie.mockPieChart();

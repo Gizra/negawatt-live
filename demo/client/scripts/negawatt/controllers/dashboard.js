@@ -9,40 +9,32 @@ angular.module('app')
       label: 'Kiriat Gat'
     };
 
-    $scope.account = {};
-    $scope.events =  {};
+    // Initialization need by the leaflet directive.
+    $scope.center = {};
+    $scope.events = {};
 
     // Get initial data from server.
     Account.getAccount(defaultAccount)
       .then(function(response) {
         $scope.account = response.data;
 
+        // Center of the map, according the account.
+        $scope.center = Account.getMapCenter($scope.account);
+
         Meter.get().then(function(response) {
           $scope.meters = response.data;
 
-          Electricity.get().then(function(response) {
+          if ($scope.meterSelected) {
+            Electricity.get().then(function(response) {
 
-          });
+            });
+          }
 
         });
 
       });
 
-
-    // Get list of meters.
-    //Meter.get().then(function (response) {
-    //
-    //  console.log(response);
-    //
-    //  $scope.account = response.data.account;
-    //
-    //  $scope.meters = response.data.meters;
-    //
-    //  $scope.status = response.data.status;
-    //
-    //  $scope.totals = response.data.totals;
-    //});
-
+    // Observers.
     $scope.$on('leafletDirectiveMarker.click', function(event, args){
       $scope.meterSelected = $scope.meters[args.markerName];
       $scope.$broadcast('negawatt.markerSelected', $scope.meterSelected);
