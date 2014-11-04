@@ -28,8 +28,6 @@ angular.module('app')
     $scope.$on('negawatt.markerSelected', function(event, meterSelected) {
       $scope.meterSelected = meterSelected;
 
-      $scope.pie = ChartPie.mockPieChart();
-
       // Select last year report like default.
       plotChart($scope.meterSelected.id);
     });
