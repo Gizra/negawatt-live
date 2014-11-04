@@ -6,6 +6,11 @@
 
 'use strict';
 
+/**
+ * Return interceptor definition to handle session router.
+ *
+ * @returns {Function}
+ */
 angular.module('app')
   .service('Session', function () {
     var Session = this;
@@ -17,29 +22,6 @@ angular.module('app')
      */
     this.getProfile = function() {
       return Session.profile || undefined;
-    };
-
-    /**
-     * Return interceptor definition to handle session routering.
-     *
-     * @returns {Function}
-     */
-    this.interceptor = function() {
-      return function($q) {
-        return {
-          request: function(config) {
-            console.log('request: ', config);
-            return config;
-          },
-          response: function(result) {
-            //console.log('response:', result);
-            return result;
-          },
-          responseError: function(rejection) {
-            return $q.reject(rejection);
-          }
-        };
-      };
     };
 
   });

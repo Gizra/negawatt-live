@@ -11,8 +11,13 @@ angular.module('app')
      *
      * @returns {*}
      */
-    function firstAccount(data) {
-      data = JSON.parse(data).data[0];
+    function firstAccount(data, headers) {
+      data = JSON.parse(data);
+      if (data.status !== 200) {
+        return;
+      }
+
+      data = data.data[0];
 
       data.location.lat = parseFloat(data.location.lat);
       data.location.lng = parseFloat(data.location.lng);
