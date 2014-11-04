@@ -14,7 +14,7 @@
         <link rel="stylesheet" href="fonts/weather-icons/css/weather-icons.min.css">
         <!-- end Needs images -->
 
-            
+
             <!-- build:css({.tmp,client}) styles/main.css -->
             <link rel="stylesheet" href="styles/bootstrap.css">
             <link rel="stylesheet" href="styles/ui.css">
@@ -26,7 +26,7 @@
     <body data-ng-app="app"
           id="app"
           class="app"
-          data-custom-page 
+          data-custom-page
           data-off-canvas-nav
           data-ng-controller="AppCtrl"
           data-ng-class=" {'layout-boxed': admin.layout === 'boxed', rtl: rtlActivated} "
@@ -113,12 +113,13 @@
         <!-- build:js({.tmp,client}) scripts/app.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/negawatt/controllers/report.js"></script>
+        <script src="scripts/negawatt/controllers/dashboard.js"></script>
         <script src="scripts/negawatt/services/account.js"></script>
         <script src="scripts/negawatt/services/charts.js"></script>
         <script src="scripts/negawatt/services/chartsLine.js"></script>
         <script src="scripts/negawatt/services/chartsPie.js"></script>
         <script src="scripts/negawatt/services/config.js"></script>
-        <script src="scripts/negawatt/services/counter.js"></script>
+        <script src="scripts/negawatt/services/meter.js"></script>
         <script src="scripts/negawatt/services/electricity.js"></script>
         <script src="scripts/negawatt/services/message.js"></script>
         <script src="scripts/negawatt/services/utils.js"></script>

@@ -76,27 +76,7 @@
         return $scope.taskRemainingCount = count;
       });
     }
-  ])
-  /**
-   * Dashboard controller.
-   */
-  .controller('DashboardCtrl', ['$scope', 'Counter', function($scope, Counter) {
-      $scope.city = {
-        "name": 'קרית גת',
-        "lat": 31.603466403994243,
-        "lng": 34.77099895477295,
-        "zoom": 14
-      };
-
-    // Get list of counters.
-    Counter.get().then(function(response) {
-      $scope.city = response.data.city;
-      $scope.counters = response.data.counters;
-      $scope.status = response.data.status;
-      $scope.totals = response.data.totals;
-    });
-
-  }]);
+  ]);
 
 }).call(this);
 

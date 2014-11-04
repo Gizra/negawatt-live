@@ -1,34 +1,38 @@
 'use strict';
 
 angular.module('app')
-  .controller('AccountReportCtrl', function($scope, ChartLine, ChartPie, Electricity, Utils) {
-
-    $scope.pie = ChartPie.mockPieChart();
+  .controller('AccountReportCtrl', function($scope, ChartLine, ChartPie, Electricity) {
 
     /**
      * Get the chart data and plot.
      */
-    function plotChart() {
+    function plotChart(meterSelected) {
       var filters = {
-        meter: 258,
-        type: 'month'
-      };
+          type: 'month'
+        };
+
+      if (meterSelected) {
+        filters.meter = meterSelected;
+      }
 
       // Get chart data object.
-      Electricity.get(Utils.createQueryString(filters))
+      Electricity.get(filters)
         .then(ChartLine.getLineChart)
         .then(function(response) {
           $scope.line = {
             data: response.data,
             options: response.options
-          }
+          };
 
-          console.log($scope.line);
         });
 
-    };
+    }
 
-    // Select last year report like default.
-    plotChart();
+    $scope.$on('negawatt.markerSelected', function(event, meterSelected) {
+      $scope.meterSelected = meterSelected;
+
+      // Select last year report like default.
+      plotChart($scope.meterSelected.id);
+    });
 
   });

@@ -2,6 +2,7 @@
 
 angular.module('app')
   .service('ChartLine', function ($q, moment) {
+    var ChartLine = this;
 
     /**
      *  From the object getted from de server transforming to chart object format.
@@ -9,7 +10,7 @@ angular.module('app')
      *  source object:
      *  --------------
      *
-     *   {
+     *    data: {
      *      data: [
      *        {
      *          0: Object
@@ -22,8 +23,17 @@ angular.module('app')
      *          type: "month"
      *        },
      *        ...
-     *      ]
-     *   }
+     *      ],
+     *      total: {
+     *        1: {
+     *          kwh: "942"
+     *        },
+     *        2: {
+     *          kwh: "803"
+     *        }
+     *        ...
+     *      }
+     *    }
      *
      *
      *  target object:
@@ -54,19 +64,28 @@ angular.module('app')
      *   ]
      *
      *
-     * @param {source} source object.
+     * @param {data} data source object.
      * @returns {Array} - target data datasets.
      **/
     function transformDataToDatasets(data) {
       var datasets = [],
-        data = data.data,
         values = [],
-        timestamp;
+        totals = [],
+        timestamp,
+        series;
+
+      // Transform total to an array.
+      angular.forEach(data.total, function(item) {
+        this.push(item);
+      }, totals);
 
       // Get the year of the  timestamp first item.
-      timestamp = moment.unix(data[0].timestamp).format('YYYY');
+      timestamp = moment.unix(data.data[0].timestamp).format('YYYY');
 
-      angular.forEach(data, function(item) {
+      // Build a series for a dataset from data or totals.
+      series = (data.showTotals) ? totals : data.data;
+
+      angular.forEach(series, function(item) {
         this.push(item.kwh);
       }, values);
 
@@ -80,7 +99,7 @@ angular.module('app')
         pointHighlightFill: '#fff',
         pointHighlightStroke: 'rgba(151,187,205,1)',
         data: values
-      })
+      });
 
       return datasets;
     }
@@ -88,7 +107,7 @@ angular.module('app')
     /**
     * Get the response data from the service electricity via controller report.
     *
-    * @param {*} - response
+    * @param {*} response
     * @returns {$q.promise}
     */
     this.getLineChart = function(response) {
@@ -155,6 +174,18 @@ angular.module('app')
 
       deferred.resolve(line);
       return deferred.promise;
-    }
+    };
+
+    /**
+     * Append property show totals into the response data. This indicate to the data transformation
+     * get the information from the total property an not the monthly data.
+     *
+     * @param response
+     * @returns {$q.promise}
+     */
+    this.getLineChartTotals = function(response) {
+      response.data.showTotals = true;
+      return ChartLine.getLineChart(response);
+    };
 
   });

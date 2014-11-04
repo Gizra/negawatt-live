@@ -2,12 +2,12 @@
 
   <section>
     <section class="panel panel-default">
-      <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> {{city.name}}</strong></div>
+      <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> {{account.label}}</strong></div>
       <div class="panel-body">
 
         <div class="row">
           <div class="col-sm-8">
-            <leaflet center="city" markers="counters" height="270px" width="100%"></leaflet>
+            <leaflet center="center" markers="meters" event-broadcast="events" height="270px" width="100%"></leaflet>
           </div>
 
           <div class="col-sm-4">
@@ -18,7 +18,7 @@
                     <div class="tl-body">
                       <div class="tl-entry">
                         <div class="tl-caption">
-                          <a href="javascript:;" class="btn btn-primary btn-block">היום</a>
+                          <a href="" class="btn btn-primary btn-block">היום</a>
                         </div>
                       </div>
                     </div>
@@ -93,7 +93,7 @@
   </section>
 
   <section class="dasboard-chart" data-ng-controller="AccountReportCtrl">
-    <div class="row">
+    <div class="row" >
       <div class="col-sm-4">
         <div class="panel panel-default">
           <div class="panel-heading">
@@ -107,7 +107,7 @@
       <div class="col-sm-8">
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h3 class="panel-title">צריכה</h3>
+            <h3 class="panel-title">{{meterSelected.label}}</h3>
           </div>
           <div class="panel-body">
             <canvas tc-chartjs chart-type="line" chart-data="line.data" chart-options="line.options" class="charts charts-line"></canvas>
