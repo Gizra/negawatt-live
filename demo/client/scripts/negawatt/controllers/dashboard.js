@@ -4,7 +4,7 @@
  * Dashboard controller.
  */
 angular.module('app')
-  .controller('DashboardCtrl', function ($scope, Account, Meter, Electricity) {
+  .controller('DashboardCtrl', function ($scope, Account, Meter, Electricity, ChartLine) {
     // Initialization need by the leaflet directive.
     $scope.center = {};
     $scope.events = {};
@@ -20,11 +20,17 @@ angular.module('app')
         Meter.get().then(function(response) {
           $scope.meters = response.data;
 
-          if ($scope.meterSelected) {
-            Electricity.get().then(function(response) {
+
+          Electricity.get()
+            .then(ChartLine.getLineChartTotals)
+            .then(function(response) {
+              $scope.line = {
+                data: response.data,
+                options: response.options
+              };
 
             });
-          }
+
 
         });
 

@@ -1,19 +1,22 @@
 'use strict';
 
 angular.module('app')
-  .controller('AccountReportCtrl', function($scope, ChartLine, ChartPie, Electricity, Utils) {
+  .controller('AccountReportCtrl', function($scope, ChartLine, ChartPie, Electricity) {
 
     /**
      * Get the chart data and plot.
      */
     function plotChart(meterSelected) {
       var filters = {
-        meter: meterSelected,
-        type: 'month'
-      };
+          type: 'month'
+        };
+
+      if (meterSelected) {
+        filters.meter = meterSelected;
+      }
 
       // Get chart data object.
-      Electricity.get(Utils.createQueryString(filters))
+      Electricity.get(filters)
         .then(ChartLine.getLineChart)
         .then(function(response) {
           $scope.line = {
