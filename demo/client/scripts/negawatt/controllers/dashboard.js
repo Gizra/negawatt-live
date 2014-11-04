@@ -5,21 +5,17 @@
  */
 angular.module('app')
   .controller('DashboardCtrl', function ($scope, Account, Meter, Electricity) {
-    var defaultAccount = {
-      label: 'Kiriat Gat'
-    };
-
     // Initialization need by the leaflet directive.
     $scope.center = {};
     $scope.events = {};
 
     // Get initial data from server.
-    Account.getAccount(defaultAccount)
+    Account.getAccount()
       .then(function(response) {
         $scope.account = response.data;
 
         // Center of the map, according the account.
-        $scope.center = Account.getMapCenter($scope.account);
+        $scope.center = $scope.account.location;
 
         Meter.get().then(function(response) {
           $scope.meters = response.data;

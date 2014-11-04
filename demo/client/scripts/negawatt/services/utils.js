@@ -28,7 +28,7 @@ angular.module('app')
         queryString = ((angular.isUndefined(queryString)) ? '?' : queryString + '&') + 'filter[' + key + ']=' + value;
       }, queryString);
 
-      return queryString;
+      return queryString || '';
     };
 
   });

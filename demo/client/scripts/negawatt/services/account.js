@@ -5,59 +5,43 @@ angular.module('app')
     var Account = this;
 
     /**
-     * Return dashboard start information.
+     * Return the first account form the collection of acconts.
      *
      * @param data
      *
      * @returns {*}
      */
-    function oneAccount(data) {
+    function firstAccount(data) {
       data = JSON.parse(data).data[0];
 
-      data.lat = parseFloat(data.location.lat);
-      data.lng = parseFloat(data.location.lng);
-      data.zoom = parseInt(data.zoom);
+      data.location.lat = parseFloat(data.location.lat);
+      data.location.lng = parseFloat(data.location.lng);
+      data.location.zoom = parseInt(data.zoom);
 
-      delete data['location'];
+      delete data['zoom'];
 
       return data;
     }
 
     /**
-     * Get accounts list, the list could be filtered.
+     * Get accounts first account.
      *
      * @param filters
-     * @param fnTransformResponse
      *
      * @returns {*}
      */
-    this.get = function (filters, fnTransformResponse) {
+    this.getAccount = function (filters) {
       var url = BACKEND_URL + '/api/accounts' + Utils.createQueryString(filters);
 
       var options = {
         method: 'GET',
         withCredentials: true,
-        url: url
+        url: url,
+        transformResponse: firstAccount
       };
-
-      if (angular.isDefined(fnTransformResponse)) {
-        options.transformResponse = fnTransformResponse;
-      }
 
       return $http(options);
     };
-
-    /**
-     * Get account filter details, including the meter list.
-     *
-     * @param filter {*} - {label: string}
-     *
-     * @returns {*}
-     */
-    this.getAccount = function(filter) {
-      return Account.get(filter, oneAccount);
-    };
-
 
     /**
      * Get leaflet map center object.
