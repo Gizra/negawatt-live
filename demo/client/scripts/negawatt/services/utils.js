@@ -7,6 +7,7 @@
 
 angular.module('app')
   .service('Utils', function () {
+    var Utils = this;
 
     /**
      * Return query string for restful module. (Drupal 7.0)
@@ -47,7 +48,7 @@ angular.module('app')
           var chr1, chr2, chr3, enc1, enc2, enc3, enc4;
           var i = 0;
 
-          input = Base64._utf8_encode(input);
+          input = Utils.Base64._utf8_encode(input);
 
           while (i < input.length) {
 

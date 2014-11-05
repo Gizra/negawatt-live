@@ -7,7 +7,7 @@
 'use strict';
 
 angular.module('app')
-  .service('Session', function ($http, Utils) {
+  .service('Session', function ($http, Utils, BACKEND_URL) {
     var Session = this;
 
     /**
@@ -25,8 +25,6 @@ angular.module('app')
     /**
      * Login by calling the Drupal REST server.
      *
-     * @param url
-     *   The Drupal URL
      * @param user
      *   Object with the properties "name" and "pass".
      * @param method
@@ -34,10 +32,10 @@ angular.module('app')
      *
      * @returns {*}
      */
-    this.login = function(url, user, method) {
+    this.login = function(user, method) {
       return $http({
         method: 'GET',
-        url: url + (method === 'login' ? '/api/login' : '/api/login-token'),
+        url: BACKEND_URL + (method === 'login' ? '/api/login' : '/api/login'),
         withCredentials: method === 'login',
         headers: {
           'Authorization': 'Basic ' + Utils.Base64.encode(user.name + ':' + user.pass)
