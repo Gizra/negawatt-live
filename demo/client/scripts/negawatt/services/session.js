@@ -6,12 +6,7 @@
 
 'use strict';
 
-/**
- * Return interceptor definition to handle session router.
- *
- * @returns {Function}
- */
-angular.module('app')
+angular.module('app', [])
   .service('Session', function () {
     var Session = this;
 

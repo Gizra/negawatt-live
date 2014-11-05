@@ -79,7 +79,6 @@
 
       //// Use x-www-form-urlencoded Content-Type.
       $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
-      //$httpProvider.defaults.headers.all['X-CSRF-Token'] = '306c0gXZbXSFtCd1ZdLlsu61LuonsBEeUExvr8Y2Fbo';
 
     }
   );
