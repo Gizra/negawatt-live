@@ -20,7 +20,7 @@ angular.module('app')
         Meter.get().then(function(response) {
           $scope.meters = response.data;
 
-
+          // Load the total of consumption of the markers in the map.
           Electricity.get()
             .then(ChartLine.getLineChartTotals)
             .then(function(response) {
@@ -28,7 +28,6 @@ angular.module('app')
                 data: response.data,
                 options: response.options
               };
-
             });
 
         });

@@ -20,14 +20,16 @@ angular.module('app')
      *    ...
      *  }
      *
+     * @param format {string} - indicate the type of format used to construct the queryString. (token)
+     *
      * @returns {string} - in the format ?filter[key]=value[&filter[key]=value...]
      */
-    this.createQueryString = function(filters, type) {
+    this.createQueryString = function(filters, format) {
       var queryString;
 
-      switch (type) {
+      switch (format) {
         case 'token':
-          queryString = '?access_token=' + filters;
+          queryString = filters.operator + 'access_token=' + filters.access_token;
           break;
         default:
           angular.forEach(filters, function(value, key) {

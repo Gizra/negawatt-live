@@ -60,10 +60,7 @@
       $httpProvider.interceptors.push(function ($q, $location, Session) {
         return {
           'request': function (config) {
-            console.log('Session.token()', Session.token());
-            if (Session.token()) {
-              config.url += Session.token();
-            }
+            config.url +=  Session.token( /\?/.test(config.url) ? '&' : '?');
             return config;
           },
           'response': function (result) {

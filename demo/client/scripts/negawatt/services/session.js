@@ -40,16 +40,30 @@ angular.module('app')
         localStorageService.set('access_token', info['access_token']);
       }
 
-      return localStorageService.get('access_token')|| undefined;
+      return localStorageService.get('access_token');
     };
 
     /**
-     * Return the access token in a query string to be add, on each quey
+     * Return the parameters of the access token for the in a query string.
+     *
+     * @param operator {string} - operator used to add the token with the query string. '&' or '?'.
+     * use '?' by default.
      *
      * @returns {*}
      */
-    this.token = function() {
-      return (Session.info()) ? Utils.createQueryString(Session.info(), 'token') : undefined;
+    this.token = function(operator) {
+      var filters;
+
+      if (angular.isUndefined(operator)) {
+        operator = '?';
+      }
+
+      filters = {
+        'access_token': Session.info(),
+        'operator': operator
+      };
+
+      return (Session.info()) ? Utils.createQueryString(filters, 'token') : undefined;
     };
 
 
