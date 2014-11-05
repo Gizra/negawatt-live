@@ -184,7 +184,7 @@ angular.module('app')
      * @returns {$q.promise}
      */
     this.getLineChartTotals = function(response) {
-      JSON.parse(response.data).showTotals = true;
+      response.data.showTotals = true;
       return ChartLine.getLineChart(response);
     };
 
