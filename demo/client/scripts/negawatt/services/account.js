@@ -39,7 +39,6 @@ angular.module('app')
 
       var options = {
         method: 'GET',
-        withCredentials: true,
         url: url,
         transformResponse: firstAccount
       };

@@ -56,14 +56,16 @@
       });
 
       // Define interceptors.
-      $httpProvider.interceptors.push(function ($q, $location) {
+      $httpProvider.interceptors.push(function ($q, $location, Session) {
         return {
           'request': function (config) {
+            console.log('sssion: ', Session.info());
+            config.headers = angular.extend(config.headers, Session.info());
             console.log('request: ', config);
             return config;
           },
           'response': function (result) {
-            console.log('response:', result);
+            //console.log('response:', result);
             return result;
           },
           'responseError': function (rejection) {

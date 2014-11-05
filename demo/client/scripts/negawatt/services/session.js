@@ -7,21 +7,7 @@
 'use strict';
 
 angular.module('app')
-  .service('Session', function ($http, Utils, BACKEND_URL) {
-    var Session = this;
-
-    /**
-     * Return the profile information of the user login of undefined if not user is logged.
-     *
-     * @returns {string|undefined}
-     */
-    this.info = function(info) {
-      if (angular.isDefined(info)) {
-        Session.profile = (Session.profile) ? angular.extend(Session.profile, info) : info;
-      }
-      return Session.profile || undefined;
-    };
-
+  .service('Auth', function($http, Utils, BACKEND_URL) {
     /**
      * Login by calling the Drupal REST server.
      *
@@ -38,6 +24,21 @@ angular.module('app')
           'Authorization': 'Basic ' + Utils.Base64.encode(user.username + ':' + user.password)
         }
       });
+    };
+  })
+  .service('Session', function () {
+    var Session = this;
+
+    /**
+     * Return the profile information of the user login of undefined if not user is logged.
+     *
+     * @returns {string|undefined}
+     */
+    this.info = function(info) {
+      if (angular.isDefined(info)) {
+        Session.profile = (Session.profile) ? angular.extend(Session.profile, info) : info;
+      }
+      return Session.profile || undefined;
     };
 
   });

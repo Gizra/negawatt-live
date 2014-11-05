@@ -66,7 +66,6 @@ angular.module('app')
 
       return $http({
         method: 'GET',
-        withCredentials:  true,
         url: url,
         transformResponse: Meter.toObject
       });
