@@ -2,8 +2,6 @@
 
 angular.module('app')
   .service('Account', function Detector($http, $q, moment, BACKEND_URL, Utils) {
-    var Account = this;
-
     /**
      * Return the first account form the collection of acconts.
      *
@@ -13,9 +11,6 @@ angular.module('app')
      */
     function firstAccount(data, headers) {
       data = JSON.parse(data);
-      if (data.status !== 200) {
-        return;
-      }
 
       data = data.data[0];
 
@@ -61,6 +56,5 @@ angular.module('app')
         lng: account.lng
       };
     };
-
 
   });
