@@ -17,7 +17,7 @@ angular.module('app')
      */
     this.info = function(info) {
       if (angular.isDefined(info)) {
-        Session.profile = info;
+        Session.profile = (Session.profile) ? angular.extend(Session.profile, info) : info;
       }
       return Session.profile || undefined;
     };
@@ -26,19 +26,16 @@ angular.module('app')
      * Login by calling the Drupal REST server.
      *
      * @param user
-     *   Object with the properties "name" and "pass".
-     * @param method
-     *   The method of the login: "login" or "loginToken".
+     *   Object with the properties "username" and "password".
      *
      * @returns {*}
      */
-    this.login = function(user, method) {
+    this.login = function(user) {
       return $http({
         method: 'GET',
-        url: BACKEND_URL + (method === 'login' ? '/api/login' : '/api/login'),
-        withCredentials: method === 'login',
+        url: BACKEND_URL + '/api/login-token',
         headers: {
-          'Authorization': 'Basic ' + Utils.Base64.encode(user.name + ':' + user.pass)
+          'Authorization': 'Basic ' + Utils.Base64.encode(user.username + ':' + user.password)
         }
       });
     };
