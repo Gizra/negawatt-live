@@ -26,28 +26,30 @@ angular.module('app')
       });
     };
   })
-  .service('Session', function (Utils) {
+  .service('Session', function (Utils, localStorageService) {
     var Session = this;
 
     /**
-     * Return the profile information of the user login of undefined if not user is logged.
+     * Return the session information {access_token}; also return undefined if the user never login,
+     * and access_token in the local storage is empty.
      *
-     * @returns {string|undefined}
+     * @returns {*} - profile object.
      */
     this.info = function(info) {
       if (angular.isDefined(info)) {
-        Session.profile = (Session.profile) ? angular.extend(Session.profile, info) : info;
+        localStorageService.set('access_token', info['access_token']);
       }
-      return Session.profile || undefined;
+
+      return localStorageService.get('access_token')|| undefined;
     };
 
     /**
-     * Return the access token. in the
+     * Return the access token in a query string to be add, on each quey
      *
      * @returns {*}
      */
     this.token = function() {
-      return (Session.profile) ? Utils.createQueryString(Session.profile.access_token, 'token') : undefined;
+      return (Session.info()) ? Utils.createQueryString(Session.info(), 'token') : undefined;
     };
 
 

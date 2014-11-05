@@ -28,7 +28,7 @@
     'tc.chartjs',
     'LocalStorageModule'
   ]).config(
-    function($routeProvider, $httpProvider) {
+    function($routeProvider, $httpProvider, localStorageServiceProvider) {
       var routes;
 
       function setRoutes(route) {
@@ -80,8 +80,10 @@
         };
       });
 
-      //// Use x-www-form-urlencoded Content-Type.
+      // Use x-www-form-urlencoded Content-Type.
       $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
+
+      localStorageServiceProvider.setPrefix('negawatt');
 
     }
   );
