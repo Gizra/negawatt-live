@@ -9,8 +9,12 @@ angular.module('app')
      *
      * @returns {*}
      */
-    function firstAccount(data, headers) {
+    function firstAccount(data) {
       data = JSON.parse(data);
+      // If the response status is dfferent to 200 the data property is not defined.
+      if (angular.isUndefined(data.data)) {
+        return;
+      }
 
       data = data.data[0];
 
