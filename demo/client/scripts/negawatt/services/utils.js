@@ -22,12 +22,18 @@ angular.module('app')
      *
      * @returns {string} - in the format ?filter[key]=value[&filter[key]=value...]
      */
-    this.createQueryString = function(filters) {
+    this.createQueryString = function(filters, type) {
       var queryString;
 
-      angular.forEach(filters, function(value, key) {
-        queryString = ((angular.isUndefined(queryString)) ? '?' : queryString + '&') + 'filter[' + key + ']=' + value;
-      }, queryString);
+      switch (type) {
+        case 'token':
+          queryString = '?access_token=' + filters;
+          break;
+        default:
+          angular.forEach(filters, function(value, key) {
+            queryString = ((angular.isUndefined(queryString)) ? '?' : queryString + '&') + 'filter[' + key + ']=' + value;
+          }, queryString);
+      }
 
       return queryString || '';
     };

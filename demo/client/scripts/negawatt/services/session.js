@@ -26,7 +26,7 @@ angular.module('app')
       });
     };
   })
-  .service('Session', function () {
+  .service('Session', function (Utils) {
     var Session = this;
 
     /**
@@ -40,5 +40,16 @@ angular.module('app')
       }
       return Session.profile || undefined;
     };
+
+    /**
+     * Return the access token. in the
+     *
+     * @returns {*}
+     */
+    this.token = function() {
+      return (Session.profile) ? Utils.createQueryString(Session.profile.access_token, 'token') : undefined;
+    };
+
+
 
   });

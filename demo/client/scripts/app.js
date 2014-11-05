@@ -59,9 +59,10 @@
       $httpProvider.interceptors.push(function ($q, $location, Session) {
         return {
           'request': function (config) {
-            console.log('sssion: ', Session.info());
-            config.headers = angular.extend(config.headers, Session.info());
-            console.log('request: ', config);
+            console.log('Session.token()', Session.token());
+            if (Session.token()) {
+              config.url += Session.token();
+            }
             return config;
           },
           'response': function (result) {
@@ -69,7 +70,6 @@
             return result;
           },
           'responseError': function (rejection) {
-            console.log('Failed with', rejection.status, 'status');
             if (rejection.status === 401) {
               $location.url('pages/signin');
             }
