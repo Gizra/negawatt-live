@@ -28,12 +28,9 @@
     'tc.chartjs'
   ]).config(
     function($routeProvider, $httpProvider) {
-      var routes, setRoutes;
+      var routes;
 
-      // Handle routes.
-      routes = ['dashboard', 'ui/typography', 'ui/buttons', 'ui/icons', 'ui/grids', 'ui/widgets', 'ui/components', 'ui/boxes', 'ui/timeline', 'ui/nested-lists', 'ui/pricing-tables', 'ui/maps', 'tables/static', 'tables/dynamic', 'tables/responsive', 'forms/elements', 'forms/layouts', 'forms/validation', 'forms/wizard', 'charts/charts', 'charts/flot', 'pages/404', 'pages/500', 'pages/blank', 'pages/forgot-password', 'pages/invoice', 'pages/lock-screen', 'pages/profile', 'pages/invoice', 'pages/signin', 'pages/signup', 'mail/compose', 'mail/inbox', 'mail/single', 'tasks/tasks'];
-
-      setRoutes = function(route) {
+      function setRoutes(route) {
         var config, url;
         url = '/' + route;
         config = {
@@ -41,30 +38,13 @@
         };
         $routeProvider.when(url, config);
         return $routeProvider;
-      };
+      }
+
+      // Handle routes.
+      routes = ['dashboard', 'ui/typography', 'ui/buttons', 'ui/icons', 'ui/grids', 'ui/widgets', 'ui/components', 'ui/boxes', 'ui/timeline', 'ui/nested-lists', 'ui/pricing-tables', 'ui/maps', 'tables/static', 'tables/dynamic', 'tables/responsive', 'forms/elements', 'forms/layouts', 'forms/validation', 'forms/wizard', 'charts/charts', 'charts/flot', 'pages/404', 'pages/500', 'pages/blank', 'pages/forgot-password', 'pages/invoice', 'pages/lock-screen', 'pages/profile', 'pages/invoice', 'pages/signin', 'pages/signup', 'mail/compose', 'mail/inbox', 'mail/single', 'tasks/tasks'];
 
       routes.forEach(function(route) {
         return setRoutes(route);
-      });
-
-      // Define interceptors.
-      $httpProvider.interceptors.push(function ($q, $location) {
-        return {
-          'request': function (config) {
-            console.log('request: ', config);
-          },
-          'response': function (result) {
-            console.log('response:', result);
-          },
-          'responseError': function (rejection) {
-            console.log('Failed with', rejection.status, 'status');
-            if (rejection.status === 401) {
-              $location.url('/login');
-            }
-
-            //return $q.reject(rejection);
-          }
-        };
       });
 
       $routeProvider.when('/', {
@@ -75,11 +55,31 @@
         redirectTo: '/404'
       });
 
-      // Use x-www-form-urlencoded Content-Type.
+      // Define interceptors.
+      $httpProvider.interceptors.push(function ($q, $location) {
+        return {
+          'request': function (config) {
+            console.log('request: ', config);
+            return config;
+          },
+          'response': function (result) {
+            console.log('response:', result);
+            return result;
+          },
+          'responseError': function (rejection) {
+            console.log('Failed with', rejection.status, 'status');
+            if (rejection.status === 401) {
+              $location.url('pages/signin');
+            }
+
+            return $q.reject(rejection);
+          }
+        };
+      });
+
+      //// Use x-www-form-urlencoded Content-Type.
       $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
-      $httpProvider.defaults.headers.all['X-CSRF-Token'] = '306c0gXZbXSFtCd1ZdLlsu61LuonsBEeUExvr8Y2Fbo';
-
-
+      //$httpProvider.defaults.headers.all['X-CSRF-Token'] = '306c0gXZbXSFtCd1ZdLlsu61LuonsBEeUExvr8Y2Fbo';
 
     }
   );
