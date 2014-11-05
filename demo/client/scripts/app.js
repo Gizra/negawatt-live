@@ -25,7 +25,8 @@
     'app.chart.directives',
     'app.page.ctrls',
     'angularMoment',
-    'tc.chartjs'
+    'tc.chartjs',
+    'LocalStorageModule'
   ]).config(
     function($routeProvider, $httpProvider) {
       var routes;
