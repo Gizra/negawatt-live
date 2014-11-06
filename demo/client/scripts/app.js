@@ -57,22 +57,24 @@
       });
 
       // Define interceptors.
-      $httpProvider.interceptors.push(function ($q, $location, Session) {
+      $httpProvider.interceptors.push(function ($q, $location, localStorageService) {
         return {
           'request': function (config) {
-            config.url +=  Session.token( /\?/.test(config.url) ? '&' : '?');
+            if (!config.url.match(/login-token/)) {
+              config.headers = {
+                'access_token': localStorageService.get('access_token')
+              };
+            }
+
+            //config.url +=  Session.token( /\?/.test(config.url) ? '&' : '?');
             return config;
           },
-          'response': function (result) {
-            //console.log('response:', result);
-            return result;
-          },
-          'responseError': function (rejection) {
-            if (rejection.status === 401) {
+          'responseError': function (response) {
+            if (response.status === 401) {
               $location.url('pages/signin');
             }
 
-            return $q.reject(rejection);
+            return $q.reject(response);
           }
         };
       });

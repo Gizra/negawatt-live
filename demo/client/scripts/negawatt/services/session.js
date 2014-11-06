@@ -1,9 +1,3 @@
-/**
- * Created by gizra on 11/4/14.
- *
- * Service to handle session manger.
- */
-
 'use strict';
 
 angular.module('app')

@@ -1,8 +1,3 @@
-/**
- * Created by gizra on 10/28/14.
- *
- * Service for functionality used accross the application.
- */
 'use strict';
 
 angular.module('app')
