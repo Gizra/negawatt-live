@@ -66,8 +66,13 @@
               };
             }
 
-            //config.url +=  Session.token( /\?/.test(config.url) ? '&' : '?');
             return config;
+          },
+          'response': function(result) {
+            if (result.data.access_token) {
+              localStorageService.set('access_token', result.data.access_token);
+            }
+            return result;
           },
           'responseError': function (response) {
             if (response.status === 401) {

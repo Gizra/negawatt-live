@@ -1,11 +1,10 @@
 'use strict';
 
 angular.module('app')
-  .controller('AccessCtrl', function($scope, Auth, Session, $location, localStorageService) {
+  .controller('AccessCtrl', function($scope, Auth, $location) {
 
     $scope.login = function(user) {
-      Auth.login(user).then(function(response) {
-        localStorageService.set('access_token', response.data['access_token']);
+      Auth.login(user).then(function() {
         $location.url('/');
       });
     };
