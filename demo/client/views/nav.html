@@ -9,8 +9,8 @@
     <li>
       <a href="#/ui"><i class="ti-direction-alt"></i><span data-i18n="Groups"></span></a>
       <ul>
-        <li ng-repeat="item in menus">
-          <a ng-href="{{item.url}}"><i class="ti-angle-right"></i><span data-i18n="{{item.name}}"></span></a>
+        <li ng-repeat="item in categories">
+          <a ng-href="{{item.url}}"><i class="ti-angle-right" ng-style="{'margin-right': '0px'}"></i><span data-i18n="{{item.label}}"></span></a>
         </li>
       </ul>
     </li>

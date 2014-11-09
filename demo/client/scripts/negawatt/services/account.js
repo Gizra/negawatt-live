@@ -11,7 +11,7 @@ angular.module('app')
      */
     function firstAccount(data) {
       data = JSON.parse(data);
-      // If the response status is dfferent to 200 the data property is not defined.
+      // If the response status is different to 200 the data property is not defined.
       if (angular.isUndefined(data.data)) {
         return;
       }
@@ -23,6 +23,18 @@ angular.module('app')
       data.location.zoom = parseInt(data.zoom);
 
       delete data['zoom'];
+
+      return data;
+    }
+
+    function orderMenu(data) {
+      data = JSON.parse(data);
+      // If the response status is different to 200 the data property is not defined.
+      if (angular.isUndefined(data.data)) {
+        return;
+      }
+
+      console.log(data);
 
       return data;
     }
@@ -47,17 +59,16 @@ angular.module('app')
     };
 
     /**
-     * Get leaflet map center object.
+     * Return a collection of categories.
      *
-     * @param account
-     * @returns {{zoom: *, lat: *, lng: *}}
+     * @returns {$http}
      */
-    this.getMapCenter = function(account) {
-      return {
-        zoom: account.zoom,
-        lat: account.lat,
-        lng: account.lng
-      };
+    this.getCategories = function() {
+      return $http({
+        method: 'GET',
+        url: BACKEND_URL + '/api/meter_categories',
+        transformResponse: orderMenu
+      });
     };
 
   });
