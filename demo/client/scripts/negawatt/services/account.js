@@ -34,7 +34,9 @@ angular.module('app')
         return;
       }
 
-      console.log(data);
+      var items = data.data;
+
+      console.log(Object.keys(items));
 
       return data;
     }

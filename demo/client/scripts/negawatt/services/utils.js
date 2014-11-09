@@ -5,6 +5,19 @@ angular.module('app')
     var Utils = this;
 
     /**
+     * Convert
+     */
+    this.toArray = function(object) {
+      var result = [];
+
+      angular.forEach(object, function(property){
+        this.push(property);
+      }, result);
+
+      return result;
+    };
+
+    /**
      * Return query string for restful module. (Drupal 7.0)
      *
      * @param {*} filters - object with filters, where the key is the name of the field to
