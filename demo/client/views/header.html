@@ -49,19 +49,13 @@
         </a>
       </li>
       <li>
-        <a href="#/tasks/tasks">
-          <i class="ti-check-box"></i>
-          <span data-i18n="My Tasks"></span>
-        </a>
-      </li>
-      <li>
         <a href="#/pages/lock-screen">
           <i class="ti-lock"></i>
           <span data-i18n="Lock"></span>
         </a>
       </li>
-      <li>
-        <a href="#/pages/signin">
+      <li ng-controller="AccessCtrl">
+        <a ng-click="logout()" href="">
           <i class="ti-export"></i>
           <span data-i18n="Log Out"></span>
         </a>
