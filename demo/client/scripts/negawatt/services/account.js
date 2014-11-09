@@ -2,8 +2,6 @@
 
 angular.module('app')
   .service('Account', function Detector($http, $q, moment, BACKEND_URL, Utils) {
-    var Account = this;
-
     /**
      * Return the first account form the collection of acconts.
      *
@@ -12,7 +10,13 @@ angular.module('app')
      * @returns {*}
      */
     function firstAccount(data) {
-      data = JSON.parse(data).data[0];
+      data = JSON.parse(data);
+      // If the response status is dfferent to 200 the data property is not defined.
+      if (angular.isUndefined(data.data)) {
+        return;
+      }
+
+      data = data.data[0];
 
       data.location.lat = parseFloat(data.location.lat);
       data.location.lng = parseFloat(data.location.lng);
@@ -35,7 +39,6 @@ angular.module('app')
 
       var options = {
         method: 'GET',
-        withCredentials: true,
         url: url,
         transformResponse: firstAccount
       };
@@ -56,6 +59,5 @@ angular.module('app')
         lng: account.lng
       };
     };
-
 
   });

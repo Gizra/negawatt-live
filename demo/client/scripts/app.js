@@ -1,4 +1,3 @@
-(function() {
   'use strict';
   angular.module('app', [
     'ngRoute',
@@ -26,14 +25,13 @@
     'app.chart.directives',
     'app.page.ctrls',
     'angularMoment',
-    'tc.chartjs'
-  ]).config([
-    '$routeProvider',
-    '$httpProvider',
-    function($routeProvider, $httpProvider) {
-      var routes, setRoutes;
-      routes = ['dashboard', 'ui/typography', 'ui/buttons', 'ui/icons', 'ui/grids', 'ui/widgets', 'ui/components', 'ui/boxes', 'ui/timeline', 'ui/nested-lists', 'ui/pricing-tables', 'ui/maps', 'tables/static', 'tables/dynamic', 'tables/responsive', 'forms/elements', 'forms/layouts', 'forms/validation', 'forms/wizard', 'charts/charts', 'charts/flot', 'pages/404', 'pages/500', 'pages/blank', 'pages/forgot-password', 'pages/invoice', 'pages/lock-screen', 'pages/profile', 'pages/invoice', 'pages/signin', 'pages/signup', 'mail/compose', 'mail/inbox', 'mail/single', 'tasks/tasks'];
-      setRoutes = function(route) {
+    'tc.chartjs',
+    'LocalStorageModule'
+  ]).config(
+    function($routeProvider, $httpProvider, localStorageServiceProvider) {
+      var routes;
+
+      function setRoutes(route) {
         var config, url;
         url = '/' + route;
         config = {
@@ -41,11 +39,16 @@
         };
         $routeProvider.when(url, config);
         return $routeProvider;
-      };
+      }
+
+      // Handle routes.
+      routes = ['dashboard', 'ui/typography', 'ui/buttons', 'ui/icons', 'ui/grids', 'ui/widgets', 'ui/components', 'ui/boxes', 'ui/timeline', 'ui/nested-lists', 'ui/pricing-tables', 'ui/maps', 'tables/static', 'tables/dynamic', 'tables/responsive', 'forms/elements', 'forms/layouts', 'forms/validation', 'forms/wizard', 'charts/charts', 'charts/flot', 'pages/404', 'pages/500', 'pages/blank', 'pages/forgot-password', 'pages/invoice', 'pages/lock-screen', 'pages/profile', 'pages/invoice', 'pages/signin', 'pages/signup', 'mail/compose', 'mail/inbox', 'mail/single', 'tasks/tasks'];
+
       routes.forEach(function(route) {
         return setRoutes(route);
       });
-      return $routeProvider.when('/', {
+
+      $routeProvider.when('/', {
         redirectTo: '/dashboard'
       }).when('/404', {
         templateUrl: 'views/pages/404.html'
@@ -53,13 +56,39 @@
         redirectTo: '/404'
       });
 
-      // Use x-www-form-urlencoded Content-Type
+      // Define interceptors.
+      $httpProvider.interceptors.push(function ($q, $location, localStorageService) {
+        return {
+          'request': function (config) {
+            if (!config.url.match(/login-token/)) {
+              config.headers = {
+                'access_token': localStorageService.get('access_token')
+              };
+            }
+
+            return config;
+          },
+          'response': function(result) {
+            if (result.data.access_token) {
+              localStorageService.set('access_token', result.data.access_token);
+            }
+            return result;
+          },
+          'responseError': function (response) {
+            if (response.status === 401) {
+              $location.url('pages/signin');
+            }
+
+            return $q.reject(response);
+          }
+        };
+      });
+
+      // Use x-www-form-urlencoded Content-Type.
       $httpProvider.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=utf-8';
-      $httpProvider.defaults.headers.all['X-CSRF-Token'] = '306c0gXZbXSFtCd1ZdLlsu61LuonsBEeUExvr8Y2Fbo';
+
+      localStorageServiceProvider.setPrefix('negawatt');
 
     }
-  ]);
+  );
 
-}).call(this);
-
-//# sourceMappingURL=app.js.map
