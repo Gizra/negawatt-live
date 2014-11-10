@@ -4,7 +4,7 @@
  * Dashboard controller.
  */
 angular.module('app')
-  .controller('DashboardCtrl', function ($scope, Account, Meter, Electricity, ChartLine, $filter, Utils) {
+  .controller('DashboardCtrl', function ($scope, Account, Meter, Electricity, ChartLine) {
     // Initialization need by the leaflet directive.
     $scope.center = {};
     $scope.events = {};

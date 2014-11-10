@@ -27,7 +27,7 @@ angular.module('app')
       return data;
     }
 
-    function orderMenu(data) {
+    function addStyle(data) {
       data = JSON.parse(data);
       // If the response status is different to 200 the data property is not defined.
       if (angular.isUndefined(data.data)) {
@@ -36,7 +36,9 @@ angular.module('app')
 
       var items = data.data;
 
-      console.log(Object.keys(items));
+      angular.forEach(items, function(item) {
+        item.style = '{\'margin-right\': \'' + item.depth * 20 + 'px\'}';
+      });
 
       return data;
     }
@@ -69,7 +71,7 @@ angular.module('app')
       return $http({
         method: 'GET',
         url: BACKEND_URL + '/api/meter_categories',
-        transformResponse: orderMenu
+        transformResponse: addStyle
       });
     };
 
