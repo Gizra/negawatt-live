@@ -35,6 +35,10 @@ angular.module('app')
       });
 
     // Methods.
+
+    /**
+     * Remove the filter by category.
+     */
     $scope.refreshMap = function() {
       $scope.meters = Meter.cache;
       $scope.categorySelected = undefined;
