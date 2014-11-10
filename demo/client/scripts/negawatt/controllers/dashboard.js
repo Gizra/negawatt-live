@@ -18,7 +18,7 @@ angular.module('app')
         $scope.center = $scope.account.location;
 
         Meter.get().then(function(response) {
-          $scope.meters = response.data;
+          Meter.cache = $scope.meters = response.data;
 
           // Load the total of consumption of the markers in the map.
           Electricity.get()
@@ -34,6 +34,11 @@ angular.module('app')
 
       });
 
+    // Methods.
+    $scope.refreshMap = function() {
+      $scope.meters = Meter.cache;
+    };
+
     // Observers.
     $scope.$on('leafletDirectiveMarker.click', function(event, args){
       $scope.meterSelected = $scope.meters[args.markerName];
@@ -45,9 +50,7 @@ angular.module('app')
     });
 
     $scope.$on('negawatt.category.filterBy', function(event, id) {
-      //$scope.meters = Meter.filterBy(id, $scope.meters);
-      //console.log('$on negawatt.menu.filterBy: ', id, Utils.toArray($scope.meters), $filter('filter')(Utils.toArray($scope.meters), {meter_code: 442}));
-      console.log('$on negawatt.menu.filterBy: ', id, $scope.meters, Meter.filterBy(id, $scope.meters));
+      $scope.meters = Meter.filterBy(id);
     });
 
   });

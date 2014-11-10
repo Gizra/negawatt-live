@@ -44,7 +44,12 @@ angular.module('app')
     this.toObject = function(list) {
       var meters = {};
 
-      angular.forEach(angular.fromJson(list).data, function(item) {
+      // Convert response serialized to an object.
+      if (angular.isString(list)) {
+        list = angular.fromJson(list).data;
+      }
+
+      angular.forEach(list, function(item) {
         meters[item.id] = item;
 
         // Convert the geo location properties as expected by leaflet map.
@@ -75,10 +80,14 @@ angular.module('app')
     };
 
     /**
-     * Filter a meters collection, returning only
+     * Filter a meters collection
+     *
+     * @param id {Number} - id of the selected category.
+     *
+     * @returns {*} - A new collection of meters filtered, if not found return an empty object.
      */
-    this.filterBy = function(id, meters) {
-      return Meter.toObject($filter('filter')(Utils.toArray(meters), {meter_categories: id}));
+    this.filterBy = function(id) {
+      return Meter.toObject($filter('filter')(Utils.toArray(Meter.cache), {meter_categories: id}));
     };
 
   });
