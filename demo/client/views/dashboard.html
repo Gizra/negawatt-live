@@ -4,10 +4,13 @@
     <section class="panel panel-default">
       <div class="panel-heading">
         <div class="row">
-          <div class="col-sm-6 text-left">
+          <div class="col-sm-2 text-left">
             <a ng-click="refreshMap()" href="" class="badge"> Refresh map <span class="glyphicon glyphicon-refresh"></span></a>
           </div>
           <div class="col-sm-6">
+            <span ng-show="categorySelected">Filter by:  {{ categorySelected }} </span>
+          </div>
+          <div class="col-sm-4">
             <strong><span class="glyphicon glyphicon-th"></span> {{account.label}} </strong>
           </div>
         </div>

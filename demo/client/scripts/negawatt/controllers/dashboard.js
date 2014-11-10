@@ -4,7 +4,7 @@
  * Dashboard controller.
  */
 angular.module('app')
-  .controller('DashboardCtrl', function ($scope, Account, Meter, Electricity, ChartLine, Utils, $filter) {
+  .controller('DashboardCtrl', function ($scope, Account, Meter, Electricity, ChartLine, Category) {
     // Initialization need by the leaflet directive.
     $scope.center = {};
     $scope.events = {};
@@ -37,6 +37,7 @@ angular.module('app')
     // Methods.
     $scope.refreshMap = function() {
       $scope.meters = Meter.cache;
+      $scope.categorySelected = undefined;
     };
 
     // Observers.
@@ -51,6 +52,7 @@ angular.module('app')
 
     $scope.$on('negawatt.category.filterBy', function(event, id) {
       $scope.meters = Meter.filterBy(id);
+      $scope.categorySelected = Category.labelFilteredCategoryById(id);
     });
 
   });

@@ -1,14 +1,14 @@
 'use strict';
 
 angular.module('app')
-  .controller('CategoryCtrl', function($scope, Account, $rootScope) {
+  .controller('CategoryCtrl', function($scope, Category, $rootScope) {
 
     // Select last year report like default.
     $scope.categories = {};
 
     // Load Categories.
-    Account.getCategories().then(function(response) {
-      $scope.categories = response.data.data;
+    Category.getCategories().then(function(response) {
+      Category.cache = $scope.categories = response.data.data;
     });
 
     // Filter map markers by id.

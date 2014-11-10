@@ -27,22 +27,6 @@ angular.module('app')
       return data;
     }
 
-    function addStyle(data) {
-      data = JSON.parse(data);
-      // If the response status is different to 200 the data property is not defined.
-      if (angular.isUndefined(data.data)) {
-        return;
-      }
-
-      var items = data.data;
-
-      angular.forEach(items, function(item) {
-        item.style = '{\'margin-right\': \'' + item.depth * 20 + 'px\'}';
-      });
-
-      return data;
-    }
-
     /**
      * Get accounts first account.
      *
@@ -60,19 +44,6 @@ angular.module('app')
       };
 
       return $http(options);
-    };
-
-    /**
-     * Return a collection of categories.
-     *
-     * @returns {$http}
-     */
-    this.getCategories = function() {
-      return $http({
-        method: 'GET',
-        url: BACKEND_URL + '/api/meter_categories',
-        transformResponse: addStyle
-      });
     };
 
   });
