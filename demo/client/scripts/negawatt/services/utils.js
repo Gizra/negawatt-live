@@ -5,7 +5,11 @@ angular.module('app')
     var Utils = this;
 
     /**
-     * Convert
+     * Convert a object properties to an array.
+     *
+     * @param {*} object
+     *
+     * @returns {Array} - collection of the object's properties into an array.
      */
     this.toArray = function(object) {
       var result = [];
