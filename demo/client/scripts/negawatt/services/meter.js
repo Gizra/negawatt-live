@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('app')
-  .service('Meter', function ($q, $http, BACKEND_URL) {
+  .service('Meter', function ($q, $http, BACKEND_URL, $filter, Utils) {
     var Meter = this;
 
     /**
@@ -46,15 +46,18 @@ angular.module('app')
 
       angular.forEach(angular.fromJson(list).data, function(item) {
         meters[item.id] = item;
-        meters[item.id].lat = parseFloat(item.location.lat);
-        meters[item.id].lng = parseFloat(item.location.lng);
 
-        delete item['location'];
+        // Convert the geo location properties as expected by leaflet map.
+        if (item.location) {
+          meters[item.id].lat = parseFloat(item.location.lat);
+          meters[item.id].lng = parseFloat(item.location.lng);
+
+          delete item['location'];
+        }
       });
 
       return meters;
     };
-
 
     /**
      * Return meters array from the server.
@@ -69,6 +72,13 @@ angular.module('app')
         url: url,
         transformResponse: Meter.toObject
       });
+    };
+
+    /**
+     * Filter a meters collection, returning only
+     */
+    this.filterBy = function(id, meters) {
+      return Meter.toObject($filter('filter')(Utils.toArray(meters), {meter_categories: id}));
     };
 
   });

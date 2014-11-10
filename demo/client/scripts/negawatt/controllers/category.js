@@ -14,7 +14,7 @@ angular.module('app')
     // Filter map markers by id.
     $scope.filterBy = function(id) {
       // Sent the event to all the application.
-      $rootScope.$broadcast('negawatt.menu.filterBy', id);
+      $rootScope.$broadcast('negawatt.category.filterBy', id);
     };
 
   });
