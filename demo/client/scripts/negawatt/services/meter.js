@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('app')
-  .service('Meter', function ($q, $http, BACKEND_URL) {
+  .service('Meter', function ($q, $http, BACKEND_URL, $filter, Utils) {
     var Meter = this;
 
     /**
@@ -44,17 +44,25 @@ angular.module('app')
     this.toObject = function(list) {
       var meters = {};
 
-      angular.forEach(angular.fromJson(list).data, function(item) {
-        meters[item.id] = item;
-        meters[item.id].lat = parseFloat(item.location.lat);
-        meters[item.id].lng = parseFloat(item.location.lng);
+      // Convert response serialized to an object.
+      if (angular.isString(list)) {
+        list = angular.fromJson(list).data;
+      }
 
-        delete item['location'];
+      angular.forEach(list, function(item) {
+        meters[item.id] = item;
+
+        // Convert the geo location properties as expected by leaflet map.
+        if (item.location) {
+          meters[item.id].lat = parseFloat(item.location.lat);
+          meters[item.id].lng = parseFloat(item.location.lng);
+
+          delete item['location'];
+        }
       });
 
       return meters;
     };
-
 
     /**
      * Return meters array from the server.
@@ -69,6 +77,17 @@ angular.module('app')
         url: url,
         transformResponse: Meter.toObject
       });
+    };
+
+    /**
+     * Filter a meters collection
+     *
+     * @param id {Number} - id of the selected category.
+     *
+     * @returns {*} - A new collection of meters filtered, if not found return an empty object.
+     */
+    this.filterBy = function(id) {
+      return Meter.toObject($filter('filter')(Utils.toArray(Meter.cache), {meter_categories: id}));
     };
 
   });

@@ -5,6 +5,23 @@ angular.module('app')
     var Utils = this;
 
     /**
+     * Convert a object properties to an array.
+     *
+     * @param {*} object
+     *
+     * @returns {Array} - collection of the object's properties into an array.
+     */
+    this.toArray = function(object) {
+      var result = [];
+
+      angular.forEach(object, function(property){
+        this.push(property);
+      }, result);
+
+      return result;
+    };
+
+    /**
      * Return query string for restful module. (Drupal 7.0)
      *
      * @param {*} filters - object with filters, where the key is the name of the field to
@@ -15,11 +32,9 @@ angular.module('app')
      *    ...
      *  }
      *
-     * @param format {string} - indicate the type of format used to construct the queryString. (token)
-     *
      * @returns {string} - in the format ?filter[key]=value[&filter[key]=value...]
      */
-    this.createQueryString = function(filters, format) {
+    this.createQueryString = function(filters) {
       var queryString;
 
       angular.forEach(filters, function(value, key) {
