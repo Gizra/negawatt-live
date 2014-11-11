@@ -30,6 +30,10 @@ angular.module('app')
               };
             });
 
+          // Filter categories to show only the categories, define in the meters.
+          Category.filterByMeterCategories(Meter.cache);
+          console.log(Category.cache);
+
         });
 
       });

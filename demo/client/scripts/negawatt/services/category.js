@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('app')
-  .service('Category', function ($http, $q, BACKEND_URL, $filter) {
+  .service('Category', function ($http, $q, BACKEND_URL, $filter, Utils) {
     var Category = this;
 
     /**
@@ -48,6 +48,25 @@ angular.module('app')
         url: BACKEND_URL + '/api/meter_categories',
         transformResponse: addStyle
       });
+    };
+
+    /**
+     * From a collection of meters filter the categories (in cache)
+     *
+     * @param meters
+     */
+    this.filterByMeterCategories = function(meters) {
+      var metersCategorized = $filter('filter')(Utils.toArray(meters), {'meter_categories': '!!'});
+      var categoriesDefined = [];
+
+
+
+
+      angular.forEach(metersCategorized, function(meter) {
+        console.log(meter.meter_categories);
+      }, categoriesDefined);
+
+      console.log('filtered', categorized);
     };
 
   });
