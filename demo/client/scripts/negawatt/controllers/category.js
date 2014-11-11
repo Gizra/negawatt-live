@@ -17,4 +17,9 @@ angular.module('app')
       $rootScope.$broadcast('negawatt.category.filterBy', id);
     };
 
+    // Observers.
+    $scope.$on('negawatt.category.filtered', function(event, categories) {
+      $scope.categories = categories;
+    });
+
   });

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('app')
-  .service('Category', function ($http, $q, BACKEND_URL, $filter, Utils) {
+  .service('Category', function ($http, $q, BACKEND_URL, $filter, Utils, $rootScope) {
     var Category = this;
 
     /**
@@ -51,22 +51,41 @@ angular.module('app')
     };
 
     /**
-     * From a collection of meters filter the categories (in cache)
+     * From a collection of meters filter the categories (in cache).
      *
      * @param meters
      */
     this.filterByMeterCategories = function(meters) {
       var metersCategorized = $filter('filter')(Utils.toArray(meters), {'meter_categories': '!!'});
-      var categoriesDefined = [];
-
-
-
+      var categoriesDefined = [],
+        categoriesFiltered = [];
 
       angular.forEach(metersCategorized, function(meter) {
-        console.log(meter.meter_categories);
-      }, categoriesDefined);
 
-      console.log('filtered', categorized);
+        angular.forEach(meter.meter_categories, function(categoryId) {
+
+          // Check if already get the category id.
+          if (this.indexOf(categoryId) === -1) {
+            this.push(parseInt(categoryId));
+          }
+        }, categoriesDefined);
+
+      });
+
+      console.log('filtered', categoriesDefined);
+
+      // Filter category collection cached.
+      $filter('filter')(Category.cache, function(category) {
+
+        if (categoriesDefined.indexOf(category.id) !== -1) {
+          categoriesFiltered.push(category);
+        }
+
+      });
+
+      // Update service and scope objects.
+      Category.cache = categoriesFiltered;
+      $rootScope.$broadcast('negawatt.category.filtered', Category.cache);
     };
 
   });
