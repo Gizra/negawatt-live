@@ -72,8 +72,6 @@ angular.module('app')
 
       });
 
-      console.log('filtered', categoriesDefined);
-
       // Filter category collection cached.
       $filter('filter')(Category.cache, function(category) {
 
