@@ -50,6 +50,11 @@
         padding: 30px 20px;
         @include border-top-radius ($border-radius-base);
     }
+    .panel-top-sm {
+        padding: 10px 10px;
+        @include border-top-radius ($border-radius-base);
+    }
+
     .panel-bottom {
         padding: 10px;
         @include border-bottom-radius ($border-radius-base);
@@ -99,9 +104,32 @@
         text-shadow: -6px 8px 5px rgba(0,0,0,0.3);
 
     }
+
+    .panel-icon-sm,
+    .panel-img-sm {
+      display: block;
+      margin: -46px auto 0;
+      border-radius: 50%;
+      border: 10px solid $reverse;
+      width: 90px;
+      height: 90px;
+      line-height: 40px;
+      text-align: center;
+      font-size: 40px;
+      text-shadow: -6px 8px 5px rgba(0,0,0,0.3);
+
+
+    }
+
+
     .panel-icon {
         padding: 28px 35px 35px;
     }
+
+    .panel-icon-sm {
+        padding: 16px 11px 20px;
+    }
+
     .panel-img {
         padding: 0;
         img {
