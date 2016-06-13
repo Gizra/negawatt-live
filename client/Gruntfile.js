@@ -423,7 +423,7 @@ module.exports = function (grunt) {
     buildcontrol: {
       dist: {
         options: {
-          remote: 'git@github.com:Gizra/negawatt-server.git',
+          remote: 'git@github.com:Gizra/negawatt-live.git',
           branch: 'gh-pages',
           commit: true,
           push: true
